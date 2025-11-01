@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Community.css';
 
 const Community = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleOpenModal = (e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setEmail('');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // TODO: Integrate with backend API
+    console.log('Email submitted:', email);
+    alert('Thank you for joining our community! We\'ll be in touch soon.');
+    handleCloseModal();
+  };
   const collaborations = [
     {
       id: 1,
@@ -99,10 +119,47 @@ const Community = () => {
             <p className="cta-text">
               Interested in collaborating with us? We'd love to hear from artisans, designers, and organizations passionate about sustainable fashion and traditional crafts.
             </p>
-            <a href="/contact" className="cta-button">GET IN TOUCH</a>
+            <button onClick={handleOpenModal} className="cta-button">GET IN TOUCH</button>
           </div>
         </div>
       </section>
+
+      {isModalOpen && (
+        <div className="community-modal-overlay" onClick={handleCloseModal}>
+          <div className="community-modal" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="community-modal-close" 
+              onClick={handleCloseModal}
+              aria-label="Close modal"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <h2 className="community-modal-title">Join our community</h2>
+            <p className="community-modal-text">
+              Be part of our mission to preserve traditional craftsmanship and support sustainable fashion.
+            </p>
+            <form className="community-modal-form" onSubmit={handleSubmit}>
+              <div className="community-modal-input-wrapper">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="community-modal-input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  autoFocus
+                />
+              </div>
+              <button type="submit" className="community-modal-button">
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
