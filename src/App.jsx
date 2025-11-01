@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollUpButton from './components/ScrollUpButton';
 import Home from './pages/Home';
 import Collections from './pages/Collections';
 import ShopMen from './pages/ShopMen';
@@ -36,6 +37,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <ScrollUpButton />
       </div>
     </Router>
   );

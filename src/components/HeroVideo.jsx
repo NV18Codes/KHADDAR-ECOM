@@ -1,18 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './HeroVideo.css';
 
 const HeroVideo = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
   };
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Set video properties for mobile autoplay
+      video.setAttribute('muted', 'true');
+      video.setAttribute('playsinline', 'true');
+      video.setAttribute('webkit-playsinline', 'true');
+      
+      // Ensure video plays on mobile
+      const attemptPlay = async () => {
+        try {
+          await video.play();
+        } catch (error) {
+          console.log('Autoplay prevented:', error);
+          // If autoplay is prevented, try to play when user interacts
+          const handleInteraction = () => {
+            video.play().catch(e => console.log('Play failed:', e));
+            document.removeEventListener('touchstart', handleInteraction);
+            document.removeEventListener('click', handleInteraction);
+          };
+          document.addEventListener('touchstart', handleInteraction, { once: true });
+          document.addEventListener('click', handleInteraction, { once: true });
+        }
+      };
+      
+      // Try to play when video is loaded
+      if (video.readyState >= 2) {
+        attemptPlay();
+      } else {
+        video.addEventListener('loadeddata', attemptPlay, { once: true });
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = isMuted;
+    }
+  }, [isMuted]);
+
   return (
     <section className="hero-video">
       <div className="video-wrapper">
         <video
+          ref={videoRef}
           className="hero-video-element"
           autoPlay
           loop

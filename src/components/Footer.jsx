@@ -1,17 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
   // Logo is in public folder - using the actual filename
   const logo = '/logo_file_page-0001.png';
+  const location = useLocation();
+
+  const handleLinkClick = (e, path) => {
+    if (location.pathname === path) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    // If different page, let Link handle navigation naturally
+  };
 
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <Link to="/" className="footer-logo-link">
+            <Link to="/" className="footer-logo-link" onClick={(e) => handleLinkClick(e, '/')}>
               <img src={logo} alt="Khaddar Logo" className="footer-logo" />
             </Link>
             <p className="footer-text">
@@ -22,19 +34,19 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">EXPLORE</h4>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/collections">Collections</Link></li>
-              <li><Link to="/shop/mens-wear">Men's Wear</Link></li>
-              <li><Link to="/shop/womens-wear">Women's Wear</Link></li>
-              <li><Link to="/community">Community / Collaboration</Link></li>
-              <li><Link to="/sustainability">Sustainability</Link></li>
+              <li><Link to="/" onClick={(e) => handleLinkClick(e, '/')}>Home</Link></li>
+              <li><Link to="/collections" onClick={(e) => handleLinkClick(e, '/collections')}>Collections</Link></li>
+              <li><Link to="/shop/mens-wear" onClick={(e) => handleLinkClick(e, '/shop/mens-wear')}>Men's Wear</Link></li>
+              <li><Link to="/shop/womens-wear" onClick={(e) => handleLinkClick(e, '/shop/womens-wear')}>Women's Wear</Link></li>
+              <li><Link to="/community" onClick={(e) => handleLinkClick(e, '/community')}>Community / Collaboration</Link></li>
+              <li><Link to="/sustainability" onClick={(e) => handleLinkClick(e, '/sustainability')}>Sustainability</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4 className="footer-heading">CUSTOMER CARE</h4>
             <ul className="footer-links">
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/contact" onClick={(e) => handleLinkClick(e, '/contact')}>Contact Us</Link></li>
               <li><a href="#shipping">Shipping Information</a></li>
               <li><a href="#returns">Returns & Exchanges</a></li>
               <li><a href="#faq">FAQ</a></li>

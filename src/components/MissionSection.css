@@ -3,22 +3,11 @@
   background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
 }
 
-.mission-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  align-items: center;
-  animation: fadeInUp 0.8s ease-out both;
-  animation-delay: 0.1s;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
 .mission-heading-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  order: 2;
+  max-width: 1400px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .section-heading {
@@ -33,28 +22,58 @@
 }
 
 .mission-heading {
-  text-align: right;
+  text-align: left;
 }
 
 .mission-heading::after {
   content: '';
   position: absolute;
   bottom: -15px;
-  right: 0;
+  left: 0;
   width: 60px;
   height: 2px;
   background-color: #1a1a1a;
+}
+
+.mission-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out both;
+  animation-delay: 0.1s;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .mission-content-box {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  order: 1;
+}
+
+.mission-image-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  min-height: 500px;
 }
 
 .mission-list {
-  margin-top: 15px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -62,18 +81,7 @@
   padding: 0;
   margin-left: 0;
   max-width: 580px;
-  margin-right: auto;
   align-items: flex-start;
-}
-
-@media (max-width: 768px) {
-  .mission-heading-box {
-    order: 1;
-  }
-
-  .mission-content-box {
-    order: 2;
-  }
 }
 
 .mission-item {
@@ -106,6 +114,11 @@
     padding: 120px 0;
   }
 
+  .mission-heading-box {
+    max-width: 1200px;
+    margin-bottom: 50px;
+  }
+
   .mission-row {
     gap: 80px;
     max-width: 1200px;
@@ -117,15 +130,22 @@
 
   .mission-item {
     font-size: 1.125rem;
-    max-width: 500px;
   }
 
   .mission-list {
     max-width: 500px;
   }
+
+  .mission-image {
+    min-height: 450px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .mission-heading-box {
+    max-width: 1000px;
+  }
+
   .mission-row {
     gap: 60px;
     max-width: 1000px;
@@ -136,15 +156,23 @@
   }
 
   .mission-item {
-    max-width: 450px;
+    font-size: 1.125rem;
   }
 
   .mission-list {
     max-width: 450px;
   }
+
+  .mission-image {
+    min-height: 400px;
+  }
 }
 
 @media (max-width: 992px) {
+  .mission-heading-box {
+    max-width: 900px;
+  }
+
   .mission-row {
     gap: 50px;
     max-width: 900px;
@@ -154,12 +182,12 @@
     font-size: 2.5rem;
   }
 
-  .mission-item {
+  .mission-list {
     max-width: 400px;
   }
 
-  .mission-list {
-    max-width: 400px;
+  .mission-image {
+    min-height: 350px;
   }
 }
 
@@ -169,19 +197,35 @@
     background: #ffffff;
   }
 
+  .mission-heading-box {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
   .mission-row {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0 20px;
   }
 
-  .mission-heading-box,
   .mission-content-box {
+    order: 1;
     justify-content: flex-start;
+  }
+
+  .mission-image-box {
+    order: 2;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .mission-image {
+    min-height: 300px;
   }
 
   .mission-list {
     margin-right: 0;
-    margin-top: 15px;
+    margin-top: 0;
     max-width: 100%;
   }
 
@@ -223,8 +267,14 @@
     padding: 80px 0;
   }
 
+  .mission-heading-box {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
   .mission-row {
-    gap: 40px;
+    gap: 30px;
+    padding: 0 15px;
   }
 
   .section-heading {
@@ -240,7 +290,7 @@
   }
 
   .mission-list {
-    margin-top: 20px;
+    margin-top: 0;
     gap: 30px;
   }
 
@@ -255,5 +305,12 @@
     height: 4px;
     top: 14px;
   }
-}
 
+  .mission-image-box {
+    min-height: 250px;
+  }
+
+  .mission-image {
+    min-height: 250px;
+  }
+}

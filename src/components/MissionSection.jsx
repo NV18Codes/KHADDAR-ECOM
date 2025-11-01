@@ -5,10 +5,10 @@ const MissionSection = () => {
   return (
     <section className="mission-section">
       <div className="container">
+        <div className="mission-heading-box">
+          <h2 className="section-heading mission-heading">MISSION</h2>
+        </div>
         <div className="mission-row">
-          <div className="mission-heading-box">
-            <h2 className="section-heading mission-heading">MISSION</h2>
-          </div>
           <div className="mission-content-box">
             <ul className="mission-list">
               <li className="mission-item">
@@ -24,6 +24,13 @@ const MissionSection = () => {
                 Embrace and elevate the best of who we are — weaving India's rich stories, skills, and soul into fashion that is meant to be treasured, not consumed.
               </li>
             </ul>
+          </div>
+          <div className="mission-image-box">
+            <img 
+              src="/mision.jpg" 
+              alt="Mission"
+              className="mission-image"
+            />
           </div>
         </div>
       </div>

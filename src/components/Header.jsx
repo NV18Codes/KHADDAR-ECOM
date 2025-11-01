@@ -61,9 +61,10 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''} ${isBlackScrolled ? 'black-scrolled' : ''}`}>
-      <div className="header-main">
-        <div className="header-main-container">
+    <>
+      <header className={`header ${isScrolled ? 'scrolled' : ''} ${isBlackScrolled ? 'black-scrolled' : ''}`}>
+        <div className="header-main">
+          <div className="header-main-container">
           <Link to="/" className="logo-link">
             <img src={logo} alt="Khaddar Logo" className="logo" />
           </Link>
@@ -72,38 +73,17 @@ const Header = () => {
             <button 
               className="icon-btn search-btn" 
               aria-label="Search"
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsSearchOpen(!isSearchOpen);
+              }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.35-4.35"></path>
               </svg>
             </button>
-            {isSearchOpen && (
-              <div className="search-overlay" onClick={() => setIsSearchOpen(false)}>
-                <div className="search-modal" onClick={(e) => e.stopPropagation()}>
-                  <div className="search-input-wrapper">
-                    <input
-                      type="text"
-                      placeholder="Search for products..."
-                      className="search-input"
-                      autoFocus
-                    />
-                    <button 
-                      type="button"
-                      className="search-close-btn"
-                      onClick={() => setIsSearchOpen(false)}
-                      aria-label="Close search"
-                    >
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
             <Link to="/login" className="icon-btn account-btn" aria-label="Account">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -195,6 +175,37 @@ const Header = () => {
         </div>
       </div>
     </header>
+
+    {isSearchOpen && (
+      <div className="search-overlay" onClick={() => setIsSearchOpen(false)}>
+        <div className="search-modal" onClick={(e) => e.stopPropagation()}>
+          <div className="search-input-wrapper">
+            <input
+              type="text"
+              placeholder="Search for products..."
+              className="search-input"
+              autoFocus
+            />
+            <button 
+              type="button"
+              className="search-close-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsSearchOpen(false);
+              }}
+              aria-label="Close search"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+    </>
   );
 };
 
