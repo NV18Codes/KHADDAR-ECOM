@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { fetchProductDetail } from '../services/productService';
 import './ProductDetail.css';
 
@@ -158,7 +158,6 @@ womenProducts.forEach(({ key, product, gender }) => addProduct(key, product, gen
 
 const ProductDetail = () => {
   const { productSlug } = useParams();
-  const navigate = useNavigate();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
