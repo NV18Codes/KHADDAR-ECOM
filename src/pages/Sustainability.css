@@ -1,0 +1,367 @@
+.sustainability-page {
+  padding-top: 100px;
+}
+
+.sustainability-hero {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.hero-content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sustainability-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.sustainability-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: #4a4a4a;
+  font-style: italic;
+}
+
+.sustainability-intro {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.intro-text-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-paragraph {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #2a2a2a;
+  font-weight: 300;
+  text-align: center;
+}
+
+.practices-section {
+  padding: 100px 0;
+  background-color: #fafafa;
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.practice-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-out both;
+  border-radius: 4px;
+}
+
+.practice-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.practice-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.practice-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.practice-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.practice-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.practice-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.practice-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+.practice-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s ease;
+}
+
+.practice-card:hover .practice-image {
+  transform: scale(1.1);
+}
+
+.practice-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.practice-content {
+  padding: 30px;
+}
+
+.practice-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.practice-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2a2a2a;
+  font-weight: 300;
+}
+
+.sustainability-video {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-content-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sustainability-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-quote-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sustainability-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.commitment-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.commitment-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.commitment-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.commitment-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #2a2a2a;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .sustainability-hero {
+    padding: 80px 0;
+  }
+  
+  .sustainability-intro {
+    padding: 80px 0;
+  }
+  
+  .practices-section {
+    padding: 80px 0;
+  }
+  
+  .commitment-section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .practices-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .practices-grid {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sustainability-hero {
+    padding: 60px 0;
+  }
+  
+  .hero-content-wrapper {
+    padding: 0 20px;
+  }
+  
+  .sustainability-title {
+    font-size: 2.5rem;
+  }
+  
+  .sustainability-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .sustainability-intro {
+    padding: 60px 0;
+  }
+  
+  .intro-paragraph {
+    font-size: 1rem;
+  }
+  
+  .practices-section {
+    padding: 60px 0;
+  }
+  
+  .practices-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .sustainability-video {
+    height: 60vh;
+  }
+  
+  .sustainability-quote {
+    font-size: 1.75rem;
+    padding: 0 20px;
+  }
+  
+  .commitment-section {
+    padding: 60px 0;
+  }
+  
+  .commitment-heading {
+    font-size: 2rem;
+  }
+  
+  .commitment-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sustainability-hero {
+    padding: 50px 0;
+  }
+  
+  .sustainability-title {
+    font-size: 2rem;
+  }
+  
+  .sustainability-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .sustainability-intro {
+    padding: 50px 0;
+  }
+  
+  .intro-paragraph {
+    font-size: 0.9375rem;
+  }
+  
+  .practices-section {
+    padding: 50px 0;
+  }
+  
+  .practices-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .sustainability-video {
+    height: 50vh;
+  }
+  
+  .sustainability-quote {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
+  
+  .commitment-section {
+    padding: 50px 0;
+  }
+  
+  .commitment-heading {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .commitment-text {
+    font-size: 0.9375rem;
+  }
+}
+
