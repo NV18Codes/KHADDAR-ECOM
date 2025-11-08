@@ -1,5 +1,6 @@
 import React from 'react';
 import './Collections.css';
+import HeroVideo from '../components/HeroVideo';
 
 const Collections = () => {
   const collectionImages = [
@@ -26,7 +27,8 @@ const Collections = () => {
   ];
 
   return (
-    <div className="collections-page">
+    <div className="collections-page page-with-transparent-header">
+       <HeroVideo  title='Collections' subtitle='Crafting fashion that honors tradition'/>
       <div className="collections-hero">
         <div className="hero-content-wrapper">
           <h1 className="collections-title">KOLOURS OF KUTCH</h1>

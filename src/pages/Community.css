@@ -1,6 +1,24 @@
 .community-page {
-  padding-top: 100px;
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  min-height: 100vh;
 }
+
+.hero-video-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.page-with-transparent-header {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Remove the hero-section class since we're using HeroVideo directly */
 
 .community-hero {
   padding: 100px 0;
@@ -33,8 +51,11 @@
 }
 
 .community-intro {
-  padding: 100px 0;
-  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  margin-top: 0;
+  padding-top: 100px;
 }
 
 .intro-content {

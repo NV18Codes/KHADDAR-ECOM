@@ -1,5 +1,6 @@
 import React from 'react';
 import './Sustainability.css';
+import HeroVideo from '../components/HeroVideo';
 
 const Sustainability = () => {
   const practices = [
@@ -41,15 +42,12 @@ const Sustainability = () => {
   ];
 
   return (
-    <div className="sustainability-page">
-      <div className="sustainability-hero">
-        <div className="hero-content-wrapper">
-          <h1 className="sustainability-title">SUSTAINABILITY</h1>
-          <p className="sustainability-subtitle">
-            At Khaddar, sustainability isn't a trend — it's our foundation.
-          </p>
-        </div>
-      </div>
+    <div className="sustainability-page page-with-transparent-header">
+      <HeroVideo 
+        title='Sustainability' 
+        subtitle="At Khaddar, sustainability isn't a trend — it's our foundation."
+        fullHeight={true}
+      />
 
       <section className="sustainability-intro">
         <div className="container">

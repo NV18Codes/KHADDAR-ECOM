@@ -1,10 +1,14 @@
 .collections-page {
-  padding-top: 100px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
+/* Ensure the hero section takes full height and starts from the top */
 .collections-hero {
-  padding: 80px 0;
-  background-color: #fafafa;
+  min-height: 100vh;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .hero-content-wrapper {
