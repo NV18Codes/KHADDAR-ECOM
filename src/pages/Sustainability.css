@@ -1,4 +1,20 @@
 .sustainability-page {
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-with-transparent-header {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure content sections start after hero */
+.sustainability-intro {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
   padding-top: 100px;
 }
 

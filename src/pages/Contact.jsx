@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import HeroVideo from '../components/HeroVideo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,15 +33,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
-      <div className="contact-hero">
-        <div className="hero-wrapper">
-          <h1 className="contact-title">CONTACT US</h1>
-          <p className="contact-subtitle">
-            We'd love to hear from you. Get in touch with us.
-          </p>
-        </div>
-      </div>
+    <div className="contact-page page-with-transparent-header">
+      <HeroVideo 
+        title='Contact Us'  
+        subtitle="We'd love to hear from you. Get in touch with us."
+        fullHeight={true}
+      />
+      
 
       <section className="contact-content">
         <div className="container">

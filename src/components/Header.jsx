@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-// Logo is in public folder - using the actual filename
+
 const logo = '/logo_file_page-0001.png';
 
 const Header = () => {
@@ -11,35 +11,27 @@ const Header = () => {
   const [isBlackScrolled, setIsBlackScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
-  // TODO: Replace with actual authentication check
   const [isLoggedIn] = useState(false); // Set to true when user is logged in
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      // On home page, only show grey after scrolling. On other pages, show grey initially then black on scroll.
-      if (isHomePage) {
+      if (location.pathname === '/' || 
+          location.pathname === '/collections' || 
+          location.pathname === '/community' ||
+          location.pathname === '/sustainability' ||
+          location.pathname === '/contact') {
         setIsScrolled(scrollPosition > 100);
         setIsBlackScrolled(false);
       } else {
-        setIsScrolled(true); // Always show grey on non-home pages
-        setIsBlackScrolled(scrollPosition > 100); // Show black after scrolling on non-home pages
+        setIsScrolled(true);
+        setIsBlackScrolled(scrollPosition > 100);
       }
     };
 
-    // Set initial state based on page
-    if (!isHomePage) {
-      setIsScrolled(true); // Always grey on non-home pages
-      setIsBlackScrolled(window.scrollY > 100); // Check if already scrolled
-    } else {
-      setIsScrolled(window.scrollY > 100); // Check on home page
-      setIsBlackScrolled(false);
-    }
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomePage]);
+  }, [location.pathname]);
 
   const toggleMenu = (e) => {
     e.preventDefault();

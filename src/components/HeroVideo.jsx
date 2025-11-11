@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './HeroVideo.css';
 
-const HeroVideo = () => {
+const HeroVideo = ({title = 'KHADDAR' , subtitle = 'Crafting fashion that honors tradition', fullHeight }) => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
 
@@ -53,7 +53,7 @@ const HeroVideo = () => {
 
   return (
     <section className="hero-video">
-      <div className="video-wrapper">
+      <div className={`video-wrapper ${fullHeight ? 'full-height' : ''}`}>
         <video
           ref={videoRef}
           className="hero-video-element"
@@ -68,8 +68,8 @@ const HeroVideo = () => {
         </video>
         <div className="video-overlay">
           <div className="hero-content">
-            <h1 className="hero-title">KHADDAR</h1>
-            <p className="hero-subtitle">Crafting fashion that honors tradition</p>
+            <h1 className="hero-title">{title}</h1>
+            <p className="hero-subtitle">{subtitle}</p>
             <Link to="/collections" className="hero-cta">EXPLORE COLLECTIONS</Link>
           </div>
         </div>

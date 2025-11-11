@@ -3,10 +3,30 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.header:not(.scrolled) {
   background-color: transparent;
   border-bottom: 1px solid transparent;
-  z-index: 1000;
-  transition: background-color 0.3s ease, border-bottom-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Make sure text is visible on transparent background */
+.header:not(.scrolled) .nav-link,
+.header:not(.scrolled) .icon-btn {
+  color: #ffffff;
+}
+
+.header:not(.scrolled) .logo {
+  filter: brightness(0) invert(1);
 }
 
 .header.scrolled {

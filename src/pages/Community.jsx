@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Community.css';
+import HeroVideo from '../components/HeroVideo';
 
 const Community = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,16 +51,13 @@ const Community = () => {
   ];
 
   return (
-    <div className="community-page">
-      <div className="community-hero">
-        <div className="hero-content-container">
-          <h1 className="community-title">COMMUNITY / COLLABORATION</h1>
-          <p className="community-subtitle">
-            Building bridges between tradition and innovation, one collaboration at a time.
-          </p>
-        </div>
-      </div>
-
+    <div className="community-page page-with-transparent-header">
+      <HeroVideo 
+        title='Community / Collaboration' 
+        subtitle='Building bridges between tradition and innovation, one collaboration at a time.'
+        fullHeight={true}
+      />
+  
       <section className="community-intro">
         <div className="container">
           <div className="intro-content">
