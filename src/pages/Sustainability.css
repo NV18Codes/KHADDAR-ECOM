@@ -14,14 +14,16 @@
 .sustainability-intro {
   position: relative;
   z-index: 2;
-  background: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) */
+  background: #D5C6AF;
   padding-top: 100px;
 }
 
 .sustainability-hero {
   padding: 100px 0;
   text-align: center;
-  background-color: #fafafa;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - used for the hero background color (was #fafafa) */
+  background-color: #D5C6AF;
 }
 
 .hero-content-wrapper {
@@ -36,7 +38,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .sustainability-subtitle {
@@ -44,13 +47,15 @@
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: #4a4a4a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
+  color: #4C2E2E;
   font-style: italic;
 }
 
 .sustainability-intro {
   padding: 100px 0;
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
 }
 
 .intro-text-wrapper {
@@ -61,14 +66,16 @@
 .intro-paragraph {
   font-size: 1.25rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
   text-align: center;
 }
 
 .practices-section {
   padding: 100px 0;
-  background-color: #fafafa;
+  /* Updated Content Block Background: Muted Clay/Taupe (#8C6C5F) - used for section background (was #fafafa) */
+  background-color: #8C6C5F;
 }
 
 .practices-grid {
@@ -81,7 +88,8 @@
 .practice-card {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  /* Updated Card Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease-out both;
@@ -110,6 +118,7 @@
 
 .practice-card:hover {
   transform: translateY(-8px);
+  /* Optional: Keep box-shadow dark or adjust color */
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
@@ -118,7 +127,8 @@
   width: 100%;
   padding-bottom: 75%;
   overflow: hidden;
-  background-color: #f8f8f8;
+  /* Card Image Placeholder/Placeholder Background: Pale Beige/Cream (#D5C6AF) - was #f8f8f8 */
+  background-color: #D5C6AF; 
 }
 
 .practice-image {
@@ -140,13 +150,16 @@
   top: 20px;
   right: 20px;
   font-size: 2.5rem;
-  background: rgba(255, 255, 255, 0.9);
+  /* Accent Icon Background: Pale Beige/Cream (#D5C6AF) */
+  background: rgba(213, 198, 175, 0.9); /* D5C6AF with opacity */
   width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  /* Optional: Add icon color if needed. Assumed to be inherited or set elsewhere */
+  color: #6F3132; /* Dark Maroon/Reddish Brown for contrast */
 }
 
 .practice-content {
@@ -159,14 +172,16 @@
   font-weight: 400;
   letter-spacing: 0.03em;
   margin-bottom: 15px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .practice-description {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.8;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
 }
 
@@ -195,7 +210,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  /* Video Overlay: Kept dark for contrast, adjusted opacity slightly */
+  background: rgba(0, 0, 0, 0.5); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,6 +222,7 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
+  /* Quote Text Color: Kept white for contrast against dark overlay */
   color: #ffffff;
   text-align: center;
   max-width: 900px;
@@ -215,7 +232,8 @@
 
 .commitment-section {
   padding: 100px 0;
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
   text-align: center;
 }
 
@@ -230,14 +248,16 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 40px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .commitment-text {
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
 }
 
@@ -381,3 +401,95 @@
   }
 }
 
+
+/* FOOTER SECTION */
+/* --- FOOTER STYLES (Based on Option 3: Emphasized Commitment) --- */
+
+.main-footer {
+  /* Background: Muted Clay/Taupe (#8C6C5F) */
+  background-color: #8C6C5F;
+  padding: 80px 40px 40px 40px;
+  color: #D5C6AF; /* Text Color: Pale Beige/Cream */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #D5C6AF; /* Pale Beige/Cream */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  /* Link Color: Pale Beige/Cream */
+  color: #D5C6AF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  /* Link Hover: Rich Burnt Orange/Sienna (#A15F22) */
+  color: #A15F22;
+}
+
+/* Newsletter/CTA Button Example */
+.footer-cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  /* Button Background: Dark Maroon/Reddish Brown (#6F3132) */
+  background-color: #6F3132;
+  /* Button Text: Pale Beige/Cream (#D5C6AF) */
+  color: #D5C6AF; 
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.footer-cta-button:hover {
+  /* Button Hover: Warm Sand/Tan (#B38A6A) */
+  background-color: #B38A6A;
+  color: #4C2E2E; /* Deep Coffee Brown text on hover for contrast */
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(213, 198, 175, 0.3); /* Subtle divider using Pale Beige/Cream */
+  padding-top: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    min-width: 100%;
+  }
+}

@@ -5,7 +5,8 @@
 
 .shop-products {
   padding: 80px 0;
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
 }
 
 .products-category-title {
@@ -15,7 +16,8 @@
   letter-spacing: 0.05em;
   margin-bottom: 15px;
   text-align: center;
-  color: #1a1a1a;
+  /* Updated Title Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   text-transform: uppercase;
 }
 
@@ -27,7 +29,8 @@
   letter-spacing: 0.01em;
   margin-bottom: 40px;
   text-align: center;
-  color: #6b6b6b;
+  /* Updated Description Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
+  color: #4C2E2E;
   line-height: 1.6;
   max-width: 600px;
   margin-left: auto;
@@ -89,7 +92,8 @@
   padding-bottom: 133%;
   overflow: hidden;
   margin-bottom: 15px;
-  background-color: #f8f8f8;
+  /* Updated Placeholder/Wrapper BG: Pale Beige/Cream (#D5C6AF) - was #f8f8f8 */
+  background-color: #D5C6AF;
   cursor: pointer;
 }
 
@@ -111,8 +115,10 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  /* Updated Badge BG (Accent): Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  background-color: #A15F22;
+  /* Updated Badge Text: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  color: #D5C6AF;
   font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 500;
@@ -134,10 +140,13 @@
   letter-spacing: 0.05em;
   text-transform: none;
   padding: 12px 20px;
-  background: #ffffff;
-  color: #1a1a1a;
+  /* Updated Button BG (Default): Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background: #D5C6AF;
+  /* Updated Button Text: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
+  color: #4C2E2E;
   border: none;
-  border-top: 1px solid #e8e8e8;
+  /* Updated Button Border: Muted Clay/Taupe (#8C6C5F) - was #e8e8e8 */
+  border-top: 1px solid #8C6C5F;
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0;
@@ -150,7 +159,8 @@
 }
 
 .product-choose-btn:hover {
-  background: #f8f8f8;
+  /* Updated Button Hover BG: Warm Sand/Tan (#B38A6A) - was #f8f8f8 */
+  background: #B38A6A;
 }
 
 .product-info {
@@ -163,7 +173,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #1a1a1a;
+  /* Updated Product Name Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   letter-spacing: 0.01em;
   line-height: 1.4;
   margin-bottom: 5px;
@@ -179,21 +190,24 @@
 .price-label {
   font-size: 0.75rem;
   font-weight: 400;
-  color: #6b6b6b;
+  /* Updated Price Label Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
   margin-bottom: 2px;
 }
 
 .price-value {
   font-size: 0.9375rem;
   font-weight: 400;
-  color: #1a1a1a;
+  /* Updated Price Value Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
+  color: #4C2E2E;
 }
 
 .no-products {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #6b6b6b;
+  /* Updated No Products Text Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
+  color: #4C2E2E;
   text-align: center;
   padding: 60px 20px;
 }
@@ -263,4 +277,3 @@
     gap: 20px;
   }
 }
-

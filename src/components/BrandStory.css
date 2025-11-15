@@ -1,6 +1,7 @@
 .brand-story-section {
   padding: 100px 0;
-  background-color: #fafafa;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #fafafa */
+  background-color: #D5C6AF;
 }
 
 .brand-story-content {
@@ -42,7 +43,8 @@
 .brand-story-text .body-text {
   font-size: 1.125rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
 }
 
@@ -90,4 +92,3 @@
     font-size: 1rem;
   }
 }
-

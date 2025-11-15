@@ -1,6 +1,7 @@
 .vision-section {
   padding: 140px 0;
-  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  /* Updated Background Gradient: Pale Beige/Cream (#D5C6AF) */
+  background: linear-gradient(to bottom, #D5C6AF 0%, #D5C6AF 100%);
 }
 
 .vision-heading-box {
@@ -16,7 +17,8 @@
   font-weight: 400;
   letter-spacing: 0.08em;
   margin-bottom: 0;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   position: relative;
   display: inline-block;
 }
@@ -32,7 +34,8 @@
   left: 0;
   width: 60px;
   height: 2px;
-  background-color: #1a1a1a;
+  /* Updated Heading Divider Color: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  background-color: #A15F22;
 }
 
 .vision-row {
@@ -61,7 +64,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   line-height: 2.2;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
   margin: 0;
   letter-spacing: 0.015em;
@@ -154,7 +158,8 @@
 @media (max-width: 768px) {
   .vision-section {
     padding: 100px 0;
-    background: #ffffff;
+    /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+    background: #D5C6AF;
   }
 
   .vision-heading-box {

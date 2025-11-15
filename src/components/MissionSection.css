@@ -1,6 +1,7 @@
 .mission-section {
   padding: 140px 0;
-  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+  /* Updated Background Gradient: Pale Beige/Cream (#D5C6AF) */
+  background: linear-gradient(to bottom, #D5C6AF 0%, #D5C6AF 100%);
 }
 
 .mission-heading-box {
@@ -16,7 +17,8 @@
   font-weight: 400;
   letter-spacing: 0.08em;
   margin-bottom: 0;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   position: relative;
   display: inline-block;
 }
@@ -32,7 +34,8 @@
   left: 0;
   width: 60px;
   height: 2px;
-  background-color: #1a1a1a;
+  /* Updated Heading Divider Color: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  background-color: #A15F22;
 }
 
 .mission-row {
@@ -88,7 +91,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   line-height: 2.1;
-  color: #2a2a2a;
+  /* Updated Body Text/List Item Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
   position: relative;
   padding-left: 35px;
@@ -105,7 +109,8 @@
   top: 18px;
   width: 6px;
   height: 6px;
-  background-color: #1a1a1a;
+  /* Updated List Item Marker Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  background-color: #6F3132;
   border-radius: 50%;
 }
 
@@ -194,7 +199,8 @@
 @media (max-width: 768px) {
   .mission-section {
     padding: 100px 0;
-    background: #ffffff;
+    /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+    background: #D5C6AF;
   }
 
   .mission-heading-box {

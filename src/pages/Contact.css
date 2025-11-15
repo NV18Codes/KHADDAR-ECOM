@@ -14,14 +14,16 @@
 .contact-content {
   position: relative;
   z-index: 2;
-  background: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background: #D5C6AF;
   padding-top: 100px;
 }
 
 .contact-hero {
   padding: 80px 0;
   text-align: center;
-  background-color: #fafafa;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #fafafa */
+  background-color: #D5C6AF;
 }
 
 .hero-wrapper {
@@ -36,7 +38,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .contact-subtitle {
@@ -44,12 +47,14 @@
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: #4a4a4a;
+  /* Updated Subtitle Text Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
+  color: #4C2E2E;
 }
 
 .contact-content {
   padding: 100px 0;
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
 }
 
 .contact-grid {
@@ -82,7 +87,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   margin-bottom: 10px;
 }
 
@@ -90,7 +96,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.8;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
 }
 
@@ -100,28 +107,32 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #1a1a1a;
+  /* Updated Subheading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   margin-bottom: 5px;
 }
 
 .info-link {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  color: #4a4a4a;
+  /* Updated Link Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
+  color: #4C2E2E;
   font-weight: 300;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .info-link:hover {
-  color: #1a1a1a;
+  /* Updated Link Hover Color: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .info-address {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.8;
-  color: #4a4a4a;
+  /* Updated Address Text Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
+  color: #4C2E2E;
   font-weight: 300;
 }
 
@@ -134,18 +145,21 @@
 .social-link-contact {
   font-family: 'Inter', sans-serif;
   font-size: 0.9375rem;
-  color: #4a4a4a;
+  /* Updated Social Link Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
+  color: #4C2E2E;
   font-weight: 300;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-link-contact:hover {
-  color: #1a1a1a;
+  /* Updated Social Link Hover Color: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .contact-form-wrapper {
-  background-color: #fafafa;
+  /* Updated Form Wrapper Background: Muted Clay/Taupe (#8C6C5F) - was #fafafa */
+  background-color: #D5C6AF;
   padding: 50px;
 }
 
@@ -155,7 +169,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 40px;
-  color: #1a1a1a;
+  /* Updated Form Heading Color: Pale Beige/Cream (#D5C6AF) - was #1a1a1a */
+  color: #D5C6AF;
 }
 
 .contact-form {
@@ -176,7 +191,8 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #1a1a1a;
+  /* Updated Form Label Color: Pale Beige/Cream (#D5C6AF) - was #1a1a1a */
+  color: #D5C6AF;
 }
 
 .form-input,
@@ -184,9 +200,12 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   padding: 15px;
-  border: 1px solid #e8e8e8;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  /* Updated Input Border: Dark Maroon/Reddish Brown (#6F3132) - was #e8e8e8 */
+  border: 1px solid #6F3132;
+  /* Updated Input Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
+  /* Updated Input Text Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
+  color: #4C2E2E;
   transition: border-color 0.3s ease;
   font-weight: 300;
 }
@@ -194,7 +213,8 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #1a1a1a;
+  /* Updated Input Focus Border: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  border-color: #A15F22;
 }
 
 .form-textarea {
@@ -209,9 +229,12 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 15px 40px;
-  border: 1px solid #1a1a1a;
-  background: transparent;
-  color: #1a1a1a;
+  /* Updated Button Border: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  border: 1px solid #6F3132;
+  /* Updated Button Background: Warm Sand/Tan (#B38A6A) - was transparent */
+  background: #B38A6A;
+  /* Updated Button Text: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
+  color: #4C2E2E;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
@@ -219,8 +242,10 @@
 }
 
 .form-button:hover {
-  background: #1a1a1a;
-  color: #ffffff;
+  /* Updated Button Hover Background: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  background: #6F3132;
+  /* Updated Button Hover Text: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  color: #D5C6AF;
 }
 
 .contact-image-section {
@@ -393,4 +418,3 @@
     height: 35vh;
   }
 }
-

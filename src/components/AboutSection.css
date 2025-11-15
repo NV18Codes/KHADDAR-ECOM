@@ -1,6 +1,7 @@
 .about-section {
   padding: 100px 0;
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
+  background-color: #D5C6AF;
 }
 
 .about-content {
@@ -40,7 +41,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 40px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -51,7 +53,8 @@
 .about-text .body-text {
   font-size: 1.125rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
+  color: #4C2E2E;
   font-weight: 300;
 }
 
@@ -113,4 +116,3 @@
     font-size: 0.9375rem;
   }
 }
-
