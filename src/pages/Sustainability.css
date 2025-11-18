@@ -14,16 +14,16 @@
 .sustainability-intro {
   position: relative;
   z-index: 2;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) */
-  background: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background: #F7F7F0;
   padding-top: 100px;
 }
 
 .sustainability-hero {
   padding: 100px 0;
   text-align: center;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - used for the hero background color (was #fafafa) */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - used for the hero background color (was #fafafa) */
+  background-color: #F7F7F0;
 }
 
 .hero-content-wrapper {
@@ -47,15 +47,15 @@
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
   font-style: italic;
 }
 
 .sustainability-intro {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
 }
 
 .intro-text-wrapper {
@@ -66,8 +66,8 @@
 .intro-paragraph {
   font-size: 1.25rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
   font-weight: 300;
   text-align: center;
 }
@@ -88,8 +88,8 @@
 .practice-card {
   display: flex;
   flex-direction: column;
-  /* Updated Card Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Card Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease-out both;
@@ -127,8 +127,8 @@
   width: 100%;
   padding-bottom: 75%;
   overflow: hidden;
-  /* Card Image Placeholder/Placeholder Background: Pale Beige/Cream (#D5C6AF) - was #f8f8f8 */
-  background-color: #D5C6AF; 
+  /* Card Image Placeholder/Placeholder Background: Pale Beige/Cream (#F7F7F0) - was #f8f8f8 */
+  background-color: #F7F7F0; 
 }
 
 .practice-image {
@@ -150,7 +150,7 @@
   top: 20px;
   right: 20px;
   font-size: 2.5rem;
-  /* Accent Icon Background: Pale Beige/Cream (#D5C6AF) */
+  /* Accent Icon Background: Pale Beige/Cream (#F7F7F0) */
   background: rgba(213, 198, 175, 0.9); /* D5C6AF with opacity */
   width: 60px;
   height: 60px;
@@ -180,8 +180,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.8;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
   font-weight: 300;
 }
 
@@ -232,8 +232,8 @@
 
 .commitment-section {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
   text-align: center;
 }
 
@@ -256,8 +256,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
   font-weight: 300;
 }
 
@@ -409,7 +409,7 @@
   /* Background: Muted Clay/Taupe (#8C6C5F) */
   background-color: #8C6C5F;
   padding: 80px 40px 40px 40px;
-  color: #D5C6AF; /* Text Color: Pale Beige/Cream */
+  color: #F7F7F0; /* Text Color: Pale Beige/Cream */
 }
 
 .footer-content {
@@ -431,7 +431,7 @@
   font-size: 1.25rem;
   font-weight: 400;
   margin-bottom: 20px;
-  color: #D5C6AF; /* Pale Beige/Cream */
+  color: #F7F7F0; /* Pale Beige/Cream */
 }
 
 .footer-section ul {
@@ -445,7 +445,7 @@
 
 .footer-section a {
   /* Link Color: Pale Beige/Cream */
-  color: #D5C6AF;
+  color: #F7F7F0;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -461,8 +461,8 @@
   padding: 10px 20px;
   /* Button Background: Dark Maroon/Reddish Brown (#6F3132) */
   background-color: #6F3132;
-  /* Button Text: Pale Beige/Cream (#D5C6AF) */
-  color: #D5C6AF; 
+  /* Button Text: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0; 
   text-decoration: none;
   border-radius: 2px;
   font-weight: 600;
@@ -472,7 +472,7 @@
 .footer-cta-button:hover {
   /* Button Hover: Warm Sand/Tan (#B38A6A) */
   background-color: #B38A6A;
-  color: #4C2E2E; /* Deep Coffee Brown text on hover for contrast */
+  color: #6F3132; /* Deep Coffee Brown text on hover for contrast */
 }
 
 .footer-copyright {

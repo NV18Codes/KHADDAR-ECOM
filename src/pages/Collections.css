@@ -9,7 +9,7 @@
   position: relative;
   margin-top: 0;
   padding-top: 0;
-  background-color:#D5C6AF;;
+  background-color:#F7F7F0;;
   /* Assuming the hero background is set by a component, but ensure content sections use main background color */
 }
 
@@ -38,16 +38,16 @@
 .intro-text {
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
   font-weight: 300;
   margin-bottom: 30px;
 }
 
 .collections-gallery {
   padding: 0 0 100px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
 }
 
 .gallery-grid {
@@ -129,8 +129,8 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  /* Label Color: Pale Beige/Cream (#D5C6AF) - kept white/light for contrast */
-  color: #D5C6AF;
+  /* Label Color: Pale Beige/Cream (#F7F7F0) - kept white/light for contrast */
+  color: #F7F7F0;
 }
 
 .collections-video {
@@ -170,8 +170,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
-  /* Quote Text Color: Pale Beige/Cream (#D5C6AF) - kept light for contrast */
-  color: #D5C6AF;
+  /* Quote Text Color: Pale Beige/Cream (#F7F7F0) - kept light for contrast */
+  color: #F7F7F0;
   text-align: center;
   max-width: 900px;
   padding: 0 40px;

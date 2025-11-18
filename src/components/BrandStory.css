@@ -1,22 +1,65 @@
+/*
+ * New CSS Structure: 
+ * 1. Title (Centered)
+ * 2. Description (Centered/Limited Width)
+ * 3. Full-Width Image (Spanning entire container)
+ * * All elements are now stacked vertically, eliminating the grid layout.
+ */
+
 .brand-story-section {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #fafafa */
-  background-color: #D5C6AF;
+  /* Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
+  text-align: center; /* Center aligns the title and potentially the text block */
 }
 
+/* The content wrapper now handles vertical spacing and centers the text block */
 .brand-story-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  gap: 40px; /* Space between the text content and the image */
 }
 
+/* Text wrapper holds the Title and Description */
+.brand-story-text-wrapper {
+  padding: 0; /* Remove padding from original design */
+  width: 100%;
+  /* Optional: Keep animation */
+  animation: fadeInLeft 0.8s ease-out; 
+}
+
+/* Centers the h2/section-heading */
+.section-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Text block for the description, limited width for readability */
+.brand-story-text {
+  max-width: 800px; /* Limit width for centered text readability */
+  margin: 0 auto; /* Center the text block */
+}
+
+.brand-story-text .body-text {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  /* Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
+  font-weight: 300;
+  text-align: center; /* Center the description text */
+}
+
+/* Full Width Image Section */
 .brand-story-image-wrapper {
   position: relative;
   overflow: hidden;
-  order: -1;
+  width: 100%; /* Make wrapper full width */
+  max-width: 100%; /* Ensure it doesn't exceed its container */
+  /* Remove order, as stacking is now default with flex-direction: column */
   border-radius: 4px;
-  animation: fadeInRight 0.8s ease-out;
+  /* Optional: Keep animation */
+  animation: fadeInRight 0.8s ease-out; 
 }
 
 .brand-story-image {
@@ -24,43 +67,43 @@
   height: auto;
   object-fit: cover;
   display: block;
+  /* Optional: Keep hover effect */
   transition: transform 0.6s ease;
+  margin-top: 20px;
 }
 
 .brand-story-image-wrapper:hover .brand-story-image {
-  transform: scale(1.05);
+  transform: scale(1.03); /* Slightly reduced zoom for full-width image */
 }
 
-.brand-story-text-wrapper {
-  padding: 40px 0;
-  animation: fadeInLeft 0.8s ease-out;
+/* Keyframes (kept from original for animation effects) */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.brand-story-text {
-  max-width: 600px;
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.brand-story-text .body-text {
-  font-size: 1.125rem;
-  line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
-  color: #4C2E2E;
-  font-weight: 300;
-}
+/* --- Responsive Adjustments --- */
 
 @media (max-width: 1200px) {
   .brand-story-section {
     padding: 80px 0;
-  }
-  
-  .brand-story-content {
-    gap: 60px;
-  }
-}
-
-@media (max-width: 992px) {
-  .brand-story-content {
-    gap: 50px;
   }
 }
 
@@ -70,16 +113,7 @@
   }
   
   .brand-story-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .brand-story-image-wrapper {
-    order: 0;
-  }
-  
-  .brand-story-text-wrapper {
-    padding: 20px 0;
+    gap: 30px;
   }
 }
 

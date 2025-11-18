@@ -1,8 +1,8 @@
 .auth-page {
   padding-top: 140px;
   min-height: calc(100vh - 100px);
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
   padding-bottom: 80px;
 }
 
@@ -31,8 +31,8 @@
   font-weight: 300;
   letter-spacing: 0.01em;
   margin-bottom: 30px;
-  /* Updated Subtitle Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
-  color: #4C2E2E;
+  /* Updated Subtitle Color: Deep Coffee Brown (#6F3132) - was #6b6b6b */
+  color: #6F3132;
   text-align: center;
   line-height: 1.6;
 }
@@ -87,10 +87,10 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  /* Updated Input Text Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
-  /* Updated Input BG: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Input Text Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
+  /* Updated Input BG: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
   /* Updated Input Border: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
   border: 1px solid #8C6C5F;
   border-radius: 0;
@@ -148,8 +148,8 @@ textarea.form-input {
   text-transform: uppercase;
   background: none;
   border: none;
-  /* Updated Link Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Link Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   cursor: pointer;
   padding: 0;
   text-decoration: underline;
@@ -178,8 +178,8 @@ textarea.form-input {
 .checkbox-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
-  /* Updated Checkbox Label Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
-  color: #4C2E2E;
+  /* Updated Checkbox Label Color: Deep Coffee Brown (#6F3132) - was #6b6b6b */
+  color: #6F3132;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -202,8 +202,8 @@ textarea.form-input {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  /* Updated Link Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
-  color: #4C2E2E;
+  /* Updated Link Color: Deep Coffee Brown (#6F3132) - was #6b6b6b */
+  color: #6F3132;
   background: none;
   border: none;
   cursor: pointer;
@@ -229,8 +229,8 @@ textarea.form-input {
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  /* Updated Primary Button Text: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  color: #D5C6AF;
+  /* Updated Primary Button Text: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  color: #F7F7F0;
   /* Updated Primary Button BG: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
   background-color: #6F3132;
   /* Updated Primary Button Border: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
@@ -272,8 +272,8 @@ textarea.form-input {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  /* Updated Footer Text Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
-  color: #4C2E2E;
+  /* Updated Footer Text Color: Deep Coffee Brown (#6F3132) - was #6b6b6b */
+  color: #6F3132;
   margin: 0;
 }
 

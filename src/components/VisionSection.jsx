@@ -16,15 +16,15 @@ const VisionSection = () => {
               </p>
             </div>
           </div>
-          <div className="vision-image-box">
+        </div>
+      </div>
+      <div className="vision-image-box">
             <img 
               src="/visio.jpg" 
               alt="Vision"
               className="vision-image"
             />
           </div>
-        </div>
-      </div>
     </section>
   );
 };

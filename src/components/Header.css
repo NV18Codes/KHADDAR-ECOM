@@ -14,8 +14,8 @@
 }
 
 .header.scrolled {
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF; 
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0; 
   /* Updated Border: Muted Clay/Taupe (#8C6C5F) */
   border-bottom: 1px solid #8C6C5F;
   backdrop-filter: blur(10px);
@@ -32,8 +32,8 @@
 }
 
 .header.scrolled {
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+  background-color: #F7F7F0;
   /* Updated Border: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
   border-bottom: 1px solid #8C6C5F;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
@@ -72,8 +72,8 @@
 }
 
 .header.scrolled .icon-btn {
-  /* Updated Icon Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Icon Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   filter: none;
 }
 
@@ -123,8 +123,8 @@
 }
 
 .header.scrolled .cart-btn {
-  /* Updated Cart Border: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  border: 1px solid #4C2E2E;
+  /* Updated Cart Border: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  border: 1px solid #6F3132;
   filter: none;
 }
 
@@ -142,8 +142,8 @@
 .header.scrolled .cart-btn:hover {
   /* Updated Cart Hover BG: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
   background-color: #6F3132;
-  /* Updated Cart Hover Text: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  color: #D5C6AF;
+  /* Updated Cart Hover Text: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  color: #F7F7F0;
 }
 
 .header.scrolled.black-scrolled .cart-btn:hover {
@@ -171,8 +171,8 @@
 .header.scrolled .cart-count {
   /* Updated Cart Count BG: Rich Burnt Orange/Sienna (#A15F22) - was #ffffff */
   background-color: #A15F22;
-  /* Updated Cart Count Text: Pale Beige/Cream (#D5C6AF) - was #1a1a1a */
-  color: #D5C6AF;
+  /* Updated Cart Count Text: Pale Beige/Cream (#F7F7F0) - was #1a1a1a */
+  color: #F7F7F0;
 }
 
 .header.scrolled.black-scrolled .cart-count {
@@ -187,14 +187,14 @@
 }
 
 .header.scrolled .header-main {
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-  background-color: #D5C6AF !important;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+  background-color: #F7F7F0 !important;
   padding: 15px 0 12px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header.scrolled.black-scrolled .header-main {
-  background-color: #D5C6AF !important;
+  background-color: #F7F7F0 !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -241,8 +241,8 @@
 }
 
 .header.scrolled .auth-indicator {
-  /* Updated Text Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Text Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .header.scrolled.black-scrolled .auth-indicator {
@@ -351,8 +351,8 @@
 }
 
 .header.scrolled .nav-link {
-  /* Updated Nav Link Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Nav Link Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   text-shadow: none;
 }
 
@@ -393,8 +393,8 @@
   top: calc(100% + 0px);
   left: -20px;
   margin-top: 0;
-  /* DROPDOWN BG: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF;
+  /* DROPDOWN BG: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   backdrop-filter: blur(10px);
   /* DROPDOWN BORDER: Muted Clay/Taupe (#8C6C5F) */
   border: 1px solid #8C6C5F;
@@ -408,8 +408,8 @@
 }
 
 .header.scrolled .dropdown-menu {
-  /* DROPDOWN BG: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-  background-color: #D5C6AF;
+  /* DROPDOWN BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+  background-color: #F7F7F0;
   backdrop-filter: none;
   /* DROPDOWN BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
   border: 1px solid #8C6C5F;
@@ -442,8 +442,8 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  /* DROPDOWN ITEM TEXT: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* DROPDOWN ITEM TEXT: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   transition: background-color 0.3s ease;
   position: relative;
   cursor: pointer;
@@ -475,8 +475,8 @@
   display: block;
   padding: 8px 0;
   font-size: 0.7rem;
-  /* DROPDOWN SUBITEM TEXT: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
-  color: #4C2E2E;
+  /* DROPDOWN SUBITEM TEXT: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
   text-transform: none;
   letter-spacing: 0.05em;
 }
@@ -526,8 +526,8 @@
 }
 
 .header.scrolled .hamburger {
-  /* HAMBURGER COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  background-color: #4C2E2E;
+  /* HAMBURGER COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  background-color: #6F3132;
 }
 
 .hamburger.open:nth-child(1) {
@@ -635,15 +635,15 @@
 
 @media (max-width: 768px) {
   .header {
-    /* MOBILE BG: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-    background-color: #D5C6AF !important;
+    /* MOBILE BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
     /* MOBILE BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
     border-bottom: 1px solid #8C6C5F;
   }
 
   .header-main {
-    /* MOBILE BG: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-    background-color: #D5C6AF !important;
+    /* MOBILE BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
     padding: 15px 0;
   }
 
@@ -686,25 +686,25 @@
   .icon-btn {
     width: 32px;
     height: 32px;
-    /* MOBILE ICON COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    color: #4C2E2E;
+    /* MOBILE ICON COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132;
     filter: none;
   }
 
   .header.scrolled .icon-btn {
-    /* MOBILE SCROLLED ICON COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    color: #4C2E2E;
+    /* MOBILE SCROLLED ICON COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132;
   }
 
   .cart-btn {
-    /* MOBILE CART BORDER: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    border: 1px solid #4C2E2E;
+    /* MOBILE CART BORDER: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    border: 1px solid #6F3132;
     filter: none;
   }
 
   .header.scrolled .cart-btn {
-    /* MOBILE SCROLLED CART BORDER: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    border: 1px solid #4C2E2E;
+    /* MOBILE SCROLLED CART BORDER: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    border: 1px solid #6F3132;
   }
   
   .icon-btn svg {
@@ -725,13 +725,13 @@
   }
 
   .hamburger {
-    /* MOBILE HAMBURGER COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    background-color: #4C2E2E;
+    /* MOBILE HAMBURGER COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    background-color: #6F3132;
   }
 
   .header.scrolled .hamburger {
-    /* MOBILE SCROLLED HAMBURGER COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    background-color: #4C2E2E;
+    /* MOBILE SCROLLED HAMBURGER COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    background-color: #6F3132;
   }
   
   .nav {
@@ -739,8 +739,8 @@
     top: 70px;
     left: 0;
     right: 0;
-    /* MOBILE NAV BG: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-    background-color: #D5C6AF !important;
+    /* MOBILE NAV BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
     flex-direction: column;
     align-items: flex-start;
     padding: 30px 20px;
@@ -772,14 +772,14 @@
     width: 100%;
     /* MOBILE NAV LINK BORDER: Muted Clay/Taupe (#8C6C5F) - was #f0f0f0 */
     border-bottom: 1px solid #8C6C5F;
-    /* MOBILE NAV LINK COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    color: #4C2E2E !important;
+    /* MOBILE NAV LINK COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132 !important;
     text-shadow: none !important;
   }
 
   .header.scrolled .nav-link {
-    /* MOBILE SCROLLED NAV LINK COLOR: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    color: #4C2E2E !important;
+    /* MOBILE SCROLLED NAV LINK COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132 !important;
   }
   
   .dropdown-menu {
@@ -793,14 +793,14 @@
     width: 100%;
     opacity: 1;
     animation: none;
-    /* MOBILE DROPDOWN BG: Pale Beige/Cream (#D5C6AF) - was #f5f5f5 */
-    background-color: #D5C6AF !important;
+    /* MOBILE DROPDOWN BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
   }
 
   .dropdown-item,
   .dropdown-subitem {
-    /* MOBILE DROPDOWN TEXT: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-    color: #4C2E2E !important;
+    /* MOBILE DROPDOWN TEXT: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132 !important;
   }
 }
 
@@ -829,8 +829,8 @@
 
 .search-input-wrapper {
   position: relative;
-  /* SEARCH BG: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* SEARCH BG: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
   /* SEARCH BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
   border: 1px solid #8C6C5F;
   padding: 15px 50px 15px 20px;
@@ -843,8 +843,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  /* SEARCH TEXT: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* SEARCH TEXT: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   border: none;
   outline: none;
   background: transparent;
@@ -862,8 +862,8 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  /* SEARCH CLOSE ICON: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* SEARCH CLOSE ICON: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   cursor: pointer;
   padding: 5px;
   display: flex;

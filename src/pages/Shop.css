@@ -5,8 +5,8 @@
 
 .shop-products {
   padding: 80px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
 }
 
 .products-category-title {
@@ -29,8 +29,8 @@
   letter-spacing: 0.01em;
   margin-bottom: 40px;
   text-align: center;
-  /* Updated Description Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
-  color: #4C2E2E;
+  /* Updated Description Color: Deep Coffee Brown (#6F3132) - was #6b6b6b */
+  color: #6F3132;
   line-height: 1.6;
   max-width: 600px;
   margin-left: auto;
@@ -92,8 +92,8 @@
   padding-bottom: 133%;
   overflow: hidden;
   margin-bottom: 15px;
-  /* Updated Placeholder/Wrapper BG: Pale Beige/Cream (#D5C6AF) - was #f8f8f8 */
-  background-color: #D5C6AF;
+  /* Updated Placeholder/Wrapper BG: Pale Beige/Cream (#F7F7F0) - was #f8f8f8 */
+  background-color: #F7F7F0;
   cursor: pointer;
 }
 
@@ -117,8 +117,8 @@
   left: 10px;
   /* Updated Badge BG (Accent): Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
   background-color: #A15F22;
-  /* Updated Badge Text: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  color: #D5C6AF;
+  /* Updated Badge Text: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  color: #F7F7F0;
   font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 500;
@@ -140,10 +140,10 @@
   letter-spacing: 0.05em;
   text-transform: none;
   padding: 12px 20px;
-  /* Updated Button BG (Default): Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background: #D5C6AF;
-  /* Updated Button Text: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Button BG (Default): Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background: #F7F7F0;
+  /* Updated Button Text: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   border: none;
   /* Updated Button Border: Muted Clay/Taupe (#8C6C5F) - was #e8e8e8 */
   border-top: 1px solid #8C6C5F;
@@ -198,16 +198,16 @@
 .price-value {
   font-size: 0.9375rem;
   font-weight: 400;
-  /* Updated Price Value Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Price Value Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .no-products {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  /* Updated No Products Text Color: Deep Coffee Brown (#4C2E2E) - was #6b6b6b */
-  color: #4C2E2E;
+  /* Updated No Products Text Color: Deep Coffee Brown (#6F3132) - was #6b6b6b */
+  color: #6F3132;
   text-align: center;
   padding: 60px 20px;
 }

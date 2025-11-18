@@ -53,7 +53,7 @@ const Community = () => {
   return (
     <div className="community-page page-with-transparent-header">
       <HeroVideo 
-        title='Community / Collaboration' 
+        title='Community' 
         subtitle='Building bridges between tradition and innovation, one collaboration at a time.'
         fullHeight={true}
       />

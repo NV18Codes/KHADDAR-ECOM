@@ -23,8 +23,8 @@
 .community-hero {
   padding: 100px 0;
   text-align: center;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
 }
 
 .hero-content-container {
@@ -48,16 +48,16 @@
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-style: italic;
 }
 
 .community-intro {
   position: relative;
   z-index: 2;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) */
-  background: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background: #F7F7F0;
   margin-top: 0;
   padding-top: 100px;
   /* FIX 1: Ensures block content inside is centered */
@@ -73,8 +73,8 @@
 .intro-text {
   font-size: 1.25rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   text-align: center;
 }
@@ -132,8 +132,8 @@
   width: 100%;
   padding-bottom: 75%;
   overflow: hidden;
-  /* Image Placeholder/Background: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF;
+  /* Image Placeholder/Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
 }
 
 .collaboration-image {
@@ -171,8 +171,8 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   font-weight: 400;
-  /* Title Text Color: Pale Beige/Cream (#D5C6AF) */
-  color: #D5C6AF;
+  /* Title Text Color: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   letter-spacing: 0.03em;
 }
 
@@ -201,8 +201,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Description Text Color: Pale Beige/Cream (#D5C6AF) */
-  color: #D5C6AF;
+  /* Description Text Color: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   font-weight: 300;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -245,8 +245,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
-  /* Quote Text Color: Pale Beige/Cream (#D5C6AF) */
-  color: #D5C6AF;
+  /* Quote Text Color: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   text-align: center;
   max-width: 900px;
   padding: 0 40px;
@@ -255,8 +255,8 @@
 
 .community-cta {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   text-align: center;
 }
 
@@ -279,8 +279,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   margin-bottom: 40px;
 }
@@ -296,8 +296,8 @@
   border: 1px solid #6F3132;
   /* Updated Button Background: Warm Sand/Tan (#B38A6A) */
   background: #B38A6A;
-  /* Updated Button Text: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Button Text: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   display: inline-block;
   transition: all 0.3s ease;
 }
@@ -310,8 +310,8 @@
 .cta-button:hover {
   /* Updated Button Hover Background: Dark Maroon/Reddish Brown (#6F3132) */
   background: #6F3132;
-  /* Updated Button Hover Text: Pale Beige/Cream (#D5C6AF) */
-  color: #D5C6AF;
+  /* Updated Button Hover Text: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
 }
 
 /* Community Modal */
@@ -331,8 +331,8 @@
 }
 
 .community-modal {
-  /* Updated Modal Background: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF;
+  /* Updated Modal Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   border-radius: 8px;
   padding: 50px 40px;
   max-width: 500px;
@@ -354,8 +354,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Updated Close Button Color: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Close Button Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   transition: color 0.3s ease, transform 0.3s ease;
   border-radius: 50%;
 }
@@ -381,8 +381,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  /* Updated Modal Text Color: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Modal Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   text-align: center;
   margin-bottom: 30px;
@@ -406,10 +406,10 @@
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  /* Updated Input Text Color: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
-  /* Updated Input BG: Pale Beige/Cream (#D5C6AF) */
-  background-color: #D5C6AF;
+  /* Updated Input Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
+  /* Updated Input BG: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
 }
@@ -434,8 +434,8 @@
   padding: 15px 40px;
   /* Updated Button BG: Dark Maroon/Reddish Brown (#6F3132) */
   background-color: #6F3132;
-  /* Updated Button Text: Pale Beige/Cream (#D5C6AF) */
-  color: #D5C6AF;
+  /* Updated Button Text: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -446,8 +446,8 @@
 .community-modal-button:hover {
   /* Updated Button Hover BG: Warm Sand/Tan (#B38A6A) */
   background-color: #B38A6A;
-  /* Updated Button Hover Text: Deep Coffee Brown (#4C2E2E) */
-  color: #4C2E2E;
+  /* Updated Button Hover Text: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   transform: translateY(-1px);
 }
 

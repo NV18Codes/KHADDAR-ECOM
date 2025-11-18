@@ -14,16 +14,16 @@
 .contact-content {
   position: relative;
   z-index: 2;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background: #F7F7F0;
   padding-top: 100px;
 }
 
 .contact-hero {
   padding: 80px 0;
   text-align: center;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #fafafa */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #fafafa */
+  background-color: #F7F7F0;
 }
 
 .hero-wrapper {
@@ -47,14 +47,14 @@
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  /* Updated Subtitle Text Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
-  color: #4C2E2E;
+  /* Updated Subtitle Text Color: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
 }
 
 .contact-content {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
 }
 
 .contact-grid {
@@ -96,8 +96,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.8;
-  /* Updated Body Text Color: Deep Coffee Brown (#4C2E2E) - was #2a2a2a */
-  color: #4C2E2E;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
   font-weight: 300;
 }
 
@@ -115,8 +115,8 @@
 .info-link {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  /* Updated Link Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
-  color: #4C2E2E;
+  /* Updated Link Color: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
   font-weight: 300;
   transition: color 0.3s ease;
   text-decoration: none;
@@ -131,8 +131,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.8;
-  /* Updated Address Text Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
-  color: #4C2E2E;
+  /* Updated Address Text Color: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
   font-weight: 300;
 }
 
@@ -145,8 +145,8 @@
 .social-link-contact {
   font-family: 'Inter', sans-serif;
   font-size: 0.9375rem;
-  /* Updated Social Link Color: Deep Coffee Brown (#4C2E2E) - was #4a4a4a */
-  color: #4C2E2E;
+  /* Updated Social Link Color: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
   font-weight: 300;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -159,7 +159,7 @@
 
 .contact-form-wrapper {
   /* Updated Form Wrapper Background: Muted Clay/Taupe (#8C6C5F) - was #fafafa */
-  background-color: #D5C6AF;
+  background-color: #F7F7F0;
   padding: 50px;
 }
 
@@ -169,8 +169,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 40px;
-  /* Updated Form Heading Color: Pale Beige/Cream (#D5C6AF) - was #1a1a1a */
-  color: #D5C6AF;
+  /* Updated Form Heading Color: Pale Beige/Cream (#F7F7F0) - was #1a1a1a */
+  color: #F7F7F0;
 }
 
 .contact-form {
@@ -191,8 +191,8 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  /* Updated Form Label Color: Pale Beige/Cream (#D5C6AF) - was #1a1a1a */
-  color: #D5C6AF;
+  /* Updated Form Label Color: Pale Beige/Cream (#F7F7F0) - was #1a1a1a */
+  color: #F7F7F0;
 }
 
 .form-input,
@@ -202,10 +202,10 @@
   padding: 15px;
   /* Updated Input Border: Dark Maroon/Reddish Brown (#6F3132) - was #e8e8e8 */
   border: 1px solid #6F3132;
-  /* Updated Input Background: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  background-color: #D5C6AF;
-  /* Updated Input Text Color: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Input Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
+  /* Updated Input Text Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   transition: border-color 0.3s ease;
   font-weight: 300;
 }
@@ -233,8 +233,8 @@
   border: 1px solid #6F3132;
   /* Updated Button Background: Warm Sand/Tan (#B38A6A) - was transparent */
   background: #B38A6A;
-  /* Updated Button Text: Deep Coffee Brown (#4C2E2E) - was #1a1a1a */
-  color: #4C2E2E;
+  /* Updated Button Text: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
@@ -244,8 +244,8 @@
 .form-button:hover {
   /* Updated Button Hover Background: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
   background: #6F3132;
-  /* Updated Button Hover Text: Pale Beige/Cream (#D5C6AF) - was #ffffff */
-  color: #D5C6AF;
+  /* Updated Button Hover Text: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  color: #F7F7F0;
 }
 
 .contact-image-section {
