@@ -23,7 +23,8 @@
 .community-hero {
   padding: 100px 0;
   text-align: center;
-  background-color: #fafafa;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
 }
 
 .hero-content-container {
@@ -38,7 +39,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
+  color: #6F3132;
 }
 
 .community-subtitle {
@@ -46,34 +48,46 @@
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: #4a4a4a;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-style: italic;
 }
 
 .community-intro {
   position: relative;
   z-index: 2;
-  background: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background: #F7F7F0;
   margin-top: 0;
   padding-top: 100px;
+  /* FIX 1: Ensures block content inside is centered */
+  text-align: center; 
 }
 
 .intro-content {
   max-width: 900px;
-  margin: 0 auto;
+  /* FIX 2: Explicitly ensure horizontal centering */
+  margin: 0 auto !important;
 }
 
 .intro-text {
   font-size: 1.25rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   text-align: center;
 }
 
 .collaborations-section {
   padding: 100px 0;
-  background-color: #fafafa;
+  /* Updated Section Background: Muted Clay/Taupe (#8C6C5F) */
+  background-color: #8C6C5F;
+}
+
+/* FIX: Target the heading to prevent margin collapse/white gap */
+.collaborations-section .container .section-heading {
+    margin-top: 0;
 }
 
 .collaborations-grid {
@@ -118,7 +132,8 @@
   width: 100%;
   padding-bottom: 75%;
   overflow: hidden;
-  background-color: #f8f8f8;
+  /* Image Placeholder/Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
 }
 
 .collaboration-image {
@@ -156,7 +171,8 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   font-weight: 400;
-  color: #ffffff;
+  /* Title Text Color: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   letter-spacing: 0.03em;
 }
 
@@ -185,7 +201,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  color: #ffffff;
+  /* Description Text Color: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   font-weight: 300;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -228,7 +245,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
-  color: #ffffff;
+  /* Quote Text Color: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   text-align: center;
   max-width: 900px;
   padding: 0 40px;
@@ -237,7 +255,8 @@
 
 .community-cta {
   padding: 100px 0;
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   text-align: center;
 }
 
@@ -252,14 +271,16 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
+  color: #6F3132;
 }
 
 .cta-text {
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   margin-bottom: 40px;
 }
@@ -271,9 +292,12 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 15px 50px;
-  border: 1px solid #1a1a1a;
-  background: transparent;
-  color: #1a1a1a;
+  /* Updated Button Border: Dark Maroon/Reddish Brown (#6F3132) */
+  border: 1px solid #6F3132;
+  /* Updated Button Background: Warm Sand/Tan (#B38A6A) */
+  background: #B38A6A;
+  /* Updated Button Text: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   display: inline-block;
   transition: all 0.3s ease;
 }
@@ -284,8 +308,10 @@
 }
 
 .cta-button:hover {
-  background: #1a1a1a;
-  color: #ffffff;
+  /* Updated Button Hover Background: Dark Maroon/Reddish Brown (#6F3132) */
+  background: #6F3132;
+  /* Updated Button Hover Text: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
 }
 
 /* Community Modal */
@@ -305,7 +331,8 @@
 }
 
 .community-modal {
-  background-color: #ffffff;
+  /* Updated Modal Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   border-radius: 8px;
   padding: 50px 40px;
   max-width: 500px;
@@ -327,13 +354,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1a1a1a;
+  /* Updated Close Button Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   transition: color 0.3s ease, transform 0.3s ease;
   border-radius: 50%;
 }
 
 .community-modal-close:hover {
-  color: #6b6b6b;
+  /* Updated Close Button Hover: Rich Burnt Orange/Sienna (#A15F22) */
+  color: #A15F22;
   transform: rotate(90deg);
 }
 
@@ -343,7 +372,8 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 15px;
-  color: #1a1a1a;
+  /* Updated Modal Title Color: Dark Maroon/Reddish Brown (#6F3132) */
+  color: #6F3132;
   text-align: center;
 }
 
@@ -351,7 +381,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4a4a4a;
+  /* Updated Modal Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   text-align: center;
   margin-bottom: 30px;
@@ -370,23 +401,28 @@
 .community-modal-input {
   width: 100%;
   padding: 15px 20px;
-  border: 1px solid #e0e0e0;
+  /* Updated Input Border: Muted Clay/Taupe (#8C6C5F) */
+  border: 1px solid #8C6C5F;
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  /* Updated Input Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
+  /* Updated Input BG: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
 }
 
 .community-modal-input:focus {
   outline: none;
-  border-color: #1a1a1a;
+  /* Updated Input Focus Border: Rich Burnt Orange/Sienna (#A15F22) */
+  border-color: #A15F22;
 }
 
 .community-modal-input::placeholder {
-  color: #b0b0b0;
+  /* Updated Input Placeholder: Muted Clay/Taupe (#8C6C5F) */
+  color: #8C6C5F;
 }
 
 .community-modal-button {
@@ -396,8 +432,10 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 15px 40px;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  /* Updated Button BG: Dark Maroon/Reddish Brown (#6F3132) */
+  background-color: #6F3132;
+  /* Updated Button Text: Pale Beige/Cream (#F7F7F0) */
+  color: #F7F7F0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -406,7 +444,10 @@
 }
 
 .community-modal-button:hover {
-  background-color: #4a4a4a;
+  /* Updated Button Hover BG: Warm Sand/Tan (#B38A6A) */
+  background-color: #B38A6A;
+  /* Updated Button Hover Text: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   transform: translateY(-1px);
 }
 
@@ -462,7 +503,7 @@
 @media (max-width: 992px) {
   .collaborations-grid {
     gap: 45px;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -558,7 +599,7 @@
     padding: 25px 15px;
   }
   
-  .collaboration-description-text {
+.collaboration-description-text {
     font-size: 0.9375rem;
     line-height: 1.6;
   }
@@ -645,4 +686,3 @@
     height: 32px;
   }
 }
-

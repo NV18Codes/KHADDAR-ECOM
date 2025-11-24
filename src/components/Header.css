@@ -14,8 +14,10 @@
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0; 
+  /* Updated Border: Muted Clay/Taupe (#8C6C5F) */
+  border-bottom: 1px solid #8C6C5F;
   backdrop-filter: blur(10px);
 }
 
@@ -30,12 +32,15 @@
 }
 
 .header.scrolled {
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #e0e0e0;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+  background-color: #F7F7F0;
+  /* Updated Border: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+  border-bottom: 1px solid #8C6C5F;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .header.scrolled.black-scrolled {
+  /* Kept dark variant as is, unless client specifies custom dark colors */
   background-color: #1a1a1a;
   border-bottom: 1px solid #2a2a2a;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
@@ -67,7 +72,8 @@
 }
 
 .header.scrolled .icon-btn {
-  color: #1a1a1a;
+  /* Updated Icon Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   filter: none;
 }
 
@@ -83,7 +89,8 @@
 }
 
 .header.scrolled .icon-btn:hover {
-  color: #1a1a1a;
+  /* Updated Icon Hover Color: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
   opacity: 0.8;
 }
 
@@ -116,7 +123,8 @@
 }
 
 .header.scrolled .cart-btn {
-  border: 1px solid #1a1a1a;
+  /* Updated Cart Border: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  border: 1px solid #6F3132;
   filter: none;
 }
 
@@ -132,8 +140,10 @@
 }
 
 .header.scrolled .cart-btn:hover {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  /* Updated Cart Hover BG: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  background-color: #6F3132;
+  /* Updated Cart Hover Text: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  color: #F7F7F0;
 }
 
 .header.scrolled.black-scrolled .cart-btn:hover {
@@ -159,8 +169,10 @@
 }
 
 .header.scrolled .cart-count {
-  background-color: #ffffff;
-  color: #1a1a1a;
+  /* Updated Cart Count BG: Rich Burnt Orange/Sienna (#A15F22) - was #ffffff */
+  background-color: #A15F22;
+  /* Updated Cart Count Text: Pale Beige/Cream (#F7F7F0) - was #1a1a1a */
+  color: #F7F7F0;
 }
 
 .header.scrolled.black-scrolled .cart-count {
@@ -175,13 +187,14 @@
 }
 
 .header.scrolled .header-main {
-  background-color: #f5f5f5 !important;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+  background-color: #F7F7F0 !important;
   padding: 15px 0 12px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header.scrolled.black-scrolled .header-main {
-  background-color: #1a1a1a !important;
+  background-color: #F7F7F0 !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -228,7 +241,8 @@
 }
 
 .header.scrolled .auth-indicator {
-  color: #1a1a1a;
+  /* Updated Text Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .header.scrolled.black-scrolled .auth-indicator {
@@ -262,11 +276,13 @@
 }
 
 .header.scrolled .header-welcome-text {
-  color: #6b6b6b;
+  /* Kept subtle color for welcome text: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
 }
 
 .header.scrolled .header-welcome-name {
-  color: #1a1a1a;
+  /* Updated Name Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .header.scrolled.black-scrolled .header-welcome-text {
@@ -335,7 +351,8 @@
 }
 
 .header.scrolled .nav-link {
-  color: #1a1a1a;
+  /* Updated Nav Link Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   text-shadow: none;
 }
 
@@ -350,7 +367,8 @@
 }
 
 .header.scrolled .nav-link:hover {
-  color: #6b6b6b;
+  /* Updated Nav Link Hover: Rich Burnt Orange/Sienna (#A15F22) - was #6b6b6b */
+  color: #A15F22;
   text-shadow: none;
 }
 
@@ -375,9 +393,11 @@
   top: calc(100% + 0px);
   left: -20px;
   margin-top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  /* DROPDOWN BG: Pale Beige/Cream (#F7F7F0) */
+  background-color: #F7F7F0;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(232, 232, 232, 0.5);
+  /* DROPDOWN BORDER: Muted Clay/Taupe (#8C6C5F) */
+  border: 1px solid #8C6C5F;
   min-width: 250px;
   padding: 15px 0;
   opacity: 0;
@@ -388,9 +408,11 @@
 }
 
 .header.scrolled .dropdown-menu {
-  background-color: #f5f5f5;
+  /* DROPDOWN BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+  background-color: #F7F7F0;
   backdrop-filter: none;
-  border: 1px solid #e0e0e0;
+  /* DROPDOWN BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+  border: 1px solid #8C6C5F;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -420,7 +442,8 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #1a1a1a;
+  /* DROPDOWN ITEM TEXT: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   transition: background-color 0.3s ease;
   position: relative;
   cursor: pointer;
@@ -428,7 +451,8 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f8f8f8;
+  /* DROPDOWN ITEM HOVER BG: Warm Sand/Tan (#B38A6A) - was #f8f8f8 */
+  background-color: #B38A6A;
 }
 
 .dropdown-submenu {
@@ -451,13 +475,15 @@
   display: block;
   padding: 8px 0;
   font-size: 0.7rem;
-  color: #4a4a4a;
+  /* DROPDOWN SUBITEM TEXT: Deep Coffee Brown (#6F3132) - was #4a4a4a */
+  color: #6F3132;
   text-transform: none;
   letter-spacing: 0.05em;
 }
 
 .dropdown-subitem:hover {
-  color: #1a1a1a;
+  /* DROPDOWN SUBITEM HOVER: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .header.scrolled.black-scrolled .dropdown-item,
@@ -500,7 +526,8 @@
 }
 
 .header.scrolled .hamburger {
-  background-color: #1a1a1a;
+  /* HAMBURGER COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  background-color: #6F3132;
 }
 
 .hamburger.open:nth-child(1) {
@@ -608,12 +635,15 @@
 
 @media (max-width: 768px) {
   .header {
-    background-color: #f5f5f5 !important;
-    border-bottom: 1px solid #e0e0e0;
+    /* MOBILE BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
+    /* MOBILE BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+    border-bottom: 1px solid #8C6C5F;
   }
 
   .header-main {
-    background-color: #f5f5f5 !important;
+    /* MOBILE BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
     padding: 15px 0;
   }
 
@@ -656,21 +686,25 @@
   .icon-btn {
     width: 32px;
     height: 32px;
-    color: #1a1a1a;
+    /* MOBILE ICON COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132;
     filter: none;
   }
 
   .header.scrolled .icon-btn {
-    color: #1a1a1a;
+    /* MOBILE SCROLLED ICON COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132;
   }
 
   .cart-btn {
-    border: 1px solid #1a1a1a;
+    /* MOBILE CART BORDER: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    border: 1px solid #6F3132;
     filter: none;
   }
 
   .header.scrolled .cart-btn {
-    border: 1px solid #1a1a1a;
+    /* MOBILE SCROLLED CART BORDER: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    border: 1px solid #6F3132;
   }
   
   .icon-btn svg {
@@ -691,11 +725,13 @@
   }
 
   .hamburger {
-    background-color: #1a1a1a;
+    /* MOBILE HAMBURGER COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    background-color: #6F3132;
   }
 
   .header.scrolled .hamburger {
-    background-color: #1a1a1a;
+    /* MOBILE SCROLLED HAMBURGER COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    background-color: #6F3132;
   }
   
   .nav {
@@ -703,11 +739,13 @@
     top: 70px;
     left: 0;
     right: 0;
-    background-color: #f5f5f5 !important;
+    /* MOBILE NAV BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
     flex-direction: column;
     align-items: flex-start;
     padding: 30px 20px;
-    border-top: 1px solid #e0e0e0;
+    /* MOBILE NAV BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+    border-top: 1px solid #8C6C5F;
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.3s ease;
@@ -732,31 +770,37 @@
     font-size: 0.9rem;
     padding: 15px 0;
     width: 100%;
-    border-bottom: 1px solid #f0f0f0;
-    color: #1a1a1a !important;
+    /* MOBILE NAV LINK BORDER: Muted Clay/Taupe (#8C6C5F) - was #f0f0f0 */
+    border-bottom: 1px solid #8C6C5F;
+    /* MOBILE NAV LINK COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132 !important;
     text-shadow: none !important;
   }
 
   .header.scrolled .nav-link {
-    color: #1a1a1a !important;
+    /* MOBILE SCROLLED NAV LINK COLOR: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132 !important;
   }
   
   .dropdown-menu {
     position: static;
     margin-top: 10px;
     border: none;
-    border-left: 2px solid #e8e8e8;
+    /* MOBILE DROPDOWN BORDER: Dark Maroon/Reddish Brown (#6F3132) - was #e8e8e8 */
+    border-left: 2px solid #6F3132;
     padding: 10px 0 10px 15px;
     min-width: auto;
     width: 100%;
     opacity: 1;
     animation: none;
-    background-color: #f5f5f5 !important;
+    /* MOBILE DROPDOWN BG: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
+    background-color: #F7F7F0 !important;
   }
 
   .dropdown-item,
   .dropdown-subitem {
-    color: #1a1a1a !important;
+    /* MOBILE DROPDOWN TEXT: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+    color: #6F3132 !important;
   }
 }
 
@@ -785,8 +829,10 @@
 
 .search-input-wrapper {
   position: relative;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
+  /* SEARCH BG: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
+  /* SEARCH BORDER: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+  border: 1px solid #8C6C5F;
   padding: 15px 50px 15px 20px;
   display: flex;
   align-items: center;
@@ -797,14 +843,16 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #1a1a1a;
+  /* SEARCH TEXT: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   border: none;
   outline: none;
   background: transparent;
 }
 
 .search-input::placeholder {
-  color: #b0b0b0;
+  /* SEARCH PLACEHOLDER: Muted Clay/Taupe (#8C6C5F) - was #b0b0b0 */
+  color: #8C6C5F;
 }
 
 .search-close-btn {
@@ -814,7 +862,8 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #1a1a1a;
+  /* SEARCH CLOSE ICON: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   cursor: pointer;
   padding: 5px;
   display: flex;
@@ -824,7 +873,8 @@
 }
 
 .search-close-btn:hover {
-  color: #6b6b6b;
+  /* SEARCH CLOSE ICON HOVER: Rich Burnt Orange/Sienna (#A15F22) - was #6b6b6b */
+  color: #A15F22;
 }
 
 @keyframes slideDown {
@@ -893,4 +943,3 @@
     max-height: calc(100vh - 65px);
   }
 }
-

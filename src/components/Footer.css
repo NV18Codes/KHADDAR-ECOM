@@ -1,8 +1,10 @@
 .footer {
-  background-color: #f8f8f8;
-  border-top: 1px solid #e8e8e8;
+  /* BACKGROUND: Muted Clay/Taupe (#8C6C5F) */
+  background-color: #8C6C5F;
+  /* BORDER/DIVIDER: Dark Maroon/Reddish Brown (#6F3132) - Use for border-top if desired, but removed border for clean look */
+  border-top: none; 
   padding: 60px 0 30px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
 .footer-container {
@@ -34,6 +36,7 @@
   width: auto;
   max-width: 280px;
   object-fit: contain;
+  /* Optional: Adjust logo color/filter if it's a monochrome image, otherwise leave it */
 }
 
 .footer-heading {
@@ -42,14 +45,16 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
-  color: #1a1a1a;
+  /* HEADING TEXT: Pale Beige/Cream (#F7F7F0) - was #1a1a1a */
+  color: #F7F7F0;
 }
 
 .footer-text {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #4a4a4a;
+  /* BODY TEXT: Pale Beige/Cream (#F7F7F0) - was #4a4a4a */
+  color: #F7F7F0;
   font-weight: 300;
 }
 
@@ -62,13 +67,15 @@
 .footer-links li a {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  color: #4a4a4a;
+  /* LINK COLOR: Pale Beige/Cream (#F7F7F0) - was #4a4a4a */
+  color: #F7F7F0;
   font-weight: 300;
   transition: color 0.3s ease;
 }
 
 .footer-links li a:hover {
-  color: #1a1a1a;
+  /* LINK HOVER: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .social-links {
@@ -80,13 +87,15 @@
 .social-link {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  color: #4a4a4a;
+  /* SOCIAL LINK COLOR: Pale Beige/Cream (#F7F7F0) - was #4a4a4a */
+  color: #F7F7F0;
   font-weight: 300;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #1a1a1a;
+  /* SOCIAL LINK HOVER: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .footer-bottom {
@@ -94,13 +103,15 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
-  border-top: 1px solid #e8e8e8;
+  /* DIVIDER: Dark Maroon/Reddish Brown (#6F3132) - was #e8e8e8 */
+  border-top: 1px solid #6F3132;
 }
 
 .footer-copyright {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  color: #6b6b6b;
+  /* COPYRIGHT TEXT: Pale Beige/Cream (#F7F7F0) - was #6b6b6b */
+  color: #F7F7F0;
   font-weight: 300;
 }
 
@@ -113,17 +124,20 @@
 .footer-legal a {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  color: #6b6b6b;
+  /* LEGAL LINK COLOR: Pale Beige/Cream (#F7F7F0) - was #6b6b6b */
+  color: #F7F7F0;
   font-weight: 300;
   transition: color 0.3s ease;
 }
 
 .footer-legal a:hover {
-  color: #1a1a1a;
+  /* LEGAL LINK HOVER: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .footer-legal span {
-  color: #6b6b6b;
+  /* SEPARATOR: Pale Beige/Cream (#F7F7F0) - was #6b6b6b */
+  color: #F7F7F0;
   font-size: 0.75rem;
 }
 
@@ -210,4 +224,3 @@
     font-size: 0.8125rem;
   }
 }
-

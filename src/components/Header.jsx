@@ -247,7 +247,7 @@ const Header = () => {
                   )}
                 </div>
 
-                <Link to="/community" className="nav-link" onClick={closeMenu}>COMMUNITY / COLLABORATION</Link>
+                <Link to="/community" className="nav-link" onClick={closeMenu}>COMMUNITY</Link>
                 <Link to="/sustainability" className="nav-link" onClick={closeMenu}>SUSTAINABILITY</Link>
                 <Link to="/contact" className="nav-link" onClick={closeMenu}>CONTACT US</Link>
               </>

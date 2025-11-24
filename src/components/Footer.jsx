@@ -38,7 +38,7 @@ const Footer = () => {
               <li><Link to="/collections" onClick={(e) => handleLinkClick(e, '/collections')}>Collections</Link></li>
               <li><Link to="/shop/mens-wear" onClick={(e) => handleLinkClick(e, '/shop/mens-wear')}>Men's Wear</Link></li>
               <li><Link to="/shop/womens-wear" onClick={(e) => handleLinkClick(e, '/shop/womens-wear')}>Women's Wear</Link></li>
-              <li><Link to="/community" onClick={(e) => handleLinkClick(e, '/community')}>Community / Collaboration</Link></li>
+              <li><Link to="/community" onClick={(e) => handleLinkClick(e, '/community')}>Community</Link></li>
               <li><Link to="/sustainability" onClick={(e) => handleLinkClick(e, '/sustainability')}>Sustainability</Link></li>
             </ul>
           </div>

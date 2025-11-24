@@ -1,7 +1,8 @@
 .product-detail-page {
   padding-top: 160px;
   min-height: calc(100vh - 100px);
-  background-color: #ffffff;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
   padding-bottom: 80px;
 }
 
@@ -9,24 +10,28 @@
   margin-bottom: 30px;
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  color: #6b6b6b;
+  /* Updated Text Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .breadcrumb a {
-  color: #6b6b6b;
+  /* Updated Link Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .breadcrumb a:hover {
-  color: #1a1a1a;
+  /* Updated Link Hover: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .breadcrumb span {
-  color: #b0b0b0;
+  /* Updated Divider Color: Muted Clay/Taupe (#8C6C5F) - was #b0b0b0 */
+  color: #8C6C5F;
 }
 
 .product-detail-container {
@@ -49,7 +54,8 @@
   width: 100%;
   padding-bottom: 133%;
   overflow: hidden;
-  background-color: #f8f8f8;
+  /* Updated Placeholder BG: Pale Beige/Cream (#F7F7F0) - was #f8f8f8 */
+  background-color: #F7F7F0;
 }
 
 .main-product-image {
@@ -65,8 +71,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #e0e0e0;
+  /* Updated Nav BG: Pale Beige/Cream (#F7F7F0) - was white */
+  background-color: rgba(213, 198, 175, 0.9); /* D5C6AF with opacity */
+  /* Updated Border: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+  border: 1px solid #8C6C5F;
   width: 40px;
   height: 40px;
   display: flex;
@@ -75,7 +83,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 2;
-  color: #1a1a1a;
+  /* Updated Nav Icon Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .image-nav-btn.prev-btn {
@@ -87,16 +96,20 @@
 }
 
 .image-nav-btn:hover {
-  background-color: #ffffff;
-  border-color: #1a1a1a;
+  /* Updated Nav Hover BG: Warm Sand/Tan (#B38A6A) - was #ffffff */
+  background-color: #B38A6A;
+  /* Updated Nav Hover Border: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  border-color: #A15F22;
 }
 
 .image-counter {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
+  /* Updated Counter BG: Dark Maroon/Reddish Brown (#6F3132) - was black */
+  background-color: rgba(111, 49, 50, 0.7); /* 6F3132 with opacity */
+  /* Updated Counter Text: Pale Beige/Cream (#F7F7F0) - was white */
+  color: #F7F7F0;
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   padding: 5px 10px;
@@ -127,7 +140,8 @@
 }
 
 .thumbnail-btn.active {
-  border-color: #1a1a1a;
+  /* Updated Active Thumbnail Border: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  border-color: #A15F22;
 }
 
 .thumbnail-btn img {
@@ -147,7 +161,8 @@
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #1a1a1a;
+  /* Updated Title Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   margin: 0;
   line-height: 1.3;
 }
@@ -169,7 +184,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #6b6b6b;
+  /* Updated Label Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
 }
 
 .regular-price,
@@ -177,14 +193,16 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
-  color: #1a1a1a;
+  /* Updated Price Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .original-price {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #6b6b6b;
+  /* Updated Original Price Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
   text-decoration: line-through;
 }
 
@@ -192,7 +210,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  color: #6b6b6b;
+  /* Updated Unit Price Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
 }
 
 .product-options {
@@ -200,8 +219,9 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px 0;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
+  /* Updated Border Top/Bottom: Muted Clay/Taupe (#8C6C5F) - was #e8e8e8 */
+  border-top: 1px solid #8C6C5F;
+  border-bottom: 1px solid #8C6C5F;
 }
 
 .option-group {
@@ -215,7 +235,8 @@
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #1a1a1a;
+  /* Updated Label Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   text-transform: uppercase;
 }
 
@@ -225,9 +246,12 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
+  /* Updated Select Text Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
+  /* Updated Select BG: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
+  /* Updated Select Border: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+  border: 1px solid #8C6C5F;
   border-radius: 0;
   cursor: pointer;
   transition: border-color 0.3s ease;
@@ -235,7 +259,8 @@
 
 .option-select:focus {
   outline: none;
-  border-color: #1a1a1a;
+  /* Updated Select Focus Border: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  border-color: #A15F22;
 }
 
 .quantity-group {
@@ -256,23 +281,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
+  /* Updated Button BG: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
+  /* Updated Button Border: Muted Clay/Taupe (#8C6C5F) - was #e0e0e0 */
+  border: 1px solid #8C6C5F;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #1a1a1a;
+  /* Updated Button Text Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .quantity-btn:hover {
-  background-color: #f8f8f8;
-  border-color: #1a1a1a;
+  /* Updated Button Hover BG: Warm Sand/Tan (#B38A6A) - was #f8f8f8 */
+  background-color: #B38A6A;
+  /* Updated Button Hover Border: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  border-color: #A15F22;
 }
 
 .quantity-value {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #1a1a1a;
+  /* Updated Quantity Text Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   min-width: 100px;
   text-align: center;
 }
@@ -298,30 +329,44 @@
 }
 
 .add-to-cart-btn {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  border-color: #1a1a1a;
+  /* Updated Primary BG: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  background-color: #6F3132;
+  /* Updated Primary Text: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  color: #F7F7F0;
+  /* Updated Primary Border: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  border-color: #6F3132;
 }
 
 .add-to-cart-btn:hover {
-  background-color: #2a2a2a;
-  border-color: #2a2a2a;
+  /* Updated Primary Hover BG: Rich Burnt Orange/Sienna (#A15F22) - was #2a2a2a */
+  background-color: #A15F22;
+  /* Updated Primary Hover Border: Rich Burnt Orange/Sienna (#A15F22) - was #2a2a2a */
+  border-color: #A15F22;
 }
 
 .buy-now-btn {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  border-color: #1a1a1a;
+  /* Updated Secondary BG: Warm Sand/Tan (#B38A6A) - was #ffffff */
+  background-color: #B38A6A;
+  /* Updated Secondary Text: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
+  /* Updated Secondary Border: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  border-color: #6F3132;
 }
 
 .buy-now-btn:hover {
-  background-color: #f8f8f8;
+  /* Updated Secondary Hover BG: Dark Maroon/Reddish Brown (#6F3132) - was #f8f8f8 */
+  background-color: #6F3132;
+  /* Updated Secondary Hover Text: Pale Beige/Cream (#F7F7F0) - was inherit */
+  color: #F7F7F0;
+  /* Ensure border stays the same or matches hover bg for clean look */
+  border-color: #6F3132;
 }
 
 .product-tabs {
   display: flex;
   gap: 20px;
-  border-bottom: 1px solid #e8e8e8;
+  /* Updated Tab Divider: Muted Clay/Taupe (#8C6C5F) - was #e8e8e8 */
+  border-bottom: 1px solid #8C6C5F;
   padding-bottom: 10px;
 }
 
@@ -330,7 +375,8 @@
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #6b6b6b;
+  /* Updated Tab Text Color: Muted Clay/Taupe (#8C6C5F) - was #6b6b6b */
+  color: #8C6C5F;
   background: none;
   border: none;
   cursor: pointer;
@@ -341,12 +387,15 @@
 }
 
 .tab-btn:hover {
-  color: #1a1a1a;
+  /* Updated Tab Hover Color: Rich Burnt Orange/Sienna (#A15F22) - was #1a1a1a */
+  color: #A15F22;
 }
 
 .tab-btn.active {
-  color: #1a1a1a;
-  border-bottom-color: #1a1a1a;
+  /* Updated Active Tab Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
+  /* Updated Active Tab Border: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  border-bottom-color: #6F3132;
 }
 
 .tab-content {
@@ -359,7 +408,8 @@
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
-  color: #2a2a2a;
+  /* Updated Tab Panel Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
 }
 
 .tab-panel h4 {
@@ -367,7 +417,8 @@
   font-size: 1.125rem;
   font-weight: 400;
   margin-bottom: 15px;
-  color: #1a1a1a;
+  /* Updated Tab Panel Heading: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .size-table {
@@ -379,12 +430,15 @@
 }
 
 .size-table th {
-  background-color: #f8f8f8;
+  /* Updated Table Header BG: Warm Sand/Tan (#B38A6A) - was #f8f8f8 */
+  background-color: #B38A6A;
   padding: 12px 15px;
   text-align: left;
   font-weight: 400;
-  color: #1a1a1a;
-  border: 1px solid #e8e8e8;
+  /* Updated Table Header Text: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
+  /* Updated Table Border: Muted Clay/Taupe (#8C6C5F) - was #e8e8e8 */
+  border: 1px solid #8C6C5F;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
@@ -392,12 +446,15 @@
 
 .size-table td {
   padding: 12px 15px;
-  border: 1px solid #e8e8e8;
-  color: #2a2a2a;
+  /* Updated Table Border: Muted Clay/Taupe (#8C6C5F) - was #e8e8e8 */
+  border: 1px solid #8C6C5F;
+  /* Updated Table Cell Text: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
 }
 
 .size-table tr:nth-child(even) {
-  background-color: #fafafa;
+  /* Updated Even Row BG: Pale Beige/Cream (#F7F7F0) - was #fafafa */
+  background-color: #F7F7F0;
 }
 
 .product-not-found {
@@ -409,20 +466,23 @@
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  color: #1a1a1a;
+  /* Updated Not Found Heading: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   margin-bottom: 20px;
 }
 
 .back-link {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  color: #1a1a1a;
+  /* Updated Back Link Color: Deep Coffee Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 .back-link:hover {
-  color: #6b6b6b;
+  /* Updated Back Link Hover: Rich Burnt Orange/Sienna (#A15F22) - was #6b6b6b */
+  color: #A15F22;
 }
 
 @media (max-width: 992px) {
@@ -533,4 +593,3 @@
     padding: 6px 8px;
   }
 }
-

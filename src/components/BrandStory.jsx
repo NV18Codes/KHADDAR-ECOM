@@ -14,15 +14,16 @@ const BrandStory = () => {
               </p>
             </div>
           </div>
-          <div className="brand-story-image-wrapper">
+          
+        </div>
+      </div>
+      <div className="brand-story-image-wrapper">
             <img 
               src="https://images.unsplash.com/photo-1695694477689-bef8ba8fc5c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN1c3RhaW5hYmVsZSUyMGNsb3RoaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=80&w=1200" 
               alt="Traditional weaving"
               className="brand-story-image"
             />
           </div>
-        </div>
-      </div>
     </section>
   );
 };

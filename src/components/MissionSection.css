@@ -1,11 +1,22 @@
+/*
+ * New CSS Structure: 
+ * 1. Title (Centered)
+ * 2. Description Paragraph (Centered, Limited Width)
+ * 3. Full-Width Image (Spanning entire container)
+ * * All elements are now stacked vertically, replacing the grid.
+ */
+
 .mission-section {
-  padding: 140px 0;
-  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+  padding: 80px 0;
+  /* Background Gradient: Pale Beige/Cream (#F7F7F0) */
+  background: linear-gradient(to bottom, #F7F7F0 0%, #F7F7F0 100%);
+  text-align: center; /* Center aligns title and content block */
 }
 
+/* Heading remains centered within its limited box for spacing */
 .mission-heading-box {
   max-width: 1400px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 20px auto;
   padding: 0 20px;
   animation: fadeInUp 0.8s ease-out both;
 }
@@ -16,30 +27,36 @@
   font-weight: 400;
   letter-spacing: 0.08em;
   margin-bottom: 0;
-  color: #1a1a1a;
+  /* Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
+  color: #6F3132;
   position: relative;
   display: inline-block;
 }
 
 .mission-heading {
-  text-align: left;
+  /* Center the heading text */
+  text-align: center;
 }
 
 .mission-heading::after {
   content: '';
   position: absolute;
   bottom: -15px;
-  left: 0;
+  /* Center the underline for the centered heading */
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 2px;
-  background-color: #1a1a1a;
+  /* Heading Divider Color: Rich Burnt Orange/Sienna (#A15F22) */
+  background-color: #A15F22;
 }
 
+/* Row is now a vertical stack */
 .mission-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 60px; /* Space between content and image */
+  align-items: center; /* Center content horizontally */
   animation: fadeInUp 0.8s ease-out both;
   animation-delay: 0.1s;
   max-width: 1400px;
@@ -48,217 +65,96 @@
 }
 
 .mission-content-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  /* No need for complex flex alignment here, just center the content */
+  width: 100%;
 }
 
+/* Text block for the paragraph, limited width for readability */
+.mission-paragraph {
+  max-width: 800px; /* Limit width for centered text readability */
+  margin: 0 auto; /* Center the text block */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  line-height: 2.1;
+  /* Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
+  font-weight: 300;
+  text-align: center; /* Center the description text */
+  letter-spacing: 0.015em;
+}
+
+/* Full Width Image Section */
 .mission-image-box {
   width: 100%;
-  height: 100%;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .mission-image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   min-height: 500px;
+  margin-top: 40px;
 }
 
-.mission-list {
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  list-style: none;
-  padding: 0;
-  margin-left: 0;
-  max-width: 580px;
-  align-items: flex-start;
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.mission-item {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
-  line-height: 2.1;
-  color: #2a2a2a;
-  font-weight: 300;
-  position: relative;
-  padding-left: 35px;
-  padding-right: 0;
-  letter-spacing: 0.015em;
-  text-align: left;
-  width: 100%;
-}
-
-.mission-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 18px;
-  width: 6px;
-  height: 6px;
-  background-color: #1a1a1a;
-  border-radius: 50%;
-}
+/* --- Responsive Adjustments --- */
 
 @media (max-width: 1200px) {
   .mission-section {
     padding: 120px 0;
   }
-
-  .mission-heading-box {
-    max-width: 1200px;
-    margin-bottom: 50px;
-  }
-
-  .mission-row {
-    gap: 80px;
-    max-width: 1200px;
-  }
-
   .section-heading {
     font-size: 3rem;
   }
-
-  .mission-item {
+  .mission-paragraph {
     font-size: 1.125rem;
   }
-
-  .mission-list {
-    max-width: 500px;
-  }
-
   .mission-image {
     min-height: 450px;
   }
 }
 
 @media (max-width: 1024px) {
-  .mission-heading-box {
-    max-width: 1000px;
-  }
-
-  .mission-row {
-    gap: 60px;
-    max-width: 1000px;
-  }
-
   .section-heading {
     font-size: 2.75rem;
   }
-
-  .mission-item {
-    font-size: 1.125rem;
-  }
-
-  .mission-list {
-    max-width: 450px;
-  }
-
   .mission-image {
     min-height: 400px;
-  }
-}
-
-@media (max-width: 992px) {
-  .mission-heading-box {
-    max-width: 900px;
-  }
-
-  .mission-row {
-    gap: 50px;
-    max-width: 900px;
-  }
-
-  .section-heading {
-    font-size: 2.5rem;
-  }
-
-  .mission-list {
-    max-width: 400px;
-  }
-
-  .mission-image {
-    min-height: 350px;
   }
 }
 
 @media (max-width: 768px) {
   .mission-section {
     padding: 100px 0;
-    background: #ffffff;
+    background: #F7F7F0;
   }
-
-  .mission-heading-box {
-    margin-bottom: 40px;
-    padding: 0 20px;
-  }
-
   .mission-row {
-    grid-template-columns: 1fr;
     gap: 40px;
-    padding: 0 20px;
   }
-
-  .mission-content-box {
-    order: 1;
-    justify-content: flex-start;
-  }
-
-  .mission-image-box {
-    order: 2;
-    width: 100%;
-    min-height: 300px;
-  }
-
-  .mission-image {
-    min-height: 300px;
-  }
-
-  .mission-list {
-    margin-right: 0;
-    margin-top: 0;
-    max-width: 100%;
-  }
-
-  .mission-heading::after {
-    right: auto;
-    left: 0;
-  }
-
-  .mission-heading {
-    text-align: left;
-  }
-
   .section-heading {
     font-size: 2.5rem;
   }
-
-  .mission-item {
+  .mission-paragraph {
     font-size: 1.125rem;
     line-height: 2;
-    max-width: 100%;
-    text-align: left;
-    padding-left: 30px;
   }
-
-  .mission-item::before {
-    left: 0;
-    top: 16px;
-    width: 5px;
-    height: 5px;
-  }
-
-  .mission-list {
-    gap: 35px;
+  .mission-image {
+    min-height: 300px;
   }
 }
 
@@ -266,50 +162,16 @@
   .mission-section {
     padding: 80px 0;
   }
-
-  .mission-heading-box {
-    margin-bottom: 30px;
-    padding: 0 15px;
-  }
-
   .mission-row {
     gap: 30px;
-    padding: 0 15px;
   }
-
   .section-heading {
     font-size: 2.25rem;
-    margin-bottom: 30px;
-    letter-spacing: 0.06em;
   }
-
-  .section-heading::after {
-    width: 50px;
-    height: 1.5px;
-    bottom: -12px;
-  }
-
-  .mission-list {
-    margin-top: 0;
-    gap: 30px;
-  }
-
-  .mission-item {
+  .mission-paragraph {
     font-size: 1rem;
     line-height: 1.9;
-    padding-left: 25px;
   }
-
-  .mission-item::before {
-    width: 4px;
-    height: 4px;
-    top: 14px;
-  }
-
-  .mission-image-box {
-    min-height: 250px;
-  }
-
   .mission-image {
     min-height: 250px;
   }

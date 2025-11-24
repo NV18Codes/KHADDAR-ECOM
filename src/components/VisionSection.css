@@ -1,12 +1,23 @@
+/*
+ * New CSS Structure: 
+ * 1. Title (Centered)
+ * 2. Description Paragraph (Centered, Limited Width)
+ * 3. Full-Width Image (Spanning entire container)
+ * * All elements are now stacked vertically, replacing the grid.
+ */
+
 .vision-section {
-  padding: 140px 0;
-  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  padding: 80px 0;
+  /* Background Gradient: Pale Beige/Cream (#F7F7F0) */
+  background: linear-gradient(to bottom, #F7F7F0 0%, #F7F7F0 100%);
+  text-align: center; /* Center aligns the title and content block */
 }
 
+/* Heading remains centered within its limited box for spacing */
 .vision-heading-box {
   max-width: 1400px;
-  margin: 0 auto 60px auto;
-  padding: 0 20px;
+  margin: 0 auto 20px auto;
+  /* padding: 0 20px; */
   animation: fadeInUp 0.8s ease-out both;
 }
 
@@ -16,30 +27,36 @@
   font-weight: 400;
   letter-spacing: 0.08em;
   margin-bottom: 0;
-  color: #1a1a1a;
+  /* Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
+  color: #6F3132;
   position: relative;
   display: inline-block;
 }
 
 .vision-heading {
-  text-align: left;
+  /* Center the heading text */
+  text-align: center;
 }
 
 .vision-heading::after {
   content: '';
   position: absolute;
   bottom: -15px;
-  left: 0;
+  /* Center the underline for the centered heading */
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 2px;
-  background-color: #1a1a1a;
+  /* Heading Divider Color: Rich Burnt Orange/Sienna (#A15F22) */
+  background-color: #A15F22;
 }
 
+/* Row is now a vertical stack */
 .vision-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 60px; /* Space between content and image */
+  align-items: center; /* Center content horizontally */
   animation: fadeInUp 0.8s ease-out both;
   animation-delay: 0.1s;
   max-width: 1400px;
@@ -48,45 +65,59 @@
 }
 
 .vision-content-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  /* No need for complex flex alignment here, just center the content */
+  width: 100%;
 }
 
 .vision-content {
   margin-top: 0;
+  max-width: 800px; /* Limit width for centered text readability */
+  margin: 0 auto; /* Center the content block */
 }
 
 .vision-text {
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   line-height: 2.2;
-  color: #2a2a2a;
+  /* Body Text Color: Deep Coffee Brown (#6F3132) */
+  color: #6F3132;
   font-weight: 300;
   margin: 0;
   letter-spacing: 0.015em;
-  max-width: 580px;
-  text-align: left;
+  text-align: center; /* Center the description text */
+  width: 100%;
 }
 
+/* Full Width Image Section */
 .vision-image-box {
+  margin-top: 140px;
   width: 100%;
-  height: 100%;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .vision-image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   min-height: 400px;
 }
+
+/* Keyframes (kept from original) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive Adjustments --- */
 
 @media (max-width: 1200px) {
   .vision-section {
@@ -99,7 +130,7 @@
   }
 
   .vision-row {
-    gap: 80px;
+    gap: 40px; /* Reduced gap for smaller screens */
     max-width: 1200px;
   }
 
@@ -109,7 +140,6 @@
 
   .vision-text {
     font-size: 1.125rem;
-    max-width: 500px;
   }
 }
 
@@ -119,42 +149,18 @@
   }
 
   .vision-row {
-    gap: 60px;
     max-width: 1000px;
   }
 
   .section-heading {
     font-size: 2.75rem;
   }
-
-  .vision-text {
-    max-width: 450px;
-  }
-}
-
-@media (max-width: 992px) {
-  .vision-heading-box {
-    max-width: 900px;
-  }
-
-  .vision-row {
-    gap: 50px;
-    max-width: 900px;
-  }
-
-  .section-heading {
-    font-size: 2.5rem;
-  }
-
-  .vision-text {
-    max-width: 400px;
-  }
 }
 
 @media (max-width: 768px) {
   .vision-section {
     padding: 100px 0;
-    background: #ffffff;
+    background: #F7F7F0;
   }
 
   .vision-heading-box {
@@ -163,43 +169,28 @@
   }
 
   .vision-row {
-    grid-template-columns: 1fr;
     gap: 40px;
     padding: 0 20px;
   }
 
-  .vision-heading-box,
-  .vision-content-box {
-    justify-content: flex-start;
+  /* Explicitly remove grid template columns */
+  .vision-row {
+    display: flex;
+    flex-direction: column;
   }
 
   .vision-image-box {
-    order: 2;
     width: 100%;
     min-height: 300px;
+    order: 2; /* Image below content */
+  }
+  
+  .vision-content-box {
+    order: 1; /* Content above image */
   }
 
   .vision-image {
     min-height: 300px;
-  }
-
-  .vision-content-box {
-    order: 1;
-  }
-
-  .vision-text {
-    margin-left: 0;
-    margin-top: 0;
-    max-width: 100%;
-  }
-
-  .vision-content {
-    margin-top: 0;
-  }
-
-  .vision-heading::after {
-    right: auto;
-    left: 0;
   }
 
   .section-heading {
@@ -237,10 +228,6 @@
     width: 50px;
     height: 1.5px;
     bottom: -12px;
-  }
-
-  .vision-content {
-    margin-top: 0;
   }
 
   .vision-text {

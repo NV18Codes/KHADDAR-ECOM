@@ -9,6 +9,8 @@
   position: relative;
   margin-top: 0;
   padding-top: 0;
+  background-color:#F7F7F0;;
+  /* Assuming the hero background is set by a component, but ensure content sections use main background color */
 }
 
 .hero-content-wrapper {
@@ -24,7 +26,8 @@
   letter-spacing: 0.05em;
   margin-bottom: 60px;
   text-align: center;
-  color: #1a1a1a;
+  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  color: #6F3132;
 }
 
 .collections-intro {
@@ -35,14 +38,16 @@
 .intro-text {
   font-size: 1.125rem;
   line-height: 1.9;
-  color: #2a2a2a;
+  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
+  color: #6F3132;
   font-weight: 300;
   margin-bottom: 30px;
 }
 
 .collections-gallery {
-  padding: 100px 0;
-  background-color: #ffffff;
+  padding: 0 0 100px 0;
+  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
+  background-color: #F7F7F0;
 }
 
 .gallery-grid {
@@ -107,6 +112,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  /* Overlay background kept dark for text visibility */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   padding: 30px;
   transform: translateY(100%);
@@ -123,7 +129,8 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #ffffff;
+  /* Label Color: Pale Beige/Cream (#F7F7F0) - kept white/light for contrast */
+  color: #F7F7F0;
 }
 
 .collections-video {
@@ -151,6 +158,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  /* Video Overlay: Kept dark for contrast */
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
@@ -162,7 +170,8 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
-  color: #ffffff;
+  /* Quote Text Color: Pale Beige/Cream (#F7F7F0) - kept light for contrast */
+  color: #F7F7F0;
   text-align: center;
   max-width: 900px;
   padding: 0 40px;
@@ -263,4 +272,3 @@
     padding: 0 15px;
   }
 }
-
