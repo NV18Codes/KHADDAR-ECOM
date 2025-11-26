@@ -11,7 +11,6 @@ const Profile = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [ordersLoading, setOrdersLoading] = useState(true);
-  const [error, setError] = useState('');
 
   useEffect(() => {
     if (!isBootstrapped) return;
@@ -115,7 +114,6 @@ const Profile = () => {
         <div className="auth-container" style={{ maxWidth: '900px' }}>
           <h1 className="auth-title">My Profile</h1>
           
-          {error && <div className="auth-message error">{error}</div>}
           
           <div className="profile-info">
             <h2 style={{ 

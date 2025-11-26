@@ -2,19 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Auth.css';
 import { signIn, getStoredSignupName, clearSignupData } from '../services/authService';
-import { API_CONFIG } from '../services/config';
 import { useAuth } from '../context/AuthContext';
-
-const buildUrl = (path) => {
-  if (!path) return API_CONFIG.API_BASE_URL;
-  try {
-    return new URL(path, API_CONFIG.API_BASE_URL).toString();
-  } catch (error) {
-    const base = API_CONFIG.API_BASE_URL.replace(/\/$/, '');
-    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-    return `${base}${normalizedPath}`;
-  }
-};
 
 const Login = () => {
   const [email, setEmail] = useState('');

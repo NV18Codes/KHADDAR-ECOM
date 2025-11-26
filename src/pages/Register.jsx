@@ -29,7 +29,7 @@ const Register = () => {
   const [infoMessage, setInfoMessage] = useState('');
   const [cooldown, setCooldown] = useState(0);
   const navigate = useNavigate();
-  const { isAuthenticated, login, isBootstrapped } = useAuth();
+  const { isAuthenticated, isBootstrapped } = useAuth();
   const otpInputsRef = useRef([]);
 
   useEffect(() => {
