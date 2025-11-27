@@ -1,12 +1,71 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { fetchProducts, fetchCategories } from '../services/productService';
 import './Shop.css';
+
+// MOVED OUTSIDE: Defining this array outside the component makes it stable.
+// This fixes the ESLint warning because it doesn't change on re-renders.
+const allWomenProducts = [
+  {
+    id: 1,
+    name: 'White Khadi Set with Corset',
+    category: 'co-ords',
+    price: '₹4,500',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/WHITE%20KHADI%20SET%20WITH%20CORSET.jpg'
+  },
+  {
+    id: 2,
+    name: 'White and Red Khadi Dress',
+    category: 'dresses',
+    price: '₹3,800',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/WHITE%20AND%20RED%20KHADI%20DRESS.jpg'
+  },
+  {
+    id: 3,
+    name: 'Red Ajrakh Dress',
+    category: 'dresses',
+    price: '₹3,500',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/RED%20AJRAKH%20DRESS.jpg'
+  },
+  {
+    id: 4,
+    name: 'Mustard Yellow Khadi Set',
+    category: 'co-ords',
+    price: '₹4,200',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/MUSTARD%20YELLOW%20KHADI%20SET.jpg'
+  },
+  {
+    id: 5,
+    name: 'Blue and Red Ajrakh Print Dress',
+    category: 'dresses',
+    price: '₹3,600',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/BLUE%20AND%20RED%20AJRAKH%20PRINT%20DRESS.jpg'
+  },
+  {
+    id: 6,
+    name: 'Black Khadi Set',
+    category: 'co-ords',
+    price: '₹4,000',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/BLACK%20KHADI%20SET.jpg'
+  },
+  {
+    id: 7,
+    name: 'Ajrakh Print Set',
+    category: 'co-ords',
+    price: '₹4,800',
+    image: 'https://smrgampincrwtgtbnzon.supabase.co/storage/v1/object/public/product-images/product%20images/AJRAKH%20SET.jpg'
+  }
+];
+
+// MOVED OUTSIDE: Categories are also constant data.
+const categories = [
+  { id: 'dresses', name: 'Dresses', description: 'Elegant handcrafted dresses.' },
+  { id: 'co-ords', name: 'Co-ord Sets', description: 'Matching sets for a complete look.' },
+  { id: 'kurtas', name: 'Kurtas', description: 'Traditional wear.' }
+];
 
 const ShopWomen = () => {
   const [searchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -16,33 +75,22 @@ const ShopWomen = () => {
     setSelectedCategory(category);
   }, [searchParams]);
 
-  // Fetch categories on component mount
+  // Filter products based on category
   useEffect(() => {
-    const loadCategories = async () => {
-      try {
-        const data = await fetchCategories('women');
-        setCategories(data);
-      } catch (error) {
-        console.error('Error loading categories:', error);
+    setLoading(true);
+    // Simulate API delay slightly for effect
+    const timer = setTimeout(() => {
+      if (selectedCategory) {
+        // filter is now running on the static external array
+        setProducts(allWomenProducts.filter(p => p.category === selectedCategory));
+      } else {
+        setProducts(allWomenProducts);
       }
-    };
-    loadCategories();
-  }, []);
+      setLoading(false);
+    }, 300);
 
-  // Fetch products when category changes
-  useEffect(() => {
-    const loadProducts = async () => {
-      setLoading(true);
-      try {
-        const data = await fetchProducts('women', selectedCategory);
-        setProducts(data);
-      } catch (error) {
-        console.error('Error loading products:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadProducts();
+    // Cleanup timer to prevent memory leaks if component unmounts
+    return () => clearTimeout(timer);
   }, [selectedCategory]);
 
   const selectedCategoryData = categories.find(c => c.id === selectedCategory);
@@ -52,7 +100,7 @@ const ShopWomen = () => {
       <div className="shop-page">
         <div className="shop-products">
           <div className="container">
-            <p style={{ textAlign: 'center', padding: '60px 20px' }}>Loading...</p>
+            <p style={{ textAlign: 'center', padding: '60px 20px' }}>Loading products...</p>
           </div>
         </div>
       </div>
@@ -69,8 +117,9 @@ const ShopWomen = () => {
               <p className="category-description">{selectedCategoryData.description}</p>
             </>
           ) : (
-            <h2 className="products-category-title">All Products</h2>
+            <h2 className="products-category-title">Women's Collection</h2>
           )}
+          
           {products.length > 0 ? (
             <div className="products-grid">
               {products.map((product, index) => (
@@ -113,4 +162,3 @@ const ShopWomen = () => {
 };
 
 export default ShopWomen;
-

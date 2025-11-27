@@ -280,7 +280,7 @@
 
 .stat-value {
   font-family: 'Inter', sans-serif;
-  font-size: 2.75rem;
+  font-size: clamp(1.25rem,4vw,1.75rem);
   font-weight: 600;
   color: #1a1a1a;
   margin: 0 0 12px 0;

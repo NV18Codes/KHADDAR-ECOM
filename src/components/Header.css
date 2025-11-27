@@ -31,6 +31,8 @@
   filter: brightness(0) invert(1);
 }
 
+
+
 .header.scrolled {
   /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #f5f5f5 */
   background-color: #F7F7F0;
@@ -326,6 +328,7 @@
 
 .header.scrolled.black-scrolled .logo {
   filter: brightness(0) invert(1);
+  
 }
 
 .nav {
@@ -357,7 +360,7 @@
 }
 
 .header.scrolled.black-scrolled .nav-link {
-  color: #ffffff;
+  color: #6F3132;
   text-shadow: none;
 }
 
@@ -946,4 +949,8 @@
     top: 65px;
     max-height: calc(100vh - 65px);
   }
+}
+
+.header-welcome{
+  display: none;
 }
