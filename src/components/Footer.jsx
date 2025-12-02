@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="footer-legal">
             <Link to="/contact">Contact Us</Link>
             <span>|</span>
-            <a href="#faq">FAQ</a>
+            <Link to="/faq">FAQ</Link>
           </div>
         </div>
       </div>

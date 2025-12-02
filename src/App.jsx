@@ -21,6 +21,7 @@ import Profile from './pages/Profile';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import PolicyPage from './pages/PolicyPage';
+import FAQ from './pages/FAQ';
 import AdminDashboard from './admin/AdminDashboard';
 import ProtectedAdminRoute from './admin/ProtectedAdminRoute';
 import { AuthProvider } from './context/AuthContext';
@@ -56,6 +57,7 @@ function AppContent() {
           <Route path="/refund-policy" element={<PolicyPage />} />
           <Route path="/cancellation-policy" element={<PolicyPage />} />
           <Route path="/shipping-policy" element={<PolicyPage />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route
             path="/admin/dashboard"
             element={
