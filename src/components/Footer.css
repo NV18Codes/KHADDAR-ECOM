@@ -17,7 +17,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  border: none;
 }
 
 .footer-section {
@@ -29,6 +30,8 @@
   display: inline-block;
   margin-bottom: 20px;
   height: 80px;
+  text-decoration: none;
+  border: none;
 }
 
 .footer-logo {
@@ -62,6 +65,14 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  list-style: none;
+  border: none;
 }
 
 .footer-links li a {
@@ -71,6 +82,8 @@
   color: #F7F7F0;
   font-weight: 300;
   transition: color 0.3s ease;
+  text-decoration: none;
+  border: none;
 }
 
 .footer-links li a:hover {
@@ -100,11 +113,18 @@
 
 .footer-bottom {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  /* DIVIDER: Dark Maroon/Reddish Brown (#6F3132) - was #e8e8e8 */
-  border-top: 1px solid #6F3132;
+  padding: 0;
+  padding-right: 70px; /* Space for scroll-up button */
+  border: none;
+  gap: 20px;
+}
+
+.footer-bottom * {
+  border: none;
 }
 
 .footer-copyright {
@@ -128,6 +148,8 @@
   color: #F7F7F0;
   font-weight: 300;
   transition: color 0.3s ease;
+  text-decoration: none;
+  border: none;
 }
 
 .footer-legal a:hover {
@@ -183,7 +205,7 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   
   .footer-logo {
@@ -191,9 +213,11 @@
   }
   
   .footer-bottom {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
+    padding-right: 60px;
   }
 }
 
@@ -208,7 +232,7 @@
   
   .footer-content {
     gap: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   
   .footer-logo {
@@ -222,5 +246,16 @@
   .footer-links li a,
   .social-link {
     font-size: 0.8125rem;
+  }
+  
+  .footer-bottom {
+    padding-right: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .footer-copyright,
+  .footer-legal a {
+    font-size: 0.7rem;
   }
 }
