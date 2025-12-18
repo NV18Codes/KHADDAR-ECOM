@@ -6,7 +6,6 @@ import MissionSection from '../components/MissionSection';
 import BrandStory from '../components/BrandStory';
 import FeaturedCollection from '../components/FeaturedCollection';
 
-// Import the CSS file that makes the background cream
 import '../components/HomeLuxury.css'; 
 
 const FloatingShapes = () => (
@@ -43,8 +42,8 @@ const Home = () => {
     // Observe all sections
     const sections = document.querySelectorAll('.scroll-section');
     sections.forEach((section) => sectionObserver.observe(section));
-
-    // Parallax effect on scroll
+    
+    /* Optional: Parallax effect for backgrounds if needed later
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const parallaxElements = document.querySelectorAll('.parallax-bg');
@@ -64,26 +63,49 @@ const Home = () => {
     return () => {
       sectionObserver.disconnect();
       window.removeEventListener('scroll', handleScroll);
-    };
+    }; */
   }, []);
 
   return (
     <div className="home-page-container page-loaded">
       <HeroVideo />
+      
       <div className="luxury-wrapper pattern-khadi gradient-orbs">
         <FloatingShapes />
+
+        {/* 1. Vision Section */}
         <div className="scroll-section" data-section="vision">
           <VisionSection />
         </div>
+
+        {/* --- GAP 1: Handloom Texture --- */}
+        <div className="handloom-divider"></div>
+
+        {/* 2. About Section */}
         <div className="scroll-section" data-section="about">
           <AboutSection />
         </div>
+
+        {/* --- GAP 2: Handloom Texture --- */}
+        <div className="handloom-divider"></div>
+
+        {/* 3. Mission Section */}
         <div className="scroll-section" data-section="mission">
           <MissionSection />
         </div>
+
+        {/* --- GAP 3: Handloom Texture --- */}
+        <div className="handloom-divider"></div>
+
+        {/* 4. Brand Story */}
         <div className="scroll-section" data-section="brand">
           <BrandStory />
         </div>
+
+        {/* --- GAP 4: Handloom Texture --- */}
+        <div className="handloom-divider"></div>
+
+        {/* 5. Featured Collection */}
         <div className="scroll-section" data-section="featured">
           <FeaturedCollection />
         </div>
