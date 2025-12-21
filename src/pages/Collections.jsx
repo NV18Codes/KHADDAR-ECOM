@@ -24,11 +24,11 @@ const Collections = () => {
         <div className="hero-content-wrapper">
           <h1 className="collections-title">KOLOURS OF KUTCH</h1>
           <div className="collections-intro">
-            <p className="body-text intro-text">
-              Introducing exceptional fabric creations, which showcase the rich heritage and artistic prowess of Kutch. The artisans specialize in various techniques, such as handloom weaving, bandhani tie-dyeing, and intricate embroidery like mirror work and thread work. Fabrics from Kutch often feature vibrant colors, geometric patterns, and intricate detailing.
+            <p className="body-text intro-text intro-bold">
+              Introducing exceptional fabric creations, which showcase the rich heritage and artistic prowess of Kutch. The artisans specialize in various techniques, such as <strong>handloom weaving</strong>, <strong>bandhani tie-dyeing</strong>, and intricate embroidery like <strong>mirror work</strong> and <strong>thread work</strong>. Fabrics from Kutch often feature vibrant colors, geometric patterns, and intricate detailing.
             </p>
-            <p className="body-text intro-text">
-              Kolours of Kutch is a blend of the fabrics from bhujodi, Kutch & Ajrakhpur and designs tailor made in such a way that each piece tells a story of skill, tradition, and cultural identity.
+            <p className="body-text intro-text intro-bold">
+              <strong>Kolours of Kutch</strong> is a blend of the fabrics from <strong>Bhujodi</strong>, <strong>Kutch</strong> & <strong>Ajrakhpur</strong> and designs tailor made in such a way that each piece tells a story of skill, tradition, and cultural identity.
             </p>
           </div>
         </div>
@@ -51,17 +51,16 @@ const Collections = () => {
         </div>
       </section>
 
-      {/* --- NEW BUTTON SECTION START --- */}
+      {/* --- SHOP BUTTON SECTION --- */}
       <section className="collections-shop-action">
         <div className="container">
           <div className="shop-action-content">
-            <Link to="/shop-collections" className="collections-btn" style={{marginTop : "-130px", borderRadius:"10px"}}>
+            <Link to="/shop-collections" className="collections-btn">
               Shop The Collection
             </Link>
           </div>
         </div>
       </section>
-      {/* --- NEW BUTTON SECTION END --- */}
 
       <section className="collections-video">
         <div className="video-container">

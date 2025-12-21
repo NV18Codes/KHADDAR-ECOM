@@ -24,6 +24,23 @@
   text-align: center;
   /* Updated Background: Pale Beige/Cream (#F7F7F0) - used for the hero background color (was #fafafa) */
   background-color: #F7F7F0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Simple triangle pattern - #8C6C5F (Muted Clay) */
+.sustainability-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%238C6C5F' d='M25 10L38 40H12z'/%3E%3C/svg%3E");
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-content-wrapper {
@@ -75,26 +92,47 @@
 
 .practices-section {
   padding: 100px 0;
-  /* Updated Content Block Background: Muted Clay/Taupe (#8C6C5F) - used for section background (was #fafafa) */
-  background-color: #8C6C5F;
+  background-color: #F7F7F0;
+}
+
+.section-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #6F3132;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #B38A6A;
 }
 
 .practices-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
   margin-top: 60px;
 }
 
 .practice-card {
   display: flex;
   flex-direction: column;
-  /* Updated Card Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
-  background-color: #F7F7F0;
+  background-color: #fff;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: fadeInUp 0.8s ease-out both;
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(140, 108, 95, 0.1);
 }
 
 .practice-card:nth-child(1) {
@@ -118,17 +156,15 @@
 }
 
 .practice-card:hover {
-  transform: translateY(-8px);
-  /* Optional: Keep box-shadow dark or adjust color */
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(111, 49, 50, 0.1);
 }
 
 .practice-image-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 75%;
+  padding-bottom: 65%;
   overflow: hidden;
-  /* Card Image Placeholder/Placeholder Background: Pale Beige/Cream (#F7F7F0) - was #f8f8f8 */
   background-color: #F7F7F0; 
 }
 
@@ -139,51 +175,48 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
 }
 
 .practice-card:hover .practice-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .practice-icon {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2.5rem;
-  /* Accent Icon Background: Pale Beige/Cream (#F7F7F0) */
-  background: rgba(213, 198, 175, 0.9); /* D5C6AF with opacity */
-  width: 60px;
-  height: 60px;
+  bottom: -25px;
+  left: 30px;
+  font-size: 1.8rem;
+  background: #fff;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  /* Optional: Add icon color if needed. Assumed to be inherited or set elsewhere */
-  color: #6F3132; /* Dark Maroon/Reddish Brown for contrast */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #F7F7F0;
 }
 
 .practice-content {
-  padding: 30px;
+  padding: 40px 30px 30px;
 }
 
 .practice-title {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  margin-bottom: 15px;
-  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
   color: #6F3132;
 }
 
 .practice-description {
   font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
-  color: #6F3132;
-  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4C2E2E;
+  font-weight: 400;
 }
 
 .sustainability-video {
@@ -236,6 +269,23 @@
   /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
   background-color: #F7F7F0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Minimal leaf/organic shape pattern */
+.commitment-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cellipse cx='30' cy='30' rx='8' ry='15' fill='%23B38A6A' transform='rotate(45 30 30)'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .commitment-content {

@@ -27,7 +27,7 @@
 }
 
 .scroll-up-button:hover {
-  background-color: #4a4a4a;
+  background-color: #6F3132;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }

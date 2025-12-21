@@ -65,19 +65,11 @@ const handleResponse = async (response) => {
  */
 export const updateOrderStatus = async (orderId, status) => {
     try {
-        // Note: The provided API URL format for status update seems to be:
-        // .../api/orders/{id}status
-        // Ideally it should be /orders/{id}/status, but we'll follow the provided example if strict,
-        // OR try the standard convention first.
-        // Based on user request: /api/orders/b0bed085...status 
-        // It seems like there might be a typo in the request description or it's just appended.
-        // I will assume standard REST convention /orders/:id/status first, or careful construction.
-        // Re-reading request: .../orders/b0bed085...status 
-        // It looks like it literally appends "status" to the ID? 
-        // Let's assume the user meant /orders/:id/status and the example was a bit mashed.
-
-        const path = `${API_CONFIG.ENDPOINTS.ORDERS}/${orderId}/status`;
+        // Try admin endpoint first for status update
+        const path = `${API_CONFIG.ENDPOINTS.ADMIN_ORDERS}/${orderId}/status`;
         const url = API_BASE_URL ? `${API_BASE_URL}${path}` : path;
+
+        console.log('Updating order status:', { orderId, status, url });
 
         const response = await withTimeout(
             fetch(url, {
@@ -86,11 +78,13 @@ export const updateOrderStatus = async (orderId, status) => {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${getAdminToken()}`
                 },
-                body: JSON.stringify({ order_status: status })
+                body: JSON.stringify({ order_status: status, status: status })
             })
         );
 
-        return await handleResponse(response);
+        const result = await handleResponse(response);
+        console.log('Order status update result:', result);
+        return result;
     } catch (error) {
         console.error('Error updating order status:', error);
         throw error;

@@ -4,6 +4,22 @@
   /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
   background-color: #F7F7F0;
   padding-bottom: 80px;
+  position: relative;
+}
+
+/* Simple dot pattern - #8C6C5F (Muted Clay) */
+.product-detail-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Ccircle cx='12.5' cy='12.5' r='1.5' fill='%238C6C5F'/%3E%3C/svg%3E");
+  background-size: 25px 25px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .breadcrumb {
