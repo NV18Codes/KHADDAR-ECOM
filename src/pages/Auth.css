@@ -4,6 +4,22 @@
   /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
   background-color: #F7F7F0;
   padding-bottom: 80px;
+  position: relative;
+}
+
+/* Simple diamond pattern - #B38A6A (Warm Sand) */
+.auth-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35'%3E%3Cpath fill='%23B38A6A' d='M17.5 5L27 17.5L17.5 30L8 17.5z'/%3E%3C/svg%3E");
+  background-size: 35px 35px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .auth-container {
@@ -138,13 +154,13 @@ textarea.form-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6b6b6b;
+  color: #8C6C5F;
   transition: color 0.3s ease;
   z-index: 1;
 }
 
 .password-toggle:hover {
-  color: #1a1a1a;
+  color: #6F3132;
 }
 
 .password-toggle:disabled {
@@ -236,10 +252,10 @@ textarea.form-input {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #1a1a1a;
+  color: #4C2E2E;
   padding: 12px 15px;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
+  background-color: #F7F7F0;
+  border: 1px solid #8C6C5F;
   min-height: 44px;
   display: flex;
   align-items: center;

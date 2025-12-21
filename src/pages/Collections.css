@@ -9,14 +9,43 @@
   position: relative;
   margin-top: 0;
   padding-top: 0;
-  background-color:#F7F7F0;;
-  /* Assuming the hero background is set by a component, but ensure content sections use main background color */
+  background-color: #F7F7F0;
+  overflow: hidden;
+}
+
+/* Culture of Kutch background image with subtle animation */
+.collections-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.gujaratexpert.com/blog/wp-content/uploads/2024/01/Culture-of-Kutch.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  animation: slowZoom 30s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .hero-content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .collections-title {
@@ -24,10 +53,74 @@
   font-size: 5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   text-align: center;
-  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
   color: #6F3132;
+  position: relative;
+  animation: titleFadeIn 1.2s ease forwards;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    letter-spacing: 0.15em;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Simple decorative diamond below title with floating animation */
+.collections-title::after {
+  content: '— ◆ —';
+  display: block;
+  font-size: 14px;
+  color: #A15F22;
+  opacity: 0.6;
+  margin-top: 10px;
+  letter-spacing: 8px;
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Elegant entrance animations */
+.collections-hero .collections-title {
+  animation: fadeSlideDown 1s ease forwards;
+}
+
+.collections-hero .intro-text {
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .collections-intro {
@@ -38,17 +131,42 @@
 .intro-text {
   font-family: 'Lato', sans-serif;
   font-size: 1.125rem;
-  line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
-  color: #6F3132;
+  line-height: 1.8;
+  color: #4C2E2E;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+.intro-text.intro-bold {
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+
+.intro-text.intro-bold strong {
+  font-weight: 600;
+  color: #6F3132;
 }
 
 .collections-gallery {
   padding: 0 0 100px 0;
   /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
   background-color: #F7F7F0;
+  position: relative;
+}
+
+/* Simple diamond pattern - #8C6C5F (Muted Clay) */
+.collections-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%238C6C5F' d='M20 5L30 20L20 35L10 20z'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .gallery-grid {
@@ -276,8 +394,7 @@
 /* Add this to Collections.css */
 
 .collections-shop-action {
-  padding: 80px 0;
-  /* Pale Beige/Cream */
+  padding: 60px 0 80px;
   background-color: #F7F7F0; 
   text-align: center;
 }
@@ -302,30 +419,43 @@
 .collections-btn {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.2em;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 16px 50px;
+  padding: 18px 55px;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
   
-  /* Matches your requested style */
-  /* Border: Dark Maroon */
-  border: 1px solid #6F3132;
-  /* Background: Warm Sand/Tan */
-  background: #B38A6A;
-  /* Text: Deep Coffee Brown */
-  color: #6F3132;
+  border: 2px solid #6F3132;
+  background: #6F3132;
+  color: #F7F7F0;
+}
+
+.collections-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.collections-btn:hover::before {
+  left: 100%;
 }
 
 .collections-btn:hover {
-  /* Hover Background: Dark Maroon */
-  background: #6F3132;
-  /* Hover Text: Pale Beige */
+  background: #B38A6A;
+  border-color: #B38A6A;
   color: #F7F7F0;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(111, 49, 50, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(111, 49, 50, 0.2);
 }
 
 @media (max-width: 768px) {

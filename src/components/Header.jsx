@@ -18,7 +18,6 @@ const Header = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isTransparent, setIsTransparent] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
   const { isAuthenticated, user, logout } = useAuth();
@@ -105,20 +104,6 @@ const Header = () => {
           </Link>
 
           <div className="header-icons-left">
-            <button
-              className="icon-btn search-btn"
-              aria-label="Search"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                setIsSearchOpen(!isSearchOpen);
-              }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
             {showAuthIcons ? (
               <>
                 {!isAdminRoute && (
@@ -280,35 +265,6 @@ const Header = () => {
       </div>
     </header>
 
-    {isSearchOpen && (
-      <div className="search-overlay" onClick={() => setIsSearchOpen(false)}>
-        <div className="search-modal" onClick={(e) => e.stopPropagation()}>
-          <div className="search-input-wrapper">
-            <input
-              type="text"
-              placeholder="Search for products..."
-              className="search-input"
-              autoFocus
-            />
-            <button
-              type="button"
-              className="search-close-btn"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                setIsSearchOpen(false);
-              }}
-              aria-label="Close search"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    )}
     </>
   );
 };

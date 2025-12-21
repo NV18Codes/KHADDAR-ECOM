@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
   getDashboardSummary,
@@ -16,6 +17,7 @@ const logo = '/logo_file_page-0001.png';
 
 const AdminDashboard = () => {
   const { logout } = useAuth();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
   const [loading, setLoading] = useState(false);
 
@@ -175,15 +177,43 @@ const AdminDashboard = () => {
     }).format(amount);
   };
 
+  // Parse revenue data from various possible API response formats
+  const parseRevenueData = () => {
+    if (!revenueData) {
+      return { labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'], data: [0, 0, 0, 0, 0, 0] };
+    }
+    
+    // Try different data structures
+    const months = revenueData.months || 
+                   revenueData.data?.months || 
+                   revenueData.labels ||
+                   ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    
+    const revenue = revenueData.revenue || 
+                    revenueData.data?.revenue || 
+                    revenueData.values ||
+                    revenueData.data ||
+                    (Array.isArray(revenueData) ? revenueData : [0, 0, 0, 0, 0, 0]);
+    
+    console.log('Parsed revenue data:', { months, revenue });
+    return { labels: months, data: Array.isArray(revenue) ? revenue : [0, 0, 0, 0, 0, 0] };
+  };
+
+  const parsedRevenue = parseRevenueData();
+  
   const chartData = {
-    labels: revenueData?.months || ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    labels: parsedRevenue.labels,
     datasets: [{
-      label: 'Revenue',
-      data: revenueData?.revenue || [0, 0, 0, 0, 0, 0],
+      label: 'Revenue (₹)',
+      data: parsedRevenue.data,
       borderColor: '#6F3132',
       backgroundColor: 'rgba(111, 49, 50, 0.1)',
       fill: true,
-      tension: 0.4
+      tension: 0.4,
+      pointBackgroundColor: '#6F3132',
+      pointBorderColor: '#fff',
+      pointBorderWidth: 2,
+      pointRadius: 4
     }]
   };
 
@@ -217,7 +247,7 @@ const AdminDashboard = () => {
           >
             Orders
           </button>
-          <button onClick={logout} className="logout-btn">
+          <button onClick={() => { logout(); navigate('/'); }} className="logout-btn">
             Logout
           </button>
         </nav>

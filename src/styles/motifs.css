@@ -1,0 +1,171 @@
+/* ================================================
+   KHADDAR - INDIAN MOTIF PATTERNS
+   Strategic, subtle placement only
+   ================================================ */
+
+/* === MOTIF DIVIDER (Use between sections) === */
+.motif-divider {
+  width: 100%;
+  height: 60px;
+  background-color: #F9F5F0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.motif-divider::before {
+  content: '✦';
+  font-size: 14px;
+  color: #8C6C5F;
+  opacity: 0.4;
+  letter-spacing: 40px;
+  padding-left: 40px;
+}
+
+/* === HERITAGE BAND (Decorative strip with pattern) === */
+.heritage-band {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #6F3132;
+  position: relative;
+  overflow: hidden;
+}
+
+.heritage-band::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23F7F7F0' d='M20 5L30 15L20 25L10 15z'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.heritage-band-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.heritage-band-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #F7F7F0;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+.heritage-band-author {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(247, 247, 240, 0.7);
+  margin-top: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* === SUBTLE BACKGROUND PATTERN (For specific sections) === */
+.pattern-section {
+  position: relative;
+}
+
+.pattern-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%236F3132' d='M30 5c2 0 3 10 3 18s-1 13-3 17c-2-4-3-9-3-17s1-18 3-18z'/%3E%3Cpath fill='%236F3132' d='M30 5c2 0 3 10 3 18s-1 13-3 17c-2-4-3-9-3-17s1-18 3-18z' transform='rotate(90 30 30)'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pattern-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === PAGE WATERMARK (Very subtle, for policy/info pages) === */
+.page-watermark {
+  position: relative;
+}
+
+.page-watermark::after {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='%236F3132'%3E%3Ccircle cx='100' cy='100' r='8'/%3E%3Cpath d='M100 20c5 0 8 25 8 45s-3 35-8 45c-5-10-8-25-8-45s3-45 8-45z'/%3E%3Cpath d='M100 20c5 0 8 25 8 45s-3 35-8 45c-5-10-8-25-8-45s3-45 8-45z' transform='rotate(45 100 100)'/%3E%3Cpath d='M100 20c5 0 8 25 8 45s-3 35-8 45c-5-10-8-25-8-45s3-45 8-45z' transform='rotate(90 100 100)'/%3E%3Cpath d='M100 20c5 0 8 25 8 45s-3 35-8 45c-5-10-8-25-8-45s3-45 8-45z' transform='rotate(135 100 100)'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === CORNER MOTIF (For cards/containers) === */
+.corner-motif {
+  position: relative;
+}
+
+.corner-motif::before,
+.corner-motif::after {
+  content: '❋';
+  position: absolute;
+  font-size: 16px;
+  color: #A15F22;
+  opacity: 0.25;
+}
+
+.corner-motif::before {
+  top: 15px;
+  left: 15px;
+}
+
+.corner-motif::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .heritage-band {
+    padding: 40px 0;
+  }
+  
+  .heritage-band-text {
+    font-size: 1.25rem;
+  }
+  
+  .motif-divider {
+    height: 40px;
+  }
+  
+  .motif-divider::before {
+    font-size: 12px;
+    letter-spacing: 30px;
+    padding-left: 30px;
+  }
+  
+  .page-watermark::after {
+    width: 250px;
+    height: 250px;
+  }
+}
+

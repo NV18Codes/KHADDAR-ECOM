@@ -1,128 +1,146 @@
-/*
- * New CSS Structure: 
- * 1. Title (Centered)
- * 2. Description (Centered/Limited Width)
- * 3. Full-Width Image (Spanning entire container)
- * * All elements are now stacked vertically, eliminating the grid layout.
- */
+/* BRAND STORY SECTION - Split layout with image (reverse) */
 
-.brand-story-section {
-  padding: 100px 0;
-  /* Background: Pale Beige/Cream (#F7F7F0) */
+.brand-section {
+  padding: 0;
   background-color: #F7F7F0;
-  text-align: center; /* Center aligns the title and potentially the text block */
+  position: relative;
 }
 
-/* The content wrapper now handles vertical spacing and centers the text block */
-.brand-story-content {
+.brand-container {
+  display: flex;
+  align-items: stretch;
+  min-height: 80vh;
+}
+
+/* Content Side (Left) */
+.brand-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers items horizontally */
-  gap: 40px; /* Space between the text content and the image */
+  justify-content: center;
+  padding: 80px 60px;
+  background-color: #8C6C5F;
+  position: relative;
 }
 
-/* Text wrapper holds the Title and Description */
-.brand-story-text-wrapper {
-  padding: 0; /* Remove padding from original design */
-  width: 100%;
-  /* Optional: Keep animation */
-  animation: fadeInLeft 0.8s ease-out; 
+/* Kutch Ajrakh Block Print pattern - traditional geometric */
+.brand-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect x='8' y='8' width='20' height='20' fill='none' stroke='%23F7F7F0' stroke-width='1'/%3E%3Crect x='14' y='14' width='8' height='8' fill='%23F7F7F0' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 36px 36px;
+  pointer-events: none;
+  z-index: 0;
+  animation: blockFade 12s ease-in-out infinite;
 }
 
-/* Centers the h2/section-heading */
-.section-heading {
+@keyframes blockFade {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.08; }
+}
+
+.brand-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F7F7F0;
+  opacity: 0.7;
+  display: block;
   margin-bottom: 20px;
-  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-/* Text block for the description, limited width for readability */
-.brand-story-text {
-  max-width: 800px; /* Limit width for centered text readability */
-  margin: 0 auto; /* Center the text block */
+.brand-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #F7F7F0;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
 }
 
-.brand-story-text .body-text {
-  font-size: 1.125rem;
+.brand-content:hover .brand-heading {
+  transform: translateX(5px);
+}
+
+.brand-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
   line-height: 1.9;
-  /* Body Text Color: Deep Coffee Brown (#6F3132) */
-  color: #6F3132;
+  color: rgba(247, 247, 240, 0.9);
   font-weight: 300;
-  text-align: center; /* Center the description text */
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Full Width Image Section */
-.brand-story-image-wrapper {
+.brand-text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Image Side (Right) */
+.brand-image-wrapper {
+  flex: 1;
   position: relative;
   overflow: hidden;
-  width: 100%; /* Make wrapper full width */
-  max-width: 100%; /* Ensure it doesn't exceed its container */
-  /* Remove order, as stacking is now default with flex-direction: column */
-  border-radius: 4px;
-  /* Optional: Keep animation */
-  animation: fadeInRight 0.8s ease-out; 
 }
 
-.brand-story-image {
+.brand-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  display: block;
-  /* Optional: Keep hover effect */
-  transition: transform 0.6s ease;
-  margin-top: 20px;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.8s ease;
+  filter: brightness(1);
 }
 
-.brand-story-image-wrapper:hover .brand-story-image {
-  transform: scale(1.03); /* Slightly reduced zoom for full-width image */
+.brand-image-wrapper:hover .brand-image {
+  transform: scale(1.05);
+  filter: brightness(1.05);
 }
 
-/* Keyframes (kept from original for animation effects) */
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* --- Responsive Adjustments --- */
-
-@media (max-width: 1200px) {
-  .brand-story-section {
-    padding: 80px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .brand-story-section {
-    padding: 60px 0;
+@media (max-width: 992px) {
+  .brand-container {
+    flex-direction: column-reverse; /* Image on top on mobile */
+    min-height: auto;
   }
   
-  .brand-story-content {
-    gap: 30px;
+  .brand-image-wrapper {
+    height: 50vh;
+  }
+  
+  .brand-content {
+    padding: 60px 40px;
+  }
+  
+  .brand-heading {
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 576px) {
-  .brand-story-section {
-    padding: 40px 0;
+  .brand-image-wrapper {
+    height: 40vh;
   }
   
-  .brand-story-text .body-text {
+  .brand-content {
+    padding: 40px 20px;
+  }
+  
+  .brand-heading {
+    font-size: 1.8rem;
+  }
+  
+  .brand-text {
     font-size: 1rem;
   }
 }

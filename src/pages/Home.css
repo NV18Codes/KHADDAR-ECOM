@@ -1,4 +1,138 @@
-.home {
-  padding-top: 0;
+/* HOME PAGE STYLES */
+
+.home-page-container {
+  width: 100%;
 }
 
+/* Elegant scroll reveal animations */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-section.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle breathing animation for labels */
+.vision-label, .mission-label, .about-label, .brand-label {
+  animation: gentleBreath 4s ease-in-out infinite;
+}
+
+@keyframes gentleBreath {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* Subtle underline grow on headings hover */
+.vision-heading, .mission-heading, .about-heading, .brand-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.vision-heading::after, .mission-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #B38A6A;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.vision-container:hover .vision-heading::after,
+.mission-container:hover .mission-heading::after {
+  width: 60px;
+}
+
+/* Staggered text reveal for labels */
+.scroll-section.section-visible .vision-label,
+.scroll-section.section-visible .mission-label,
+.scroll-section.section-visible .about-label,
+.scroll-section.section-visible .brand-label {
+  animation: fadeSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+/* Staggered text reveal for headings */
+.scroll-section.section-visible .vision-heading,
+.scroll-section.section-visible .mission-heading,
+.scroll-section.section-visible .about-heading,
+.scroll-section.section-visible .brand-heading {
+  animation: fadeSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+
+/* Staggered text reveal for paragraphs */
+.scroll-section.section-visible .vision-text,
+.scroll-section.section-visible .mission-text,
+.scroll-section.section-visible .about-text,
+.scroll-section.section-visible .brand-text {
+  animation: fadeSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+/* Elegant fade and slide animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image hover enhancement */
+.scroll-section.section-visible .about-image,
+.scroll-section.section-visible .brand-image {
+  animation: subtleZoom 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes subtleZoom {
+  from {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  .scroll-section.section-visible .vision-label,
+  .scroll-section.section-visible .mission-label,
+  .scroll-section.section-visible .about-label,
+  .scroll-section.section-visible .brand-label,
+  .scroll-section.section-visible .vision-heading,
+  .scroll-section.section-visible .mission-heading,
+  .scroll-section.section-visible .about-heading,
+  .scroll-section.section-visible .brand-heading,
+  .scroll-section.section-visible .vision-text,
+  .scroll-section.section-visible .mission-text,
+  .scroll-section.section-visible .about-text,
+  .scroll-section.section-visible .brand-text,
+  .scroll-section.section-visible .about-image,
+  .scroll-section.section-visible .brand-image {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

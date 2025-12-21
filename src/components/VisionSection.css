@@ -1,245 +1,87 @@
-/*
- * New CSS Structure: 
- * 1. Title (Centered)
- * 2. Description Paragraph (Centered, Limited Width)
- * 3. Full-Width Image (Spanning entire container)
- * * All elements are now stacked vertically, replacing the grid.
- */
+/* VISION SECTION - Plain background with subtle pattern */
 
 .vision-section {
-  padding: 80px 0;
-  /* Background Gradient: Pale Beige/Cream (#F7F7F0) */
-  background: linear-gradient(to bottom, #F7F7F0 0%, #F7F7F0 100%);
-  text-align: center; /* Center aligns the title and content block */
-}
-
-/* Heading remains centered within its limited box for spacing */
-.vision-heading-box {
-  max-width: 1400px;
-  margin: 0 auto 20px auto;
-  /* padding: 0 20px; */
-  animation: fadeInUp 0.8s ease-out both;
-}
-
-.section-heading {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  margin-bottom: 0;
-  /* Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
-  color: #6F3132;
+  padding: 100px 20px;
+  background-color: #F7F7F0;
   position: relative;
-  display: inline-block;
+}
+
+/* Cross-stitch ethnic border pattern */
+.vision-section.pattern-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23B38A6A' d='M4 4h4v4H4zM16 4h4v4h-4zM4 16h4v4H4zM16 16h4v4h-4zM10 10h4v4h-4z'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gentleDrift 30s ease-in-out infinite;
+}
+
+@keyframes gentleDrift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-12px) translateY(-6px); }
+}
+
+.vision-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.vision-container:hover {
+  transform: translateY(-3px);
+}
+
+.vision-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8C6C5F;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .vision-heading {
-  /* Center the heading text */
-  text-align: center;
-}
-
-.vision-heading::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  /* Center the underline for the centered heading */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  /* Heading Divider Color: Rich Burnt Orange/Sienna (#A15F22) */
-  background-color: #A15F22;
-}
-
-/* Row is now a vertical stack */
-.vision-row {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 60px; /* Space between content and image */
-  align-items: center; /* Center content horizontally */
-  animation: fadeInUp 0.8s ease-out both;
-  animation-delay: 0.1s;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.vision-content-box {
-  /* No need for complex flex alignment here, just center the content */
-  width: 100%;
-}
-
-.vision-content {
-  margin-top: 0;
-  max-width: 800px; /* Limit width for centered text readability */
-  margin: 0 auto; /* Center the content block */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #6F3132;
+  margin-bottom: 30px;
+  line-height: 1.2;
 }
 
 .vision-text {
   font-family: 'Lato', sans-serif;
-  font-size: 1.25rem;
-  line-height: 2.2;
-  /* Body Text Color: Deep Coffee Brown (#6F3132) */
-  color: #6F3132;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4C2E2E;
   font-weight: 300;
-  margin: 0;
-  letter-spacing: 0.015em;
-  text-align: center; /* Center the description text */
-  width: 100%;
+  transition: color 0.3s ease;
 }
 
-/* Full Width Image Section */
-.vision-image-box {
-  margin-top: 140px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.vision-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  min-height: 400px;
-}
-
-/* Keyframes (kept from original) */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* --- Responsive Adjustments --- */
-
-@media (max-width: 1200px) {
-  .vision-section {
-    padding: 120px 0;
-  }
-
-  .vision-heading-box {
-    max-width: 1200px;
-    margin-bottom: 50px;
-  }
-
-  .vision-row {
-    gap: 40px; /* Reduced gap for smaller screens */
-    max-width: 1200px;
-  }
-
-  .section-heading {
-    font-size: 3rem;
-  }
-
-  .vision-text {
-    font-size: 1.125rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .vision-heading-box {
-    max-width: 1000px;
-  }
-
-  .vision-row {
-    max-width: 1000px;
-  }
-
-  .section-heading {
-    font-size: 2.75rem;
-  }
+.vision-container:hover .vision-text {
+  color: #6F3132;
 }
 
 @media (max-width: 768px) {
   .vision-section {
-    padding: 100px 0;
-    background: #F7F7F0;
-  }
-
-  .vision-heading-box {
-    margin-bottom: 40px;
-    padding: 0 20px;
-  }
-
-  .vision-row {
-    gap: 40px;
-    padding: 0 20px;
-  }
-
-  /* Explicitly remove grid template columns */
-  .vision-row {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .vision-image-box {
-    width: 100%;
-    min-height: 300px;
-    order: 2; /* Image below content */
+    padding: 70px 20px;
   }
   
-  .vision-content-box {
-    order: 1; /* Content above image */
+  .vision-heading {
+    font-size: 2rem;
   }
-
-  .vision-image {
-    min-height: 300px;
-  }
-
-  .section-heading {
-    font-size: 2.5rem;
-  }
-
-  .vision-text {
-    font-size: 1.125rem;
-    line-height: 2;
-  }
-}
-
-@media (max-width: 576px) {
-  .vision-section {
-    padding: 80px 0;
-  }
-
-  .vision-heading-box {
-    margin-bottom: 30px;
-    padding: 0 15px;
-  }
-
-  .vision-row {
-    gap: 30px;
-    padding: 0 15px;
-  }
-
-  .section-heading {
-    font-size: 2.25rem;
-    margin-bottom: 30px;
-    letter-spacing: 0.06em;
-  }
-
-  .section-heading::after {
-    width: 50px;
-    height: 1.5px;
-    bottom: -12px;
-  }
-
+  
   .vision-text {
     font-size: 1rem;
-    line-height: 1.9;
-  }
-
-  .vision-image-box {
-    min-height: 250px;
-  }
-
-  .vision-image {
-    min-height: 250px;
   }
 }
