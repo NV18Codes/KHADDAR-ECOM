@@ -3,6 +3,36 @@
   padding-top: 0;
   position: relative;
   min-height: 100vh;
+  /* Base color for the whole page */
+  background-color: #F7F7F0;
+}
+
+/* GLOBAL BACKGROUND PATTERN ("Dorito"/Triangle) 
+   Applied to the whole page container for a consistent look everywhere.
+*/
+.community-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* "Dorito-like" Triangle Pattern 
+     Based on your image_c83ef2.png.
+     Updated: fill-opacity reduced to 0.05 (Very Faint)
+  */
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 10L30 30H10z' fill='%238C6C5F' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  
+  background-size: 40px 40px; 
+  background-position: center top;
+  background-repeat: repeat;
+  
+  /* Updated: Overall opacity lowered to 0.3 to make it "even more lighter" */
+  opacity: 0.3; 
+  
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-video-container {
@@ -11,6 +41,7 @@
   position: relative;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 
 .page-with-transparent-header {
@@ -18,36 +49,26 @@
   min-height: 100vh;
 }
 
-/* Remove the hero-section class since we're using HeroVideo directly */
-
 .community-hero {
   padding: 100px 0;
   text-align: center;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
-  background-color: #F7F7F0;
+  /* Transparent so global pattern shows */
+  background-color: transparent; 
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-/* Simple dot pattern - #8C6C5F (Muted Clay) */
+/* REMOVED: Specific patterns removed */
 .community-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35'%3E%3Ccircle cx='17.5' cy='17.5' r='2.5' fill='%238C6C5F'/%3E%3C/svg%3E");
-  background-size: 35px 35px;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .hero-content-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 40px;
+  position: relative;
 }
 
 .community-title {
@@ -56,7 +77,6 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
-  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
   color: #6F3132;
 }
 
@@ -65,7 +85,6 @@
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
   font-style: italic;
 }
@@ -73,11 +92,10 @@
 .community-intro {
   position: relative;
   z-index: 2;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
-  background: #F7F7F0;
+  /* Transparent so global pattern shows */
+  background: transparent;
   margin-top: 0;
   padding-top: 100px;
-  /* FIX 1: Ensures block content inside is centered */
   text-align: center; 
 }
 
@@ -131,11 +149,12 @@
 
 .collaborations-section {
   padding: 100px 0;
-  /* Updated Section Background: Muted Clay/Taupe (#8C6C5F) */
+  /* Keep solid background for contrast in this specific section */
   background-color: #8C6C5F;
+  position: relative;
+  z-index: 1;
 }
 
-/* FIX: Target the heading to prevent margin collapse/white gap */
 .collaborations-section .container .section-heading {
     margin-top: 0;
 }
@@ -156,21 +175,10 @@
   overflow: hidden;
 }
 
-.collaboration-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.collaboration-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.collaboration-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.collaboration-card:nth-child(4) {
-  animation-delay: 0.4s;
-}
+.collaboration-card:nth-child(1) { animation-delay: 0.1s; }
+.collaboration-card:nth-child(2) { animation-delay: 0.2s; }
+.collaboration-card:nth-child(3) { animation-delay: 0.3s; }
+.collaboration-card:nth-child(4) { animation-delay: 0.4s; }
 
 .collaboration-card:hover {
   transform: translateY(-5px);
@@ -182,7 +190,6 @@
   width: 100%;
   padding-bottom: 75%;
   overflow: hidden;
-  /* Image Placeholder/Background: Pale Beige/Cream (#F7F7F0) */
   background-color: #F7F7F0;
 }
 
@@ -221,7 +228,6 @@
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.75rem;
   font-weight: 400;
-  /* Title Text Color: Pale Beige/Cream (#F7F7F0) */
   color: #F7F7F0;
   letter-spacing: 0.03em;
 }
@@ -251,7 +257,6 @@
   font-family: 'Lato', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Description Text Color: Pale Beige/Cream (#F7F7F0) */
   color: #F7F7F0;
   font-weight: 300;
   text-align: center;
@@ -295,7 +300,6 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
-  /* Quote Text Color: Pale Beige/Cream (#F7F7F0) */
   color: #F7F7F0;
   text-align: center;
   max-width: 900px;
@@ -305,26 +309,17 @@
 
 .community-cta {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
-  background-color: #F7F7F0;
+  /* Transparent so global pattern shows */
+  background-color: transparent;
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-/* Simple triangle pattern - #B38A6A (Warm Sand) */
+/* REMOVED: Specific patterns removed */
 .community-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23B38A6A' d='M20 8L32 32H8z'/%3E%3C/svg%3E");
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .cta-content {
@@ -338,7 +333,6 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
-  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) */
   color: #6F3132;
 }
 
@@ -346,7 +340,6 @@
   font-family: 'Lato', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
   font-weight: 300;
   margin-bottom: 40px;
@@ -359,25 +352,17 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 15px 50px;
-  /* Updated Button Border: Dark Maroon/Reddish Brown (#6F3132) */
   border: 1px solid #6F3132;
-  /* Updated Button Background: Warm Sand/Tan (#B38A6A) */
   background: #B38A6A;
-  /* Updated Button Text: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
   display: inline-block;
   transition: all 0.3s ease;
-}
-
-.cta-button {
   cursor: pointer;
   text-decoration: none;
 }
 
 .cta-button:hover {
-  /* Updated Button Hover Background: Dark Maroon/Reddish Brown (#6F3132) */
   background: #6F3132;
-  /* Updated Button Hover Text: Pale Beige/Cream (#F7F7F0) */
   color: #F7F7F0;
 }
 
@@ -398,7 +383,6 @@
 }
 
 .community-modal {
-  /* Updated Modal Background: Pale Beige/Cream (#F7F7F0) */
   background-color: #F7F7F0;
   border-radius: 8px;
   padding: 50px 40px;
@@ -421,14 +405,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Updated Close Button Color: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
   transition: color 0.3s ease, transform 0.3s ease;
   border-radius: 50%;
 }
 
 .community-modal-close:hover {
-  /* Updated Close Button Hover: Rich Burnt Orange/Sienna (#A15F22) */
   color: #A15F22;
   transform: rotate(90deg);
 }
@@ -439,7 +421,6 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 15px;
-  /* Updated Modal Title Color: Dark Maroon/Reddish Brown (#6F3132) */
   color: #6F3132;
   text-align: center;
 }
@@ -448,7 +429,6 @@
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  /* Updated Modal Text Color: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
   font-weight: 300;
   text-align: center;
@@ -468,14 +448,11 @@
 .community-modal-input {
   width: 100%;
   padding: 15px 20px;
-  /* Updated Input Border: Muted Clay/Taupe (#8C6C5F) */
   border: 1px solid #8C6C5F;
   border-radius: 4px;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  /* Updated Input Text Color: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
-  /* Updated Input BG: Pale Beige/Cream (#F7F7F0) */
   background-color: #F7F7F0;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
@@ -483,12 +460,10 @@
 
 .community-modal-input:focus {
   outline: none;
-  /* Updated Input Focus Border: Rich Burnt Orange/Sienna (#A15F22) */
   border-color: #A15F22;
 }
 
 .community-modal-input::placeholder {
-  /* Updated Input Placeholder: Muted Clay/Taupe (#8C6C5F) */
   color: #8C6C5F;
 }
 
@@ -499,9 +474,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 15px 40px;
-  /* Updated Button BG: Dark Maroon/Reddish Brown (#6F3132) */
   background-color: #6F3132;
-  /* Updated Button Text: Pale Beige/Cream (#F7F7F0) */
   color: #F7F7F0;
   border: none;
   border-radius: 4px;
@@ -511,9 +484,7 @@
 }
 
 .community-modal-button:hover {
-  /* Updated Button Hover BG: Warm Sand/Tan (#B38A6A) */
   background-color: #B38A6A;
-  /* Updated Button Hover Text: Deep Coffee Brown (#6F3132) */
   color: #6F3132;
   transform: translateY(-1px);
 }
@@ -523,233 +494,75 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 1200px) {
-  .community-hero {
-    padding: 80px 0;
-  }
-  
-  .community-intro {
-    padding: 80px 0;
-  }
-  
-  .collaborations-section {
-    padding: 80px 0;
-  }
-  
-  .community-cta {
-    padding: 80px 0;
-  }
+  .community-hero { padding: 80px 0; }
+  .community-intro { padding: 80px 0; }
+  .collaborations-section { padding: 80px 0; }
+  .community-cta { padding: 80px 0; }
 }
 
 @media (max-width: 1024px) {
-  .collaborations-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
+  .collaborations-grid { grid-template-columns: 1fr; gap: 50px; }
 }
 
 @media (max-width: 992px) {
-  .collaborations-grid {
-    gap: 45px;
-}
+  .collaborations-grid { gap: 45px; }
 }
 
 @media (max-width: 768px) {
-  .community-hero {
-    padding: 60px 0;
-  }
-  
-  .hero-content-container {
-    padding: 0 20px;
-  }
-  
-  .community-title {
-    font-size: 2.5rem;
-  }
-  
-  .community-subtitle {
-    font-size: 1rem;
-  }
-  
-  .community-intro {
-    padding: 60px 0;
-  }
-  
-  .intro-text {
-    font-size: 1rem;
-  }
-  
-  .collaborations-section {
-    padding: 60px 0;
-  }
-  
-  .collaboration-description-overlay {
-    padding: 30px 20px;
-  }
-  
-  .collaboration-description-text {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-  
-  .community-video {
-    height: 60vh;
-  }
-  
-  .video-quote-community {
-    font-size: 1.75rem;
-    padding: 0 20px;
-  }
-  
-  .community-cta {
-    padding: 60px 0;
-  }
-  
-  .cta-heading {
-    font-size: 2rem;
-  }
-  
-  .cta-text {
-    font-size: 1rem;
-  }
+  .community-hero { padding: 60px 0; }
+  .hero-content-container { padding: 0 20px; }
+  .community-title { font-size: 2.5rem; }
+  .community-subtitle { font-size: 1rem; }
+  .community-intro { padding: 60px 0; }
+  .intro-text { font-size: 1rem; }
+  .collaborations-section { padding: 60px 0; }
+  .collaboration-description-overlay { padding: 30px 20px; }
+  .collaboration-description-text { font-size: 1rem; line-height: 1.7; }
+  .community-video { height: 60vh; }
+  .video-quote-community { font-size: 1.75rem; padding: 0 20px; }
+  .community-cta { padding: 60px 0; }
+  .cta-heading { font-size: 2rem; }
+  .cta-text { font-size: 1rem; }
 }
 
 @media (max-width: 576px) {
-  .community-hero {
-    padding: 50px 0;
-  }
-  
-  .community-title {
-    font-size: 2rem;
-  }
-  
-  .community-subtitle {
-    font-size: 0.9375rem;
-  }
-  
-  .community-intro {
-    padding: 50px 0;
-  }
-  
-  .intro-text {
-    font-size: 0.9375rem;
-  }
-  
-  .collaborations-section {
-    padding: 50px 0;
-  }
-  
-  .collaborations-grid {
-    gap: 35px;
-  }
-  
-  .collaboration-description-overlay {
-    padding: 25px 15px;
-  }
-  
-.collaboration-description-text {
-    font-size: 0.9375rem;
-    line-height: 1.6;
-  }
-  
-  .collaboration-card:hover .collaboration-image {
-    filter: blur(6px);
-  }
-  
-  .community-video {
-    height: 50vh;
-  }
-  
-  .video-quote-community {
-    font-size: 1.5rem;
-    padding: 0 15px;
-  }
-  
-  .community-cta {
-    padding: 50px 0;
-  }
-  
-  .cta-heading {
-    font-size: 2rem;
-    margin-bottom: 25px;
-  }
-  
-  .cta-text {
-    font-size: 0.9375rem;
-    margin-bottom: 30px;
-  }
-  
-  .cta-button {
-    padding: 12px 40px;
-    font-size: 0.75rem;
-  }
-
-  .community-modal {
-    padding: 40px 30px;
-    max-width: 100%;
-  }
-
-  .community-modal-title {
-    font-size: 2rem;
-  }
-
-  .community-modal-text {
-    font-size: 0.9375rem;
-  }
-
-  .community-modal-input {
-    padding: 12px 18px;
-    font-size: 0.9375rem;
-  }
-
-  .community-modal-button {
-    padding: 12px 30px;
-    font-size: 0.8125rem;
-  }
+  .community-hero { padding: 50px 0; }
+  .community-title { font-size: 2rem; }
+  .community-subtitle { font-size: 0.9375rem; }
+  .community-intro { padding: 50px 0; }
+  .intro-text { font-size: 0.9375rem; }
+  .collaborations-section { padding: 50px 0; }
+  .collaborations-grid { gap: 35px; }
+  .collaboration-description-overlay { padding: 25px 15px; }
+  .collaboration-description-text { font-size: 0.9375rem; line-height: 1.6; }
+  .collaboration-card:hover .collaboration-image { filter: blur(6px); }
+  .community-video { height: 50vh; }
+  .video-quote-community { font-size: 1.5rem; padding: 0 15px; }
+  .community-cta { padding: 50px 0; }
+  .cta-heading { font-size: 2rem; margin-bottom: 25px; }
+  .cta-text { font-size: 0.9375rem; margin-bottom: 30px; }
+  .cta-button { padding: 12px 40px; font-size: 0.75rem; }
+  .community-modal { padding: 40px 30px; max-width: 100%; }
+  .community-modal-title { font-size: 2rem; }
+  .community-modal-text { font-size: 0.9375rem; }
+  .community-modal-input { padding: 12px 18px; font-size: 0.9375rem; }
+  .community-modal-button { padding: 12px 30px; font-size: 0.8125rem; }
 }
 
 @media (max-width: 480px) {
-  .community-modal-overlay {
-    padding: 15px;
-  }
-
-  .community-modal {
-    padding: 35px 25px;
-  }
-
-  .community-modal-title {
-    font-size: 1.75rem;
-    margin-bottom: 12px;
-  }
-
-  .community-modal-text {
-    font-size: 0.875rem;
-    margin-bottom: 25px;
-  }
-
-  .community-modal-close {
-    top: 15px;
-    right: 15px;
-    width: 32px;
-    height: 32px;
-  }
+  .community-modal-overlay { padding: 15px; }
+  .community-modal { padding: 35px 25px; }
+  .community-modal-title { font-size: 1.75rem; margin-bottom: 12px; }
+  .community-modal-text { font-size: 0.875rem; margin-bottom: 25px; }
+  .community-modal-close { top: 15px; right: 15px; width: 32px; height: 32px; }
 }

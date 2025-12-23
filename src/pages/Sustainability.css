@@ -3,6 +3,36 @@
   padding-top: 0;
   position: relative;
   min-height: 100vh;
+  /* Base color for the whole page */
+  background-color: #F7F7F0;
+}
+
+/* GLOBAL BACKGROUND PATTERN ("Dorito"/Triangle) 
+   Applied to the whole page container for consistency with Community page.
+*/
+.sustainability-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* "Dorito-like" Triangle Pattern 
+     Matches the Community page exactly.
+     Fill-opacity set to 0.05 (Very Faint).
+  */
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 10L30 30H10z' fill='%238C6C5F' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  
+  background-size: 40px 40px; 
+  background-position: center top;
+  background-repeat: repeat;
+  
+  /* Overall opacity set to 0.3 (Extremely Light) */
+  opacity: 0.3; 
+  
+  pointer-events: none;
+  z-index: 0;
 }
 
 .page-with-transparent-header {
@@ -14,39 +44,31 @@
 .sustainability-intro {
   position: relative;
   z-index: 2;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) */
-  background: #F7F7F0;
+  /* CHANGED: Transparent so global pattern shows */
+  background: transparent;
   padding-top: 100px;
 }
 
 .sustainability-hero {
   padding: 100px 0;
   text-align: center;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) - used for the hero background color (was #fafafa) */
-  background-color: #F7F7F0;
+  /* CHANGED: Transparent so global pattern shows */
+  background-color: transparent;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-/* Simple triangle pattern - #8C6C5F (Muted Clay) */
+/* REMOVED: Specific triangle pattern removed in favor of global one */
 .sustainability-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%238C6C5F' d='M25 10L38 40H12z'/%3E%3C/svg%3E");
-  background-size: 50px 50px;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .hero-content-wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 40px;
+  position: relative;
 }
 
 .sustainability-title {
@@ -55,7 +77,6 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
-  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
   color: #6F3132;
 }
 
@@ -64,15 +85,14 @@
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #4a4a4a */
   color: #6F3132;
   font-style: italic;
 }
 
 .sustainability-intro {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
-  background-color: #F7F7F0;
+  /* CHANGED: Transparent so global pattern shows */
+  background-color: transparent;
 }
 
 .intro-text-wrapper {
@@ -125,7 +145,10 @@
 
 .practices-section {
   padding: 100px 0;
-  background-color: #F7F7F0;
+  /* CHANGED: Transparent so global pattern shows */
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .section-heading {
@@ -168,25 +191,11 @@
   border: 1px solid rgba(140, 108, 95, 0.1);
 }
 
-.practice-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.practice-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.practice-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.practice-card:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.practice-card:nth-child(5) {
-  animation-delay: 0.5s;
-}
+.practice-card:nth-child(1) { animation-delay: 0.1s; }
+.practice-card:nth-child(2) { animation-delay: 0.2s; }
+.practice-card:nth-child(3) { animation-delay: 0.3s; }
+.practice-card:nth-child(4) { animation-delay: 0.4s; }
+.practice-card:nth-child(5) { animation-delay: 0.5s; }
 
 .practice-card:hover {
   transform: translateY(-5px);
@@ -277,7 +286,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* Video Overlay: Kept dark for contrast, adjusted opacity slightly */
   background: rgba(0, 0, 0, 0.5); 
   display: flex;
   align-items: center;
@@ -289,7 +297,6 @@
   font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
-  /* Quote Text Color: Kept white for contrast against dark overlay */
   color: #ffffff;
   text-align: center;
   max-width: 900px;
@@ -299,26 +306,17 @@
 
 .commitment-section {
   padding: 100px 0;
-  /* Updated Background: Pale Beige/Cream (#F7F7F0) - was #ffffff */
-  background-color: #F7F7F0;
+  /* CHANGED: Transparent so global pattern shows */
+  background-color: transparent;
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-/* Minimal leaf/organic shape pattern */
+/* REMOVED: Specific ellipse pattern removed in favor of global one */
 .commitment-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cellipse cx='30' cy='30' rx='8' ry='15' fill='%23B38A6A' transform='rotate(45 30 30)'/%3E%3C/svg%3E");
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .commitment-content {
@@ -332,7 +330,6 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-bottom: 40px;
-  /* Updated Heading Color: Dark Maroon/Reddish Brown (#6F3132) - was #1a1a1a */
   color: #6F3132;
 }
 
@@ -340,160 +337,63 @@
   font-family: 'Lato', sans-serif;
   font-size: 1.125rem;
   line-height: 1.9;
-  /* Updated Body Text Color: Deep Coffee Brown (#6F3132) - was #2a2a2a */
   color: #6F3132;
   font-weight: 300;
 }
 
 @media (max-width: 1200px) {
-  .sustainability-hero {
-    padding: 80px 0;
-  }
-  
-  .sustainability-intro {
-    padding: 80px 0;
-  }
-  
-  .practices-section {
-    padding: 80px 0;
-  }
-  
-  .commitment-section {
-    padding: 80px 0;
-  }
+  .sustainability-hero { padding: 80px 0; }
+  .sustainability-intro { padding: 80px 0; }
+  .practices-section { padding: 80px 0; }
+  .commitment-section { padding: 80px 0; }
 }
 
 @media (max-width: 1024px) {
-  .practices-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
+  .practices-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
 }
 
 @media (max-width: 992px) {
-  .practices-grid {
-    gap: 35px;
-  }
+  .practices-grid { gap: 35px; }
 }
 
 @media (max-width: 768px) {
-  .sustainability-hero {
-    padding: 60px 0;
-  }
-  
-  .hero-content-wrapper {
-    padding: 0 20px;
-  }
-  
-  .sustainability-title {
-    font-size: 2.5rem;
-  }
-  
-  .sustainability-subtitle {
-    font-size: 1.25rem;
-  }
-  
-  .sustainability-intro {
-    padding: 60px 0;
-  }
-  
-  .intro-paragraph {
-    font-size: 1rem;
-  }
-  
-  .practices-section {
-    padding: 60px 0;
-  }
-  
-  .practices-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .sustainability-video {
-    height: 60vh;
-  }
-  
-  .sustainability-quote {
-    font-size: 1.75rem;
-    padding: 0 20px;
-  }
-  
-  .commitment-section {
-    padding: 60px 0;
-  }
-  
-  .commitment-heading {
-    font-size: 2rem;
-  }
-  
-  .commitment-text {
-    font-size: 1rem;
-  }
+  .sustainability-hero { padding: 60px 0; }
+  .hero-content-wrapper { padding: 0 20px; }
+  .sustainability-title { font-size: 2.5rem; }
+  .sustainability-subtitle { font-size: 1.25rem; }
+  .sustainability-intro { padding: 60px 0; }
+  .intro-paragraph { font-size: 1rem; }
+  .practices-section { padding: 60px 0; }
+  .practices-grid { grid-template-columns: 1fr; gap: 30px; }
+  .sustainability-video { height: 60vh; }
+  .sustainability-quote { font-size: 1.75rem; padding: 0 20px; }
+  .commitment-section { padding: 60px 0; }
+  .commitment-heading { font-size: 2rem; }
+  .commitment-text { font-size: 1rem; }
 }
 
 @media (max-width: 576px) {
-  .sustainability-hero {
-    padding: 50px 0;
-  }
-  
-  .sustainability-title {
-    font-size: 2rem;
-  }
-  
-  .sustainability-subtitle {
-    font-size: 1.125rem;
-  }
-  
-  .sustainability-intro {
-    padding: 50px 0;
-  }
-  
-  .intro-paragraph {
-    font-size: 0.9375rem;
-  }
-  
-  .practices-section {
-    padding: 50px 0;
-  }
-  
-  .practices-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .sustainability-video {
-    height: 50vh;
-  }
-  
-  .sustainability-quote {
-    font-size: 1.5rem;
-    padding: 0 15px;
-  }
-  
-  .commitment-section {
-    padding: 50px 0;
-  }
-  
-  .commitment-heading {
-    font-size: 1.75rem;
-    margin-bottom: 30px;
-  }
-  
-  .commitment-text {
-    font-size: 0.9375rem;
-  }
+  .sustainability-hero { padding: 50px 0; }
+  .sustainability-title { font-size: 2rem; }
+  .sustainability-subtitle { font-size: 1.125rem; }
+  .sustainability-intro { padding: 50px 0; }
+  .intro-paragraph { font-size: 0.9375rem; }
+  .practices-section { padding: 50px 0; }
+  .practices-grid { grid-template-columns: 1fr; gap: 25px; }
+  .sustainability-video { height: 50vh; }
+  .sustainability-quote { font-size: 1.5rem; padding: 0 15px; }
+  .commitment-section { padding: 50px 0; }
+  .commitment-heading { font-size: 1.75rem; margin-bottom: 30px; }
+  .commitment-text { font-size: 0.9375rem; }
 }
 
-
 /* FOOTER SECTION */
-/* --- FOOTER STYLES (Based on Option 3: Emphasized Commitment) --- */
-
 .main-footer {
-  /* Background: Muted Clay/Taupe (#8C6C5F) */
   background-color: #8C6C5F;
   padding: 80px 40px 40px 40px;
-  color: #F7F7F0; /* Text Color: Pale Beige/Cream */
+  color: #F7F7F0;
+  position: relative;
+  z-index: 2; /* Ensure footer sits above pattern */
 }
 
 .footer-content {
@@ -515,7 +415,7 @@
   font-size: 1.25rem;
   font-weight: 400;
   margin-bottom: 20px;
-  color: #F7F7F0; /* Pale Beige/Cream */
+  color: #F7F7F0;
 }
 
 .footer-section ul {
@@ -529,24 +429,19 @@
 
 .footer-section a {
   font-family: 'Lato', sans-serif;
-  /* Link Color: Pale Beige/Cream */
   color: #F7F7F0;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  /* Link Hover: Rich Burnt Orange/Sienna (#A15F22) */
   color: #A15F22;
 }
 
-/* Newsletter/CTA Button Example */
 .footer-cta-button {
   display: inline-block;
   padding: 10px 20px;
-  /* Button Background: Dark Maroon/Reddish Brown (#6F3132) */
   background-color: #6F3132;
-  /* Button Text: Pale Beige/Cream (#F7F7F0) */
   color: #F7F7F0; 
   text-decoration: none;
   border-radius: 2px;
@@ -555,21 +450,19 @@
 }
 
 .footer-cta-button:hover {
-  /* Button Hover: Warm Sand/Tan (#B38A6A) */
   background-color: #B38A6A;
-  color: #6F3132; /* Deep Coffee Brown text on hover for contrast */
+  color: #6F3132;
 }
 
 .footer-copyright {
   font-family: 'Lato', sans-serif;
-  border-top: 1px solid rgba(213, 198, 175, 0.3); /* Subtle divider using Pale Beige/Cream */
+  border-top: 1px solid rgba(213, 198, 175, 0.3);
   padding-top: 20px;
   margin-top: 40px;
   text-align: center;
   font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
