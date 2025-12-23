@@ -9,7 +9,7 @@
 .brand-container {
   display: flex;
   align-items: stretch;
-  min-height: 60vh;
+  min-height: 40vh; /* Compact height */
 }
 
 /* Content Side (Left) */
@@ -18,32 +18,32 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 60px;
-  /* background-color: #bc7942; */
+  /* PADDING: Left padding is larger (80px) to accommodate the strip on the left */
+  padding: 40px 60px 40px 80px;
   background-color: #462111;
-  /* background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F0 30%, #E8E4D8 70%, #D9D2C0 100%); */
   position: relative;
+  overflow: hidden;
 }
 
-/* Kutch Ajrakh Block Print pattern - traditional geometric */
-.brand-content::before {
+/* CHANGED: Vertical Strip on LEFT side.
+   NEW PATTERN: Traditional Saree Zari Butta Motif (inspired by the right image)
+   Color: Cream (#F0E7E7) to match embroidery on dark background.
+*/
+.brand-content::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 20px; 
   bottom: 0;
-  opacity: 0.06;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect x='8' y='8' width='20' height='20' fill='none' stroke='%238B5A3C' stroke-width='1'/%3E%3Crect x='14' y='14' width='8' height='8' fill='%238B5A3C' opacity='0.5'/%3E%3C/svg%3E");
-  background-size: 36px 36px;
+  width: 40px;
+  opacity: 0.25; /* Subtle opacity for a textile feel */
+  
+  /* New Zari Butta Embroidery Pattern */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='50' viewBox='0 0 40 50'%3E%3Cg fill='%23F0E7E7'%3E%3C!-- Central Diamond --%3E%3Cpath d='M20 18 L26 25 L20 32 L14 25 Z' /%3E%3C!-- Top Flourish (like zari stitches) --%3E%3Cpath d='M20 5 C 25 5, 30 10, 32 15 L 28 18 C 26 12, 22 8, 20 8 C 18 8, 14 12, 12 18 L 8 15 C 10 10, 15 5, 20 5 Z' /%3E%3C!-- Bottom Flourish --%3E%3Cpath d='M20 45 C 25 45, 30 40, 32 35 L 28 32 C 26 38, 22 42, 20 42 C 18 42, 14 38, 12 32 L 8 35 C 10 40, 15 45, 20 45 Z' /%3E%3C!-- Connecting Dots --%3E%3Ccircle cx='20' cy='2' r='1.5'/%3E%3Ccircle cx='20' cy='48' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+  
+  background-repeat: repeat-y;
+  background-size: 40px 50px; /* Tiling size */
   pointer-events: none;
-  z-index: 0;
-  animation: blockFade 12s ease-in-out infinite;
-}
-
-@keyframes blockFade {
-  0%, 100% { opacity: 0.04; }
-  50% { opacity: 0.08; }
 }
 
 .brand-label {
@@ -53,10 +53,26 @@
   text-transform: uppercase;
   color: #f0e7e7;
   opacity: 0.8;
-  display: block;
+  
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+}
+
+/* Horizontal motif next to label (kept the wavy flourish as it fits the theme) */
+.brand-label::after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 10px;
+  opacity: 0.6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='10' viewBox='0 0 35 10'%3E%3Cpath d='M0 5 C 5 1, 10 9, 17.5 5 C 25 1, 30 9, 35 5' stroke='%23F0E7E7' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='17.5' cy='5' r='2' fill='%23F0E7E7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 .brand-heading {
@@ -84,6 +100,7 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  max-width: 90%;
 }
 
 .brand-text:last-of-type {
@@ -139,61 +156,21 @@
   filter: brightness(1.05);
 }
 
-
-/* Picture in Picture Overlay */
-.brand-image-pip {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  width: 280px;
-  height: 340px;
-  z-index: 3;
-  border: 6px solid #F7F7F0;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3),
-              0 5px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transform: rotate(-2deg);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.5s ease;
-  animation: floatPip 6s ease-in-out infinite;
-}
-
-@keyframes floatPip {
-  0%, 100% { 
-    transform: rotate(-2deg) translateY(0); 
-  }
-  50% { 
-    transform: rotate(-2deg) translateY(-10px); 
-  }
-}
-
-.brand-image-pip:hover {
-  transform: rotate(0deg) scale(1.05);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4),
-              0 10px 20px rgba(0, 0, 0, 0.3);
-  animation: none;
-}
-
-.brand-image-overlay {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-}
-
-.brand-image-pip:hover .brand-image-overlay {
-  transform: scale(1.15);
-}
-
 /* Responsive Design */
 @media (max-width: 1200px) {
   .brand-container {
-    min-height: 50vh;
+    min-height: 35vh;
   }
   
   .brand-content {
-    padding: 70px 50px;
+    /* Adjust padding for tablet: Left padding larger for strip */
+    padding: 40px 50px 40px 70px;
+  }
+  
+  .brand-content::after {
+    left: 15px;
+    width: 35px;
+    background-size: 35px 43px; /* Adjusted for responsive scaling */
   }
   
   .brand-heading {
@@ -203,16 +180,22 @@
 
 @media (max-width: 992px) {
   .brand-container {
-    flex-direction: column-reverse; /* Image on top on mobile */
+    flex-direction: column-reverse; /* Image on top */
     min-height: auto;
   }
   
   .brand-image-wrapper {
-    height: 45vh;
+    height: 35vh;
   }
   
   .brand-content {
-    padding: 60px 40px;
+    /* Symmetrical padding for mobile */
+    padding: 40px 40px;
+  }
+  
+  /* Hide decorative strip on mobile */
+  .brand-content::after {
+    display: none;
   }
   
   .brand-heading {
@@ -222,23 +205,15 @@
   .brand-text {
     font-size: 1.05rem;
   }
-  
-  .brand-image-pip {
-    width: 180px;
-    height: 220px;
-    bottom: 20px;
-    left: 20px;
-    border-width: 4px;
-  }
 }
 
 @media (max-width: 768px) {
   .brand-image-wrapper {
-    height: 40vh;
+    height: 30vh;
   }
   
   .brand-content {
-    padding: 50px 30px;
+    padding: 35px 30px;
   }
   
   .brand-heading {
@@ -253,21 +228,16 @@
   .brand-label {
     font-size: 0.75rem;
   }
-  
-  .brand-signature {
-    font-size: 0.85rem;
-    margin-top: 25px;
-  }
 }
 
 @media (max-width: 576px) {
   .brand-image-wrapper {
-    height: 35vh;
-    min-height: 280px;
+    height: 25vh;
+    min-height: 200px;
   }
   
   .brand-content {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
   
   .brand-label {
@@ -284,36 +254,17 @@
   .brand-text {
     font-size: 0.95rem;
     line-height: 1.7;
-    margin-bottom: 18px;
-  }
-  
-  .brand-signature {
-    font-size: 0.8rem;
-    margin-top: 20px;
-  }
-  
-  .content-accent {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-  }
-  
-  .brand-image-pip {
-    width: 140px;
-    height: 170px;
-    bottom: 15px;
-    left: 15px;
-    border-width: 3px;
   }
 }
 
 @media (max-width: 480px) {
   .brand-image-wrapper {
-    height: 32vh;
-    min-height: 240px;
+    height: 25vh;
+    min-height: 180px;
   }
   
   .brand-content {
-    padding: 35px 15px;
+    padding: 25px 15px;
   }
   
   .brand-heading {
@@ -322,9 +273,5 @@
   
   .brand-text {
     font-size: 0.9rem;
-  }
-  
-  .brand-signature {
-    font-size: 0.75rem;
   }
 }
