@@ -80,7 +80,7 @@ const Collections = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % collectionImages.length);
-    }, 5000); 
+    }, 5000);
     return () => clearInterval(interval);
   }, [collectionImages.length]);
 
@@ -106,11 +106,23 @@ const Collections = () => {
 
       <div className="collections-hero">
         <div className="hero-content-wrapper">
-          <div className="collections-icon">✧</div>
-           <span className="collections-label">Our Collection</span>
-          <h1 className="collections-title">Kolours of Kutch</h1>
-          <div className="section-divider">
-            <span className="divider-line-full"></span>
+          <div className="collections-hero">
+            <div className="hero-content-wrapper">
+              <div className="collections-icon">✧</div>
+              <span className="collections-label">Our Collection</span>
+              <h1 className="collections-title">Kolours of Kutch</h1>
+              <div className="section-divider">
+                <span className="divider-line-full"></span>
+              </div>
+              <div className="collections-intro">
+                <p className="body-text intro-text intro-bold">
+                  Introducing exceptional fabric creations, which showcase the rich heritage and artistic prowess of Kutch. The artisans specialize in various techniques, such as <strong>handloom weaving</strong>, <strong>bandhani tie-dyeing</strong>, and intricate embroidery like <strong>mirror work</strong> and <strong>thread work</strong>. Fabrics from Kutch often feature vibrant colors, geometric patterns, and intricate detailing.
+                </p>
+                <p className="body-text intro-text intro-bold">
+                  <strong>Kolours of Kutch</strong> is a blend of the fabrics from <strong>Bhujodi</strong>, <strong>Kutch</strong> & <strong>Ajrakhpur</strong> and designs tailor made in such a way that each piece tells a story of skill, tradition, and cultural identity.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

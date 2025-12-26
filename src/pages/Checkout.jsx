@@ -17,10 +17,9 @@ const Checkout = () => {
   // Order state
   const [currentOrder, setCurrentOrder] = useState(null);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
-  const [transactionId, setTransactionId] = useState('');
 
-  // Payment method - only online payment options (NO COD as per client request)
-  const [paymentMethod, setPaymentMethod] = useState('upi');
+  // Payment method - HDFC by default
+  const paymentMethod = 'hdfc';
 
   // Shipping details
   const [shippingDetails, setShippingDetails] = useState({
@@ -33,34 +32,6 @@ const Checkout = () => {
     pincode: '',
     country: 'India'
   });
-
-  // Payment methods available (NO COD)
-  const paymentMethods = [
-    {
-      id: 'upi',
-      name: 'UPI Payment',
-      description: 'Pay using UPI (GPay, PhonePe, Paytm)',
-      icon: '📱'
-    },
-    {
-      id: 'card',
-      name: 'Credit/Debit Card',
-      description: 'Pay securely with Visa, Mastercard, RuPay',
-      icon: '💳'
-    },
-    {
-      id: 'netbanking',
-      name: 'Net Banking',
-      description: 'Pay through your bank account',
-      icon: '🏦'
-    },
-    {
-      id: 'wallet',
-      name: 'Digital Wallet',
-      description: 'Pay using Paytm, Amazon Pay, etc.',
-      icon: '👛'
-    }
-  ];
 
   useEffect(() => {
     if (!isBootstrapped) return;
@@ -154,8 +125,8 @@ const Checkout = () => {
       const orderItems = cartItems.map(item => ({
         product_id: item.id || item.productId,
         name: item.name,
-        size: item.size || 'M', // Fallback
-        color: item.color || 'Default', // Fallback
+        size: item.size || 'M',
+        color: item.color || 'Default',
         quantity: item.quantity || 1,
         price: typeof item.price === 'string'
           ? parseFloat(item.price.replace(/[₹,]/g, ''))
@@ -176,58 +147,46 @@ const Checkout = () => {
         payment_method: paymentMethod
       };
 
-      console.log('Sending Order Data (JSON):', JSON.stringify(orderData, null, 2));
-      const response = await createOrder(orderData);
+      console.log('Creating Order:', JSON.stringify(orderData, null, 2));
+      const orderResponse = await createOrder(orderData);
+      console.log('Order Response:', orderResponse);
 
-      if (response && (response.success || response.data)) {
-        const orderInfo = response.data || response;
-        setCurrentOrder(orderInfo);
+      if (orderResponse && (orderResponse.success || orderResponse.data || orderResponse.order_id)) {
+        const orderInfo = orderResponse.data || orderResponse;
+        const orderId = orderInfo.order_id || orderInfo.id;
 
-        // Clear cart
-        sessionStorage.removeItem('cartItems');
+        if (!orderId) {
+          throw new Error('Order ID not received from server');
+        }
 
-        // Show payment modal
-        setShowPaymentModal(true);
-        toast.success('Order created! Please complete payment.');
-      }
-    } catch (error) {
-      console.error('Order error:', error);
-      toast.error(error.message || 'Failed to place order. Please try again.');
-    } finally {
-      setProcessing(false);
-    }
-  };
+        // Now submit payment immediately
+        console.log('Submitting Payment for Order:', orderId);
+        const paymentData = { payment_method: paymentMethod };
+        const paymentResponse = await submitPayment(orderId, paymentData);
+        console.log('Payment Response:', paymentResponse);
 
-  const handlePaymentSubmit = async (e) => {
-    e.preventDefault();
-    if (!transactionId.trim()) {
-      toast.error('Please enter transaction ID');
-      return;
-    }
-
-    setProcessing(true);
-    try {
-      const orderId = currentOrder.order_id || currentOrder.id;
-      if (!orderId) throw new Error('Invalid order ID');
-
-      const response = await submitPayment(orderId, {
-        payment_method: paymentMethod,
-        transaction_id: transactionId
-      });
-
-      if (response.success || response.status === 'success') {
-        toast.success('Payment successful! Order confirmed.');
-        navigate('/profile'); // Redirect to profile to see order
+        if (paymentResponse && (paymentResponse.success || paymentResponse.status === 'success' || paymentResponse.payment_status === 'completed')) {
+          // Clear cart
+          sessionStorage.removeItem('cartItems');
+          
+          // Show success message
+          setCurrentOrder(orderInfo);
+          setShowPaymentModal(true);
+          toast.success('🎉 Payment successful! Your order has been placed.');
+        } else {
+          throw new Error('Payment processing failed');
+        }
       } else {
-        throw new Error('Payment verification failed');
+        throw new Error('Failed to create order');
       }
     } catch (error) {
-      console.error('Payment error:', error);
-      toast.error(error.message || 'Payment failed. Please try again.');
+      console.error('Order/Payment error:', error);
+      toast.error(error.message || 'Failed to process order. Please try again.');
     } finally {
       setProcessing(false);
     }
   };
+
 
   if (!isBootstrapped || loading) {
     return (
@@ -378,42 +337,6 @@ const Checkout = () => {
                 </div>
               </div>
             </section>
-
-            {/* Payment Method */}
-            <section className="checkout-section">
-              <h2>Mode of Payment</h2>
-              <p className="payment-note">
-                Select your preferred payment method. All transactions are secure and encrypted.
-              </p>
-
-              <div className="payment-methods">
-                {paymentMethods.map((method) => (
-                  <label
-                    key={method.id}
-                    className={`payment-option ${paymentMethod === method.id ? 'selected' : ''}`}
-                  >
-                    <input
-                      type="radio"
-                      name="paymentMethod"
-                      value={method.id}
-                      checked={paymentMethod === method.id}
-                      onChange={(e) => setPaymentMethod(e.target.value)}
-                    />
-                    <span className="payment-icon">{method.icon}</span>
-                    <div className="payment-info">
-                      <span className="payment-name">{method.name}</span>
-                      <span className="payment-desc">{method.description}</span>
-                    </div>
-                    <span className="payment-check">✓</span>
-                  </label>
-                ))}
-              </div>
-
-              <div className="secure-payment-badge">
-                <span className="lock-icon">🔒</span>
-                <span>Your payment information is secure and encrypted</span>
-              </div>
-            </section>
           </div>
 
           {/* Right Column - Order Summary */}
@@ -473,7 +396,7 @@ const Checkout = () => {
                     Processing...
                   </>
                 ) : (
-                  `Pay ₹${calculateTotal().toLocaleString('en-IN')}`
+                  'Proceed to Payment'
                 )}
               </button>
 
@@ -486,53 +409,59 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-      {/* Payment Modal */}
-      {showPaymentModal && (
+      {/* Success Modal */}
+      {showPaymentModal && currentOrder && (
         <div className="modal-overlay">
-          <div className="payment-modal">
-            <div className="modal-header">
-              <h2>Complete Payment</h2>
-              {/* Prevent closing for now, or allow verify later */}
+          <div className="payment-modal success-modal">
+            <div className="modal-header success-header">
+              <div className="success-icon">✓</div>
+              <h2>Payment Successful!</h2>
             </div>
             <div className="modal-body">
-              <p className="order-summary-text">
-                Order ID: <strong>{currentOrder?.order_number || currentOrder?.order_id}</strong><br />
-                Amount: <strong>₹{calculateTotal().toLocaleString('en-IN')}</strong>
-              </p>
-
-              <div className="payment-instructions">
-                <p>Please make a payment of <strong>₹{calculateTotal().toLocaleString('en-IN')}</strong> using {paymentMethod.toUpperCase()}.</p>
-                {paymentMethod === 'upi' && (
-                  <div className="qr-placeholder">
-                    <p>Scan QR Code (Simulated)</p>
-                    <div style={{ width: '150px', height: '150px', background: '#f0f0f0', margin: '10px auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      QR CODE
-                    </div>
+              <div className="success-message">
+                <p className="success-text">
+                  Thank you for your purchase! Your payment has been processed successfully and your order is confirmed.
+                </p>
+                
+                <div className="order-details-card">
+                  <h3>Order Details</h3>
+                  <div className="detail-row">
+                    <span className="detail-label">Order ID:</span>
+                    <span className="detail-value">{currentOrder?.order_number || currentOrder?.order_id || 'N/A'}</span>
                   </div>
-                )}
+                  <div className="detail-row">
+                    <span className="detail-label">Amount Paid:</span>
+                    <span className="detail-value">₹{calculateTotal().toLocaleString('en-IN')}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Payment Method:</span>
+                    <span className="detail-value">HDFC Payment Gateway</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Email:</span>
+                    <span className="detail-value">{shippingDetails.email}</span>
+                  </div>
+                </div>
+
+                <p className="confirmation-note">
+                  📧 A confirmation email has been sent to <strong>{shippingDetails.email}</strong>
+                </p>
               </div>
 
-              <form onSubmit={handlePaymentSubmit}>
-                <div className="form-group">
-                  <label htmlFor="transactionId">Enter Transaction ID / Reference No.</label>
-                  <input
-                    type="text"
-                    id="transactionId"
-                    value={transactionId}
-                    onChange={(e) => setTransactionId(e.target.value)}
-                    placeholder="e.g. UPI1234567890"
-                    required
-                    className="transaction-input"
-                  />
-                  <small>Use "TXN12345679900049988" for testing</small>
-                </div>
-
-                <div className="modal-actions">
-                  <button type="submit" className="confirm-payment-btn" disabled={processing}>
-                    {processing ? 'Verifying...' : 'Confirm Payment'}
-                  </button>
-                </div>
-              </form>
+              <div className="modal-actions">
+                <button 
+                  className="confirm-payment-btn success-btn" 
+                  onClick={() => navigate('/profile')}
+                >
+                  View My Orders
+                </button>
+                <button 
+                  className="secondary-btn" 
+                  onClick={() => navigate('/')}
+                >
+                  Continue Shopping
+                </button>
+              </div>
             </div>
           </div>
         </div>

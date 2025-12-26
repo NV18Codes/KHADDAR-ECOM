@@ -73,7 +73,9 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Khaddar. All rights reserved.
           </p>
           <div className="footer-legal">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" onClick={(e) => handleLinkClick(e, '/contact')}>Contact Us</Link>
+            <span className="footer-separator">|</span>
+            <Link to="/faqs" onClick={(e) => handleLinkClick(e, '/faqs')}>FAQ's</Link>
           </div>
         </div>
       </div>

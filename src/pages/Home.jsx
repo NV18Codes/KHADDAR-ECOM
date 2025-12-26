@@ -51,8 +51,6 @@ const Home = () => {
       
       <HeritageDivider variant="light" />
       
-      
-      
       {/* About Section - with image */}
       <div className="scroll-section">
         <AboutSection />
@@ -69,6 +67,8 @@ const Home = () => {
       <div className="scroll-section">
         <BrandStory />
       </div>
+      
+      <HeritageDivider variant="light" />
       
       {/* Featured Collection */}
       <div className="scroll-section">

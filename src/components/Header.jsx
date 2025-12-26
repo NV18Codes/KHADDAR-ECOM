@@ -200,7 +200,7 @@ const Header = () => {
                   className="nav-link-wrapper"
                   onMouseEnter={() => handleMenuHover('shop')}
                   onMouseLeave={(e) => {
-                    if (!e.relatedTarget || !e.currentTarget.contains(e.relatedTarget)) {
+                    if (!e.relatedTarget || !(e.relatedTarget instanceof Node) || !e.currentTarget.contains(e.relatedTarget)) {
                       handleMenuLeave();
                     }
                   }}

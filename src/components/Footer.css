@@ -216,10 +216,12 @@
   color: #FFFFFF;
 }
 
-.footer-legal span {
+.footer-legal span,
+.footer-separator {
   /* SEPARATOR: Pale Beige/Cream (#F7F7F0) - was #6b6b6b */
   color: #F7F7F0;
   font-size: 0.75rem;
+  opacity: 0.6;
 }
 
 @media (max-width: 1400px) {

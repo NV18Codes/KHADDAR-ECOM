@@ -59,6 +59,9 @@ export const createOrder = async (orderData) => {
         const path = API_CONFIG.ENDPOINTS.ORDERS;
         const url = API_BASE_URL ? `${API_BASE_URL}${path}` : path;
 
+        console.log('Creating order at:', url);
+        console.log('Order data:', JSON.stringify(orderData, null, 2));
+
         const token = sessionStorage.getItem('khaddar.auth.token') || sessionStorage.getItem('token');
         const headers = {
             'Content-Type': 'application/json'
@@ -76,7 +79,9 @@ export const createOrder = async (orderData) => {
             })
         );
 
-        return await handleResponse(response);
+        const result = await handleResponse(response);
+        console.log('Order creation response:', result);
+        return result;
     } catch (error) {
         console.error('Error creating order:', error);
         throw error;
@@ -94,6 +99,9 @@ export const submitPayment = async (orderId, paymentData) => {
         const path = `${API_CONFIG.ENDPOINTS.ORDERS}/${orderId}/pay`;
         const url = API_BASE_URL ? `${API_BASE_URL}${path}` : path;
 
+        console.log('Submitting payment to:', url);
+        console.log('Payment data:', paymentData);
+
         const response = await withTimeout(
             fetch(url, {
                 method: 'POST',
@@ -104,7 +112,9 @@ export const submitPayment = async (orderId, paymentData) => {
             })
         );
 
-        return await handleResponse(response);
+        const result = await handleResponse(response);
+        console.log('Payment submission response:', result);
+        return result;
     } catch (error) {
         console.error('Error submitting payment:', error);
         throw error;
@@ -132,6 +142,8 @@ export const getMyOrders = async (email, page = 1, limit = 10) => {
 
         url = `${url}?${queryParams.toString()}`;
 
+        console.log('Fetching orders from:', url);
+
         const response = await withTimeout(
             fetch(url, {
                 method: 'GET',
@@ -141,7 +153,9 @@ export const getMyOrders = async (email, page = 1, limit = 10) => {
             })
         );
 
-        return await handleResponse(response);
+        const result = await handleResponse(response);
+        console.log('Get orders response:', result);
+        return result;
     } catch (error) {
         console.error('Error fetching orders:', error);
         throw error;
