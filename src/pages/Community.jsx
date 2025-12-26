@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Community.css';
 import HeroVideo from '../components/HeroVideo';
 
 const Community = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState('');
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5; // 1.5x speed
+    }
+  }, []);
 
   const handleOpenModal = (e) => {
     e.preventDefault();
@@ -31,7 +38,74 @@ const Community = () => {
         subtitle='Building bridges between tradition and innovation, one collaboration at a time.'
         fullHeight={true}
       />
-  
+
+      {/* Artisan Story Section */}
+      <section className="artisan-story-section">
+        <div className="container">
+          <div className="artisan-story-wrapper">
+            <div className="story-icon">✦</div>
+            <span className="story-label">Our Artisans</span>
+            <h2 className="story-heading">Artisans from Kutch & Ajrakhpur</h2>
+            
+            <div className="story-content-grid">
+              {/* Decorative Pattern Elements */}
+              <div className="story-pattern story-pattern-left">
+                <div className="pattern-diamond"></div>
+                <div className="pattern-dots"></div>
+              </div>
+              <div className="story-pattern story-pattern-right">
+                <div className="pattern-diamond"></div>
+                <div className="pattern-dots"></div>
+              </div>
+
+              {/* Photo Collage */}
+              <div className="story-photo-section">
+                <div className="story-photo-wrapper">
+                  <img src="/blog-images/collage-artisans-2.png" alt="Artisans from Kutch & Ajrakhpur" className="story-collage-image" />
+                  <div className="image-outline-glow"></div>
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <div className="story-text-content">
+                <div className="text-decorative-accent"></div>
+                <p className="story-paragraph">
+                  From the culturally rich regions of <strong>Kutch</strong> and <strong>Ajrakhpur</strong> in Gujarat, these artisans carry forward traditions that have lived through generations. Their craft is not simply a profession, but a <strong>way of life</strong> - one shaped by stories, rituals, and an intimate relationship with their surroundings.
+                </p>
+                <p className="story-paragraph">
+                  The motifs they create are inspired by <strong>age-old folklore</strong>, memory, and regional symbolism. Each form holds meaning, reflecting <strong>nature</strong>, belief systems, and the rhythms of community life. Having grown up immersed in this heritage, these skills live <strong>instinctively in their hands</strong>, refined over time, yet deeply rooted in ancestry.
+                </p>
+                <p className="story-paragraph">
+                  At Khaddar, we engage with these artisans through <strong>shared values</strong> and <strong>mutual respect</strong>, supporting the continuation of practices that honour India's living cultural legacy - quietly, thoughtfully, and with <strong>integrity</strong>.
+                </p>
+                <div className="text-decorative-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="community-video">
+        <div className="video-section-wrapper">
+          <video
+            ref={videoRef}
+            className="community-video-element"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="https://cdn.pixabay.com/video/2025/07/11/290603_large.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="video-overlay-content">
+            <p className="video-quote-community">
+              "Together, we weave stories of tradition, innovation, and community."
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="community-intro">
         <div className="container">
           <div className="intro-content">
@@ -40,27 +114,6 @@ const Community = () => {
             <h2 className="section-heading">Building Together</h2>
             <p className="body-text intro-text">
               At Khaddar, we believe that fashion is a collaborative art. Our community initiatives and collaborations bring together artisans, designers, and cultural enthusiasts to create something meaningful. Through these partnerships, we aim to preserve traditional crafts, support local communities, and inspire new generations to appreciate the beauty of handcrafted excellence.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="community-video">
-        <div className="video-section-wrapper">
-          <video
-            className="community-video-element"
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="https://images.unsplash.com/photo-1718128306989-a5bd41566cde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2000"
-          >
-            <source src="https://cdn.pixabay.com/video/2024/03/29/206029_tiny.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="video-overlay-content">
-            <p className="video-quote-community">
-              "Together, we weave stories of tradition, innovation, and community."
             </p>
           </div>
         </div>
