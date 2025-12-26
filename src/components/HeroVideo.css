@@ -147,12 +147,13 @@
 /* Typography */
 .hero-title {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
   margin-top: 50px;
   margin-bottom: 20px;
   line-height: 1.1;
+  text-transform: uppercase;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   /* Optional: Luxury text reveal */
   animation: scaleReveal 1.2s ease-out;
@@ -267,16 +268,16 @@
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1200px) {
-  .hero-title { font-size: 3.5rem; }
+  .hero-title { font-size: 3rem; }
 }
 
 @media (max-width: 992px) {
-  .hero-title { font-size: 3rem; }
+  .hero-title { font-size: 2.6rem; }
 }
 
 @media (max-width: 768px) {
   .hero-video { height: 100vh; }
-  .hero-title { font-size: 2.5rem; }
+  .hero-title { font-size: 2.2rem; letter-spacing: 0.12em; }
   .hero-subtitle { font-size: 1rem; margin-bottom: 30px; letter-spacing: 0.1em; }
   .hero-cta { padding: 12px 30px; font-size: 0.75rem; }
   
@@ -285,7 +286,11 @@
 }
 
 @media (max-width: 576px) {
-  .hero-title { font-size: 2rem; margin-bottom: 15px; }
+  .hero-title { font-size: 1.8rem; letter-spacing: 0.1em; margin-bottom: 15px; }
   .hero-subtitle { font-size: 0.9rem; margin-bottom: 25px; }
   .home-hero-custom .hero-subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 1.6rem; letter-spacing: 0.08em; }
 }
