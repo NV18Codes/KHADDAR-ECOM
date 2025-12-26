@@ -97,7 +97,7 @@ const Sustainability = () => {
           </video>
           <div className="video-quote-wrapper">
             <p className="sustainability-quote">
-              "Protect the planet by choosing organic fabrics, natural dyes, and earth-friendly practices that respect nature's rhythms."
+              "Khadi is freedom in fabric." — Mahatma Gandhi
             </p>
           </div>
         </div>

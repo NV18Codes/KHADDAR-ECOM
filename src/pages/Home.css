@@ -4,56 +4,6 @@
   width: 100%;
 }
 
-/* Heritage Quote Banner */
-.heritage-quote-banner {
-  background-color: #6F3132;
-  padding: 25px 40px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.heritage-quote-banner::before,
-.heritage-quote-banner::after {
-  content: '◆';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  color: #B38A6A;
-  opacity: 0.6;
-}
-
-.heritage-quote-banner::before {
-  left: 30px;
-}
-
-.heritage-quote-banner::after {
-  right: 30px;
-}
-
-.heritage-quote-banner p {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  font-style: italic;
-  color: #F7F7F0;
-  letter-spacing: 0.05em;
-  margin: 0;
-  animation: quoteReveal 1s ease forwards;
-}
-
-@keyframes quoteReveal {
-  from {
-    opacity: 0;
-    letter-spacing: 0.15em;
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 0.05em;
-  }
-}
-
 /* Heritage Divider */
 .heritage-divider {
   display: flex;
@@ -86,47 +36,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .heritage-quote-banner p {
-    font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .heritage-quote-banner {
-    padding: 22px 30px;
-  }
-  
-  .heritage-quote-banner p {
-    font-size: 1rem;
-  }
-  
-  .heritage-quote-banner::before,
-  .heritage-quote-banner::after {
-    font-size: 10px;
-    left: 20px;
-  }
-  
-  .heritage-quote-banner::after {
-    right: 20px;
-  }
-}
-
 @media (max-width: 768px) {
-  .heritage-quote-banner {
-    padding: 20px 20px;
-  }
-  
-  .heritage-quote-banner p {
-    font-size: 0.95rem;
-    letter-spacing: 0.03em;
-  }
-  
-  .heritage-quote-banner::before,
-  .heritage-quote-banner::after {
-    display: none;
-  }
-  
   .heritage-divider {
     padding: 30px 20px;
   }
@@ -142,15 +52,6 @@
 }
 
 @media (max-width: 576px) {
-  .heritage-quote-banner {
-    padding: 18px 15px;
-  }
-  
-  .heritage-quote-banner p {
-    font-size: 0.875rem;
-    letter-spacing: 0.02em;
-  }
-  
   .heritage-divider {
     padding: 25px 15px;
   }
@@ -166,14 +67,6 @@
 }
 
 @media (max-width: 480px) {
-  .heritage-quote-banner {
-    padding: 15px 10px;
-  }
-  
-  .heritage-quote-banner p {
-    font-size: 0.8rem;
-  }
-  
   .heritage-divider {
     padding: 20px 10px;
   }

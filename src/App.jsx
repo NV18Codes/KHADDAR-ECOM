@@ -13,6 +13,7 @@ import ShopWomen from './pages/ShopWomen';
 import Community from './pages/Community';
 import Sustainability from './pages/Sustainability';
 import Contact from './pages/Contact';
+import FAQs from './pages/FAQs';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
@@ -48,6 +49,7 @@ function AppContent() {
             <Route path="/community" element={<Community />} />
             <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faqs" element={<FAQs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />

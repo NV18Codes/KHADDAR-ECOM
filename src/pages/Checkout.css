@@ -614,22 +614,244 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
+  padding: 20px;
+  overflow-y: auto;
   backdrop-filter: blur(4px);
 }
 
 .payment-modal {
   background-color: white;
-  padding: 30px;
+  padding: 40px;
   border-radius: 12px;
   width: 100%;
   max-width: 450px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   animation: modalSlideUp 0.3s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.payment-modal.success-modal {
+  max-width: 600px;
+  max-height: 85vh;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 20px;
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-message {
+  text-align: center;
+}
+
+.success-text {
+  font-size: 1.1rem;
+  color: #4C2E2E;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.order-details-card {
+  background: #F7F7F0;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 25px 0;
+  text-align: left;
+  border-left: 4px solid #6F3132;
+}
+
+.order-details-card h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3rem;
+  color: #6F3132;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(140, 108, 95, 0.2);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #8C6C5F;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #4C2E2E;
+  word-break: break-word;
+}
+
+.confirmation-note {
+  font-size: 0.95rem;
+  color: #8C6C5F;
+  margin: 20px 0;
+  padding: 15px;
+  background: #FFF9E6;
+  border-radius: 6px;
+  border: 1px solid #FFE69C;
+}
+
+.success-btn {
+  background: linear-gradient(135deg, #6F3132, #8B4545);
+}
+
+.success-btn:hover {
+  background: linear-gradient(135deg, #8B4545, #6F3132);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #8C6C5F;
+  color: #6F3132;
+  padding: 14px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.secondary-btn:hover {
+  background: #F7F7F0;
+  border-color: #6F3132;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles for Success Modal */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 15px;
+  }
+
+  .payment-modal {
+    padding: 30px 20px;
+  }
+
+  .payment-modal.success-modal {
+    max-width: 95%;
+  }
+
+  .success-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .success-text {
+    font-size: 1rem;
+  }
+
+  .order-details-card {
+    padding: 20px 15px;
+  }
+
+  .order-details-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 0;
+  }
+
+  .detail-label,
+  .detail-value {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .payment-modal {
+    padding: 25px 15px;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .success-text {
+    font-size: 0.95rem;
+  }
+
+  .order-details-card {
+    padding: 15px 12px;
+  }
+
+  .confirmation-note {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .confirm-payment-btn,
+  .secondary-btn {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
 }
 
 @keyframes modalSlideUp {
@@ -664,6 +886,32 @@
   text-align: center;
   margin-bottom: 25px;
   color: #4C2E2E;
+}
+
+.payment-gateway-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid #6F3132;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.gateway-notice {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6F3132;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gateway-features {
+  font-size: 0.95rem;
+  color: #4C2E2E;
+  line-height: 1.8;
+  margin: 0;
 }
 
 .qr-placeholder {

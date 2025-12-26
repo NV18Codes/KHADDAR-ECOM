@@ -5,13 +5,29 @@ import HeroVideo from '../components/HeroVideo';
 const Community = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState('');
+  const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef(null);
+
+  const artisanImages = [
+    '/blog-images/IMG_1625.PNG',
+    '/blog-images/IMG_1626.PNG',
+    '/blog-images/IMG_1627.PNG',
+    '/blog-images/IMG_1628.PNG'
+  ];
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 1.5; // 1.5x speed
     }
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % artisanImages.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [artisanImages.length]);
 
   const handleOpenModal = (e) => {
     e.preventDefault();
@@ -58,10 +74,28 @@ const Community = () => {
                 <div className="pattern-dots"></div>
               </div>
 
-              {/* Photo Collage */}
+              {/* Photo Carousel */}
               <div className="story-photo-section">
                 <div className="story-photo-wrapper">
-                  <img src="/blog-images/collage-artisans-2.png" alt="Artisans from Kutch & Ajrakhpur" className="story-collage-image" />
+                  <div className="carousel-container">
+                    {artisanImages.map((image, index) => (
+                      <div 
+                        key={index}
+                        className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
+                        style={{
+                          opacity: index === currentSlide ? 1 : 0,
+                          transform: index === currentSlide ? 'scale(1)' : 'scale(0.95)'
+                        }}
+                      >
+                        <img 
+                          src={image} 
+                          alt={`Artisan ${index + 1}`} 
+                          className="story-collage-image"
+                        />
+                        <div className="glow-sweep"></div>
+                      </div>
+                    ))}
+                  </div>
                   <div className="image-outline-glow"></div>
                 </div>
               </div>
@@ -70,13 +104,13 @@ const Community = () => {
               <div className="story-text-content">
                 <div className="text-decorative-accent"></div>
                 <p className="story-paragraph">
-                  From the culturally rich regions of <strong>Kutch</strong> and <strong>Ajrakhpur</strong> in Gujarat, these artisans carry forward traditions that have lived through generations. Their craft is not simply a profession, but a <strong>way of life</strong> - one shaped by stories, rituals, and an intimate relationship with their surroundings.
+                  From the culturally rich regions of Kutch and Ajrakhpur in Gujarat, these artisans carry forward traditions that have lived through generations. Their craft is not simply a profession, but a way of life - one shaped by stories, rituals, and an intimate relationship with their surroundings.
                 </p>
                 <p className="story-paragraph">
-                  The motifs they create are inspired by <strong>age-old folklore</strong>, memory, and regional symbolism. Each form holds meaning, reflecting <strong>nature</strong>, belief systems, and the rhythms of community life. Having grown up immersed in this heritage, these skills live <strong>instinctively in their hands</strong>, refined over time, yet deeply rooted in ancestry.
+                  The motifs they create are inspired by age-old folklore, memory, and regional symbolism. Each form holds meaning, reflecting nature, belief systems, and the rhythms of community life. Having grown up immersed in this heritage, these skills live instinctively in their hands, refined over time, yet deeply rooted in ancestry.
                 </p>
                 <p className="story-paragraph">
-                  At Khaddar, we engage with these artisans through <strong>shared values</strong> and <strong>mutual respect</strong>, supporting the continuation of practices that honour India's living cultural legacy - quietly, thoughtfully, and with <strong>integrity</strong>.
+                  At Khaddar, we engage with these artisans through shared values and mutual respect, supporting the continuation of practices that honour India's living cultural legacy - quietly, thoughtfully, and with integrity.
                 </p>
                 <div className="text-decorative-line"></div>
               </div>
@@ -100,7 +134,7 @@ const Community = () => {
           </video>
           <div className="video-overlay-content">
             <p className="video-quote-community">
-              "Together, we weave stories of tradition, innovation, and community."
+              "Tradition is a living force." — Rabindranath Tagore
             </p>
           </div>
         </div>

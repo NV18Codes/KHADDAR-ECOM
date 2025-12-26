@@ -4,44 +4,32 @@ import './PageTransition.css';
 
 const culturalThoughts = [
   {
-    quote: "Every thread woven by hand carries the soul of an artisan.",
-    context: "— The Spirit of Kutch"
+    quote: "Khadi is not just a fabric; it is a movement.",
+    context: "— Narendra Modi"
   },
   {
-    quote: "In the desert of Kutch, colors bloom through the hands of its people.",
-    context: "— Bhujodi Weaving Tradition"
+    quote: "Indian crafts are living traditions.",
+    context: "— Pupul Jayakar"
   },
   {
-    quote: "Ajrakh is not just a fabric, it is a philosophy of harmony with nature.",
-    context: "— Ancient Block Printing Art"
+    quote: "Craft is the language of the people.",
+    context: "— Pupul Jayakar"
   },
   {
-    quote: "Where the land meets the sky, artisans weave stories of generations.",
-    context: "— Rann of Kutch"
+    quote: "Tradition is a living force.",
+    context: "— Rabindranath Tagore"
   },
   {
-    quote: "Handloom is the heartbeat of India's cultural heritage.",
-    context: "— Indian Textile Legacy"
+    quote: "Khadi is freedom in fabric.",
+    context: "— Mahatma Gandhi"
   },
   {
-    quote: "Each mirror sewn is a reflection of centuries-old craftsmanship.",
-    context: "— Kutchi Mirror Work"
+    quote: "To save crafts is to save livelihoods.",
+    context: "— Kamaladevi Chattopadhyay"
   },
   {
-    quote: "Sustainable fashion was born in India, long before it had a name.",
-    context: "— Khaddar Philosophy"
-  },
-  {
-    quote: "The rhythm of the loom echoes the heartbeat of tradition.",
-    context: "— Handwoven Heritage"
-  },
-  {
-    quote: "In every fold of fabric lies the patience of an artisan's journey.",
-    context: "— Bandhani Tie-Dye Art"
-  },
-  {
-    quote: "Colors of Kutch tell tales that words cannot express.",
-    context: "— Vibrant Gujarat"
+    quote: "The soul of India lives in its villages.",
+    context: "— Sarojini Naidu"
   }
 ];
 

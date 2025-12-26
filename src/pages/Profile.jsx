@@ -51,17 +51,33 @@ const Profile = () => {
       const currentUser = profileData || user;
 
       if (!currentUser?.email) {
+        console.log('No email available for fetching orders');
         setOrdersLoading(false);
         return;
       }
 
       try {
+        console.log('Fetching orders for email:', currentUser.email);
         const response = await getMyOrders(currentUser.email);
-        // Handle different response formats
-        const ordersList = response?.orders || response?.data || response || [];
-        setOrders(Array.isArray(ordersList) ? ordersList : []);
+        console.log('Orders API Response:', response);
+        
+        // Handle different response formats from API
+        let ordersList = [];
+        if (Array.isArray(response)) {
+          ordersList = response;
+        } else if (response?.orders && Array.isArray(response.orders)) {
+          ordersList = response.orders;
+        } else if (response?.data && Array.isArray(response.data)) {
+          ordersList = response.data;
+        } else if (response?.data?.orders && Array.isArray(response.data.orders)) {
+          ordersList = response.data.orders;
+        }
+        
+        console.log('Processed orders list:', ordersList);
+        setOrders(ordersList);
       } catch (err) {
-        console.warn('Could not fetch orders:', err);
+        console.error('Error fetching orders:', err);
+        toast.error('Could not load orders. Please refresh the page.');
         setOrders([]);
       } finally {
         setOrdersLoading(false);
@@ -71,7 +87,7 @@ const Profile = () => {
     // Chain the calls or handle dependencies
     fetchProfile().then(() => fetchOrders());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAuthenticated, isBootstrapped, navigate, token, user]);
+  }, [isAuthenticated, isBootstrapped, navigate, token, user, profileData]);
 
   if (!isBootstrapped || loading) {
     return (
@@ -187,88 +203,107 @@ const Profile = () => {
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                {orders.map((order) => (
-                  <div
-                    key={order.id || order.orderId}
-                    style={{
-                      border: '1px solid #e0e0e0',
-                      padding: '20px',
-                      backgroundColor: '#fff'
-                    }}
-                  >
-                    <div style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'flex-start',
-                      marginBottom: '15px',
-                      flexWrap: 'wrap',
-                      gap: '10px'
-                    }}>
-                      <div>
-                        <h3 style={{
-                          fontFamily: 'Inter, sans-serif',
-                          fontSize: '1rem',
-                          fontWeight: 400,
-                          marginBottom: '5px'
-                        }}>
-                          Order #{order.id || order.orderId || 'N/A'}
-                        </h3>
-                        <p style={{
-                          fontSize: '0.875rem',
-                          color: '#6b6b6b',
-                          marginBottom: '5px'
-                        }}>
-                          Placed on: {formatDate(order.createdAt || order.date || order.orderDate)}
-                        </p>
-                        {order.status && (
+                {orders.map((order, index) => {
+                  const orderId = order.order_id || order.id || order.orderId || order.order_number;
+                  const orderDate = order.created_at || order.createdAt || order.date || order.orderDate;
+                  const orderStatus = order.payment_status || order.status || 'pending';
+                  const orderTotal = order.total_amount || order.total || order.totalAmount || order.amount;
+                  const orderItems = order.items || order.products || [];
+
+                  return (
+                    <div
+                      key={orderId || index}
+                      style={{
+                        border: '1px solid #e0e0e0',
+                        padding: '20px',
+                        backgroundColor: '#fff'
+                      }}
+                    >
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        marginBottom: '15px',
+                        flexWrap: 'wrap',
+                        gap: '10px'
+                      }}>
+                        <div>
+                          <h3 style={{
+                            fontFamily: 'Inter, sans-serif',
+                            fontSize: '1rem',
+                            fontWeight: 400,
+                            marginBottom: '5px'
+                          }}>
+                            Order #{orderId || 'N/A'}
+                          </h3>
                           <p style={{
                             fontSize: '0.875rem',
-                            color: '#6b6b6b'
+                            color: '#6b6b6b',
+                            marginBottom: '5px'
                           }}>
-                            Status: <span style={{ textTransform: 'capitalize' }}>{order.status}</span>
+                            Placed on: {formatDate(orderDate)}
                           </p>
-                        )}
-                      </div>
-                      <div style={{ textAlign: 'right' }}>
-                        <p style={{
-                          fontFamily: 'Inter, sans-serif',
-                          fontSize: '1rem',
-                          fontWeight: 400
-                        }}>
-                          {formatPrice(order.total || order.totalAmount || order.amount)}
-                        </p>
-                      </div>
-                    </div>
-
-                    {order.items && Array.isArray(order.items) && order.items.length > 0 && (
-                      <div style={{
-                        marginTop: '15px',
-                        paddingTop: '15px',
-                        borderTop: '1px solid #f0f0f0'
-                      }}>
-                        <p style={{
-                          fontSize: '0.875rem',
-                          color: '#6b6b6b',
-                          marginBottom: '10px'
-                        }}>
-                          Items ({order.items.length}):
-                        </p>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                          {order.items.map((item, idx) => (
-                            <div key={idx} style={{
-                              display: 'flex',
-                              justifyContent: 'space-between',
-                              fontSize: '0.875rem'
-                            }}>
-                              <span>{item.name || item.productName || 'Item'}</span>
-                              <span>{formatPrice(item.price || item.amount)}</span>
-                            </div>
-                          ))}
+                          <p style={{
+                            fontSize: '0.875rem',
+                            color: orderStatus === 'completed' ? '#4CAF50' : '#8C6C5F',
+                            fontWeight: 500
+                          }}>
+                            Status: <span style={{ textTransform: 'capitalize' }}>{orderStatus}</span>
+                          </p>
+                        </div>
+                        <div style={{ textAlign: 'right' }}>
+                          <p style={{
+                            fontFamily: 'Inter, sans-serif',
+                            fontSize: '1.1rem',
+                            fontWeight: 600,
+                            color: '#6F3132'
+                          }}>
+                            {formatPrice(orderTotal)}
+                          </p>
                         </div>
                       </div>
-                    )}
-                  </div>
-                ))}
+
+                      {orderItems && Array.isArray(orderItems) && orderItems.length > 0 && (
+                        <div style={{
+                          marginTop: '15px',
+                          paddingTop: '15px',
+                          borderTop: '1px solid #f0f0f0'
+                        }}>
+                          <p style={{
+                            fontSize: '0.875rem',
+                            color: '#6b6b6b',
+                            marginBottom: '10px',
+                            fontWeight: 500
+                          }}>
+                            Items ({orderItems.length}):
+                          </p>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            {orderItems.map((item, idx) => {
+                              const itemName = item.name || item.productName || item.product_name || 'Item';
+                              const itemPrice = item.price || item.amount;
+                              const itemQty = item.quantity || 1;
+
+                              return (
+                                <div key={idx} style={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  fontSize: '0.875rem',
+                                  color: '#4C2E2E'
+                                }}>
+                                  <span>
+                                    {itemName}
+                                    {itemQty > 1 && <span style={{ color: '#8C6C5F' }}> x{itemQty}</span>}
+                                  </span>
+                                  <span style={{ fontWeight: 500 }}>{formatPrice(itemPrice)}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
