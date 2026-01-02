@@ -483,3 +483,6 @@
     min-width: 100%;
   }
 }
+.practice-card:nth-child(3) .practice-image {
+  object-position: top center;
+}
