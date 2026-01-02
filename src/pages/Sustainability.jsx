@@ -22,7 +22,8 @@ const Sustainability = () => {
       id: 3,
       title: 'Artisan Collaboration',
       description: 'We work closely with local artisan communities, ensuring fair wages, ethical practices, and cultural preservation.',
-      image: '/Sustainibility_images/Artisan_collab.PNG'
+      image: '/Sustainibility_images/Artisan_collab.PNG',
+       objectPosition: 'center 30%'
     },
     {
       id: 4,
@@ -66,7 +67,7 @@ const Sustainability = () => {
             {practices.map((practice) => (
               <div key={practice.id} className="practice-card">
                 <div className="practice-image-wrapper">
-                  <img src={practice.image} alt={practice.title} className="practice-image" />
+                  <img src={practice.image} alt={practice.title} className="practice-image" style={{ objectPosition: practice.objectPosition || 'center' }} />
                 </div>
                 <div className="practice-content">
                   <h3 className="practice-title">{practice.title}</h3>
