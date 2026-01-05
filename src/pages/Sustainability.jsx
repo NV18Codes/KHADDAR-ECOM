@@ -88,7 +88,7 @@ const Sustainability = () => {
             muted
             playsInline
           >
-            <source src="/AZtpB680-jgsyWHHaBVPkw-AZtpB680GHlBvl6d3T3TzA.mp4" type="video/mp4" />
+            <source src="/sustainibility-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="video-quote-wrapper">
