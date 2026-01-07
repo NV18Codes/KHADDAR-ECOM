@@ -32,6 +32,16 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.breadcrumb-separator {
+  flex-shrink: 0;
+  padding: 0 2px;
+}
+
+.breadcrumb-current {
+  word-break: break-word;
 }
 
 .breadcrumb a {
@@ -524,18 +534,23 @@
   }
 
   .breadcrumb {
-    font-size: 0.75rem;
-    margin-bottom: 20px;
-    gap: 6px;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+    gap: 4px;
+    line-height: 1.8;
   }
   
-  .breadcrumb span:not(:last-child) {
-    margin-right: 0;
-  }
-  
-  .breadcrumb a,
-  .breadcrumb span {
+  .breadcrumb a {
     white-space: nowrap;
+  }
+  
+  .breadcrumb-separator {
+    padding: 0 1px;
+  }
+  
+  .breadcrumb-current {
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .product-detail-container {

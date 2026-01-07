@@ -20,11 +20,31 @@
   overflow: hidden;
 }
 
+/* --- MOBILE VIDEO (Hidden on desktop) --- */
+.hero-mobile-video-container {
+  display: none; /* Hidden on desktop */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-mobile-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* --- 1. THE IMAGE (Breathing Zoom) --- */
 .hero-img-container {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: block; /* Visible on desktop */
 }
 
 .hero-bg-img {
@@ -280,6 +300,20 @@
   .hero-title { font-size: 2.2rem; letter-spacing: 0.12em; }
   .hero-subtitle { font-size: 1rem; margin-bottom: 30px; letter-spacing: 0.1em; }
   .hero-cta { padding: 12px 30px; font-size: 0.75rem; }
+  
+  /* Show mobile video, hide desktop image */
+  .hero-mobile-video-container {
+    display: block;
+  }
+  
+  .hero-img-container {
+    display: none;
+  }
+  
+  /* Disable animations on mobile for better performance */
+  .hero-mobile-video {
+    animation: none;
+  }
   
   /* Make sure the custom subtitle prop works on mobile */
   .home-hero-custom .hero-subtitle { font-size: 1.5rem; line-height: 1.4; }

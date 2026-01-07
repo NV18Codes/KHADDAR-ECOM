@@ -140,10 +140,10 @@ const ProductDetail = () => {
       <div className="container">
         <nav className="breadcrumb">
           <Link to="/">Home</Link>
-          <span>/</span>
+          <span className="breadcrumb-separator">/</span>
           <Link to={breadcrumbPath}>{product.gender === 'men' ? "Men's Wear" : "Women's Wear"}</Link>
-          <span>/</span>
-          <span>{product.name}</span>
+          <span className="breadcrumb-separator">/</span>
+          <span className="breadcrumb-current">{product.name}</span>
         </nav>
 
         <div className="product-detail-container">
