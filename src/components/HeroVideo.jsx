@@ -11,7 +11,21 @@ const HeroVideo = ({ title = '', subtitle = <>Wear a story<br />Wear sustainabil
     <section className={`hero-video ${className}`}>
       <div className={`video-wrapper ${fullHeight ? 'full-height' : ''}`}>
         
-        {/* 1. THE BASE IMAGE (The Foundation) */}
+        {/* MOBILE VIDEO (Only visible on mobile) */}
+        <div className="hero-mobile-video-container">
+          <video
+            className="hero-mobile-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/KhaddarXSummersalt.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        {/* 1. THE BASE IMAGE (The Foundation - Desktop only) */}
         <div className="hero-img-container">
            <img 
             src={heroImg} 
