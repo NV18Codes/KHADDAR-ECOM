@@ -24,7 +24,7 @@ const logo = '/logo_file_page-0001.png';
   // 1. EXACT CATEGORY MAPPING FROM YOUR IMAGES
   const CATEGORY_MAP = {
     "Men's Wear": ["Shirts", "Blazers/Jackets", "Kurtas", "Trousers", "Co-ords"],
-    "Women's Wear": ["Dresses", "Corsets", "Blouses", "Skirts/Trousers", "Co-ords", "Sarees"]
+    "Women's Wear": ["Dresses", "Corsets", "Blouses", "Skirts/Trousers", "Co-ords", "Kurtas"]
   };
   
   

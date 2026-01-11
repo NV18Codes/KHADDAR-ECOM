@@ -148,7 +148,11 @@ const Header = () => {
 
   // Filter logic for dropdown links
   const menLinks = navCategories.filter(cat => cat.parent_id === 1 || cat.id === 29);
-  const womenLinks = navCategories.filter(cat => cat.parent_id === 4);
+  const womenLinks = navCategories.filter(cat => 
+  cat.parent_id === 4 || 
+  cat.id === 17 || 
+  cat.name === 'Kurtas'
+);
 
   return (
     <>
